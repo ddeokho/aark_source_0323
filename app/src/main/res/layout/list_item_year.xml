@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ssomai.android.scalablelayout.ScalableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:scale_base_width="150"
+    app:scale_base_height="150"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <Button
+        android:id="@+id/list_item_year_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/circle"
+        android:text="2018"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/khnphdbold"
+        android:textAlignment="center"
+        app:scale_textsize = "30"
+        app:scale_left="0"
+        app:scale_top="0"
+        app:scale_width="150"
+        app:scale_height="150"/>
+</com.ssomai.android.scalablelayout.ScalableLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".activity.fragment.TableContentsFragment">
+
+<com.ssomai.android.scalablelayout.ScalableLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:scale_base_width="1080"
+    app:scale_base_height="280"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:id="@+id/list_bulletin_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scale_left="30"
+        app:scale_top="30"
+        app:scale_width="250"
+        app:scale_height="220"
+        />
+
+    <TextView
+        android:id="@+id/list_bulletin_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="ABS 분말 소화기 1kg"
+        android:textStyle="bold"
+        app:scale_textsize = "50"
+        app:scale_left="300"
+        app:scale_top="20"
+        app:scale_width="750"
+        app:scale_height="80"/>
+    <TextView
+        android:id="@+id/list_bulletin_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="ABS 분말 소화기에 대한 설명을 하겠습니다.ABS 분말 소화기에 대한 설명을 하겠습니다."
+        app:scale_textsize = "40"
+        app:scale_left="300"
+        app:scale_top="100"
+        app:scale_width="750"
+        app:scale_height="100"/>
+    <TextView
+        android:id="@+id/list_bulletin_hits"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="조회수: 1024"
+        app:scale_textsize = "40"
+        app:scale_left="300"
+        app:scale_top="220"
+        app:scale_width="250"
+        app:scale_height="50"/>
+
+    <TextView
+        android:id="@+id/list_bulletin_date"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="19.02.20"
+        android:textAlignment="textEnd"
+        app:scale_textsize = "40"
+        app:scale_left="630"
+        app:scale_top="220"
+        app:scale_width="400"
+        app:scale_height="50"/>
+</com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

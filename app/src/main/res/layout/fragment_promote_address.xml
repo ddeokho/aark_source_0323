@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.fragment.TableContentsFragment">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/promote_address_mapview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_width="1080"
+        app:scale_base_height="600">
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_width="1080"
+        app:scale_base_height="1300">
+
+        <!--TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="주소지"
+            android:textStyle="bold"
+            app:scale_textsize = "50"
+            app:scale_left="10"
+            app:scale_top="10"
+            app:scale_width="600"
+            app:scale_height="70"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_left="0"
+            app:scale_top="80"
+            app:scale_width="900"
+            app:scale_height="1"
+            /-->
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="인천 광역시 서구....."
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="690"
+            app:scale_width="600"
+            app:scale_height="70"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="전화: "
+            app:scale_textsize = "40"
+            app:scale_left="10"
+            app:scale_top="770"
+            app:scale_width="600"
+            app:scale_height="70"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_left="0"
+            app:scale_top="840"
+            app:scale_width="900"
+            app:scale_height="1"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="이메일: "
+            app:scale_textsize = "40"
+            app:scale_left="10"
+            app:scale_top="860"
+            app:scale_width="600"
+            app:scale_height="70"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_left="0"
+            app:scale_top="930"
+            app:scale_width="900"
+            app:scale_height="1"
+            />
+
+        <Button
+            android:id="@+id/join_membership_certified_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#3072b1"
+            android:text="수정"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            app:scale_textsize = "40"
+            app:scale_left="290"
+            app:scale_top="1000"
+            app:scale_width="160"
+            app:scale_height="100"/>
+
+        <Button
+            android:id="@+id/join_membership_certified_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff0000"
+            android:text="삭제"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            app:scale_textsize = "40"
+            app:scale_left="490"
+            app:scale_top="1000"
+            app:scale_width="160"
+            app:scale_height="100"/>
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

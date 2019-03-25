@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.fragment.TableContentsFragment">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_outline"
+        app:scale_base_width="1080"
+        app:scale_base_height="800">
+
+    <TextView
+        android:id="@+id/find_id_title_text"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:text="아이디 찾기"
+        android:textAlignment="textStart"
+        android:textStyle="bold"
+        android:fontFamily="@font/khnphdbold"
+        app:scale_textsize="50"
+        app:scale_left="10"
+        app:scale_top="0"
+        app:scale_width="1080"
+        app:scale_height="120"/>
+
+    <EditText
+        android:id="@+id/find_id_name_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textAlignment="textStart"
+        android:hint="이름을 입력하세요."
+        android:inputType="text"
+        android:background="@drawable/grid_row_border"
+        android:fontFamily="@font/khnphdbold"
+        app:scale_textsize="40"
+        app:scale_left="20"
+        app:scale_top="120"
+        app:scale_width="1000"
+        app:scale_height="120"/>
+
+    <EditText
+        android:id="@+id/find_id_phone_input"
+        android:layout_width="380dp"
+        android:layout_height="50dp"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:textAlignment="textStart"
+        android:hint="핸드폰 번호를 입력하세요."
+        android:inputType="text"
+        android:background="@drawable/grid_row_border"
+        android:fontFamily="@font/khnphdbold"
+        app:scale_textsize="40"
+        app:scale_left="20"
+        app:scale_top="280"
+        app:scale_width="1000"
+        app:scale_height="120"/>
+
+    <Button
+        android:id="@+id/find_id_ok_btn"
+        android:layout_width="80dp"
+        android:layout_height="36dp"
+        android:background="@drawable/round_button"
+        android:layout_marginEnd="30dp"
+        android:text="확인"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:fontFamily="@font/khnphdbold"
+        app:scale_textsize="40"
+        app:scale_left="800"
+        app:scale_top="600"
+        app:scale_width="200"
+        app:scale_height="80"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+</FrameLayout>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1080"
+        app:scale_base_height="1400"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/formula_line_up"
+            app:scale_left="190"
+            app:scale_top="100"
+            app:scale_width="600"
+            app:scale_height="307"
+            />
+
+        <EditText
+            android:id="@+id/login_page_id_input"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint="@string/join_membership_id_text"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="40"
+            app:scale_top="600"
+            app:scale_width="1000"
+            app:scale_height="100"/>
+
+        <EditText
+            android:id="@+id/login_page_pw_input"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint="@string/password_text"
+            android:inputType="textPassword"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="40"
+            app:scale_top="730"
+            app:scale_width="1000"
+            app:scale_height="100"/>
+
+        <Button
+            android:id="@+id/find_id_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/find_id_text"
+            android:fontFamily="@font/khnphdbold"
+            android:textStyle="bold"
+            android:textColor="#383838"
+            app:scale_textsize = "30"
+            app:scale_left="40"
+            app:scale_top="850"
+            app:scale_width="200"
+            app:scale_height="100"/>
+
+        <Button
+            android:id="@+id/find_pw_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="@string/find_password_text"
+            android:fontFamily="@font/khnphdbold"
+            android:textStyle="bold"
+            android:textColor="#383838"
+            app:scale_textsize = "30"
+            app:scale_left="260"
+            app:scale_top="850"
+            app:scale_width="200"
+            app:scale_height="100"/>
+
+        <CheckBox
+            android:id="@+id/auto_login_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/auto_login_text"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "30"
+            app:scale_left="780"
+            app:scale_top="850"
+            app:scale_width="300"
+            app:scale_height="100"/>
+
+        <Button
+            android:id="@+id/join_membership_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:text="@string/join_membership_text"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="600"
+            app:scale_top="1000"
+            app:scale_width="200"
+            app:scale_height="80"/>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:text="@string/login_text"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="830"
+            app:scale_top="1000"
+            app:scale_width="200"
+            app:scale_height="80"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</LinearLayout>

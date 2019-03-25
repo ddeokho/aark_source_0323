@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "568492741887",
+    "firebase_url": "https://casebook-e6fad.firebaseio.com",
+    "project_id": "casebook-e6fad",
+    "storage_bucket": "casebook-e6fad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568492741887:android:396734b6024a69db",
+        "android_client_info": {
+          "package_name": "automacticphone.android.com.casebook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "568492741887-gskqoi0qob2kl18kdi7fib75vhf4laj8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "automacticphone.android.com.casebook",
+            "certificate_hash": "ec49dee3546d8a39fca4acd19b0a131159b52e2a"
+          }
+        },
+        {
+          "client_id": "568492741887-gu3bdnuf5ojrgeeddksevleutoph2ip9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAojl5B9o3iEUQ2BnKz9qYI73iCRmUd88U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "568492741887-gu3bdnuf5ojrgeeddksevleutoph2ip9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

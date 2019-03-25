@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1080"
+        app:scale_base_height="1920"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이메일"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="20"
+            app:scale_width="500"
+            app:scale_height="60"
+            />
+
+        <EditText
+            android:id="@+id/join_membership_email_input"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint="이메일을 입력하세요."
+            android:inputType="textEmailAddress"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="100"
+            app:scale_width="1000"
+            app:scale_height="100"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="인증번호"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="220"
+            app:scale_width="500"
+            app:scale_height="60"
+            />
+
+        <EditText
+            android:id="@+id/join_membership_certified_input"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint="인증번호를 입력하세요."
+            android:inputType="textEmailAddress"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="300"
+            app:scale_width="600"
+            app:scale_height="100"/>
+
+        <Button
+            android:id="@+id/join_membership_certified_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#3072b1"
+            android:text="인증"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            app:scale_textsize = "40"
+            app:scale_left="690"
+            app:scale_top="300"
+            app:scale_width="160"
+            app:scale_height="100"/>
+
+        <Button
+            android:id="@+id/join_membership_ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#3072b1"
+            android:text="확인"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            app:scale_textsize = "40"
+            app:scale_left="860"
+            app:scale_top="300"
+            app:scale_width="160"
+            app:scale_height="100"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="비밀번호"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="420"
+            app:scale_width="500"
+            app:scale_height="60"
+            />
+
+        <EditText
+            android:id="@+id/join_membership_pw_input1"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint="1차 비밀번호를 입력하세요(4자리 이상)"
+            android:inputType="textEmailAddress"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="500"
+            app:scale_width="1000"
+            app:scale_height="100"/>
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="핸드폰"
+        android:textColor="#000"
+        android:textStyle="bold"
+        android:textAlignment="textStart"
+        app:scale_textsize = "40"
+        app:scale_left="20"
+        app:scale_top="620"
+        app:scale_width="500"
+        app:scale_height="60"
+        />
+
+        <EditText
+            android:id="@+id/join_membership_phone_input"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint=""
+            android:inputType="phone"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="700"
+            app:scale_width="1000"
+            app:scale_height="100"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="이름"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="820"
+            app:scale_width="500"
+            app:scale_height="60"
+            />
+
+        <EditText
+            android:id="@+id/join_membership_name_input"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint=""
+            android:inputType="phone"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="900"
+            app:scale_width="500"
+            app:scale_height="100"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="성별"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            app:scale_textsize = "40"
+            app:scale_left="620"
+            app:scale_top="820"
+            app:scale_width="500"
+            app:scale_height="60"
+            />
+
+        <CheckBox
+            android:id="@+id/join_membership_male_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="남자"
+            app:scale_textsize = "30"
+            app:scale_left="600"
+            app:scale_top="900"
+            app:scale_width="200"
+            app:scale_height="100"/>
+
+        <CheckBox
+            android:id="@+id/join_membership_female_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="여자"
+            app:scale_textsize = "30"
+            app:scale_left="800"
+            app:scale_top="900"
+            app:scale_width="200"
+            app:scale_height="100"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="학교/업체/출신"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="1020"
+            app:scale_width="500"
+            app:scale_height="60"
+            />
+
+        <EditText
+            android:id="@+id/join_membership_citizen_input"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint=""
+            android:inputType="phone"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="1100"
+            app:scale_width="1000"
+            app:scale_height="100"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="생년월일"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="1220"
+            app:scale_width="500"
+            app:scale_height="60"
+            />
+
+        <Button
+            android:id="@+id/join_membership_date_picker_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="날짜 선택"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textAlignment="textStart"
+            app:scale_textsize = "40"
+            app:scale_left="10"
+            app:scale_top="1300"
+            app:scale_width="500"
+            app:scale_height="120"/>
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/join_membership_apply_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0074b3"
+            android:text="회원가입"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            app:scale_textsize = "40"
+            app:scale_left="0"
+            app:scale_top="1620"
+            app:scale_width="1080"
+            app:scale_height="120"/>
+        <Button
+            android:id="@+id/join_membership_modify_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#0074b3"
+            android:text="수정"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            app:scale_textsize = "40"
+            app:scale_left="230"
+            app:scale_top="1600"
+            app:scale_width="300"
+            app:scale_height="120"/>
+
+        <Button
+            android:id="@+id/join_membership_withdrawal_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ef3940"
+            android:text="탈퇴"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            app:scale_textsize = "40"
+            app:scale_left="550"
+            app:scale_top="1600"
+            app:scale_width="300"
+            app:scale_height="120"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

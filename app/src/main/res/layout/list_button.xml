@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.ssomai.android.scalablelayout.ScalableLayout
+    android:id="@+id/list_button_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:scale_base_width="1080"
+    app:scale_base_height="100"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+
+    <Button
+        android:id="@+id/list_button_see_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="댓글 더 보기"
+        android:textStyle="bold"
+        android:textColor="#4b4b4b"
+        android:fontFamily="@font/khnphdbold"
+        android:textAlignment="center"
+        app:scale_textsize = "36"
+        app:scale_left="340"
+        app:scale_top="0"
+        app:scale_width="400"
+        app:scale_height="100"/>
+</com.ssomai.android.scalablelayout.ScalableLayout>

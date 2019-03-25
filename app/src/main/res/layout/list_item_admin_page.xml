@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1080"
+        app:scale_base_height="70"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/admin_search_index_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="1"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:scale_textsize = "40"
+            app:scale_left="0"
+            app:scale_top="0"
+            app:scale_width="100"
+            app:scale_height="60"/>
+
+
+        <TextView
+            android:id="@+id/admin_search_name_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="홍길동"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:scale_textsize = "40"
+            app:scale_left="100"
+            app:scale_top="0"
+            app:scale_width="800"
+            app:scale_height="60"/>
+
+        <!--ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_left="0"
+            app:scale_top="60"
+            app:scale_width="980"
+            app:scale_height="1"
+            /-->
+
+        <Button
+            android:id="@+id/admin_search_grade_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#3072b1"
+            android:text="등급"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            app:scale_textsize = "30"
+            app:scale_left="910"
+            app:scale_top="0"
+            app:scale_width="160"
+            app:scale_height="60"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

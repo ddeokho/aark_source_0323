@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fragment_upload_contents_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.fragment.TableContentsFragment">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_width="1080"
+        app:scale_base_height="1400">
+
+        <Button
+            android:id="@+id/add_photo_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:drawableTop="@drawable/camera_drawable_top"
+            android:text="@string/add_photo_text"
+            android:textColor="#535353"
+            android:textStyle="bold"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize="28"
+            app:scale_left="40"
+            app:scale_top="0"
+            app:scale_width="200"
+            app:scale_height="250"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/upload_photo_list_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scrollbars="horizontal"
+            app:scale_height="230"
+            app:scale_left="240"
+            app:scale_top="0"
+            app:scale_width="800"/>
+
+        <EditText
+            android:id="@+id/title_input_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_row_border"
+            android:paddingLeft="10dp"
+            android:hint="@string/title_input_text"
+            android:inputType="text"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize="30"
+            app:scale_height="100"
+            app:scale_left="40"
+            app:scale_top="250"
+            app:scale_width="1000"/>
+
+        <EditText
+            android:id="@+id/content_input_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:padding="20dp"
+            android:background="@drawable/grid_row_border"
+            android:ems="10"
+            android:hint="@string/contents_input_text"
+            android:textAlignment="viewStart"
+            android:inputType="textMultiLine"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize="30"
+            app:scale_height="800"
+            app:scale_left="40"
+            app:scale_top="360"
+            app:scale_width="1000"/>
+
+        <Button
+            android:id="@+id/select_rule_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#a4a4a5"
+            android:text="@string/select_rule_text"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="40"
+            app:scale_top="1180"
+            app:scale_width="1000"
+            app:scale_height="80"/>
+
+        <Button
+            android:id="@+id/upload_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#64b6ee"
+            android:text="@string/upload_text"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="40"
+            app:scale_top="1300"
+            app:scale_width="1000"
+            app:scale_height="80"/>
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

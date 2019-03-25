@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.fragment.TableContentsFragment">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1080"
+        app:scale_base_height="600"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/background_outline">
+
+        <Button
+            android:id="@+id/select_photo_camera_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:text="카메라"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:scale_textsize="40"
+            app:scale_top="40"
+            app:scale_left="90"
+            app:scale_width="900"
+            app:scale_height="100"/>
+
+        <Button
+            android:id="@+id/select_photo_gallery_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:text="갤러리"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:scale_textsize="40"
+            app:scale_top="180"
+            app:scale_left="90"
+            app:scale_width="900"
+            app:scale_height="100"/>
+
+        <Button
+            android:id="@+id/select_photo_cancel_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button2"
+            android:text="취소"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:scale_textsize="40"
+            app:scale_top="320"
+            app:scale_left="90"
+            app:scale_width="900"
+            app:scale_height="100"/>
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

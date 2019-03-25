@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.fragment.TableContentsFragment">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1080"
+        app:scale_base_height="1300"
+        android:layout_gravity="center"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/background_outline">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="개인정보처리방침"
+            android:textStyle="bold"
+            app:scale_textsize = "34"
+            app:scale_left="50"
+            app:scale_top="20"
+            app:scale_width="300"
+            app:scale_height="50"/>
+
+        <TextView
+            android:id="@+id/access_terms_popup_personal_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/grid_row_border"
+            android:scrollbars="vertical"
+            android:text="@string/personal_information_collection_agreement"
+            app:scale_textsize = "30"
+            app:scale_left="50"
+            app:scale_top="80"
+            app:scale_width="980"
+            app:scale_height="450"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="이용 약관"
+            android:textStyle="bold"
+            app:scale_textsize = "34"
+            app:scale_left="50"
+            app:scale_top="550"
+            app:scale_width="300"
+            app:scale_height="50"/>
+
+        <TextView
+            android:id="@+id/access_terms_popup_access_term_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/grid_row_border"
+            android:scrollbars="vertical"
+            android:text="@string/access_terms"
+            app:scale_textsize = "30"
+            app:scale_left="50"
+            app:scale_top="610"
+            app:scale_width="980"
+            app:scale_height="450"/>
+
+        <Button
+            android:id="@+id/access_terms_close_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:text="닫기"
+            android:textAlignment="textEnd"
+            android:textColor="#297fc7"
+            app:scale_textsize = "42"
+            app:scale_left="800"
+            app:scale_top="1150"
+            app:scale_width="200"
+            app:scale_height="100"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

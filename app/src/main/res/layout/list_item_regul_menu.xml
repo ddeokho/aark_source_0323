@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.fragment.TableContentsFragment">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1040"
+        app:scale_base_height="100"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        >
+        <TextView
+            android:id="@+id/regul_menu_item_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Formula 테스트"
+            android:textColor="#000"
+            android:textStyle="bold"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/khnphdbold"
+            android:background="@null"
+            app:scale_textsize = "50"
+            app:scale_left="20"
+            app:scale_top="20"
+            app:scale_width="1040"
+            app:scale_height="60"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

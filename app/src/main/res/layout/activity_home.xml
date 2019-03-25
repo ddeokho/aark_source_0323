@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+                <com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="#64b6ee"
+                app:scale_base_width="1080"
+                app:scale_base_height="170">
+
+                <Button
+                    android:id="@+id/home_menu_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/ic_text_align_justify"
+                    app:scale_left="0"
+                    app:scale_top="20"
+                    app:scale_width="140"
+                    app:scale_height="160"/>
+
+
+                <EditText
+                    android:id="@+id/home_search_edit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#FFF"
+                    android:hint=""
+                    android:inputType="textNoSuggestions"
+                    android:textAlignment="textStart"
+                    android:fontFamily="@font/khnphdbold"
+                    android:textColor="#505050"
+                    android:paddingLeft="10dp"
+                    app:scale_left="200"
+                    app:scale_textsize="40"
+                    app:scale_top="40"
+                    app:scale_width="700"
+                    app:scale_height="100"/>
+
+                   <Button
+                    android:id="@+id/home_search_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_search3"
+                    app:scale_left="910"
+                    app:scale_top="40"
+                    app:scale_width="100"
+                    app:scale_height="100"/>
+            </com.ssomai.android.scalablelayout.ScalableLayout>
+            <com.ssomai.android.scalablelayout.ScalableLayout
+                xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/home_main_view"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:scale_base_width="1080"
+                app:scale_base_height="1400">
+            </com.ssomai.android.scalablelayout.ScalableLayout>
+
+        <com.ssomai.android.scalablelayout.ScalableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#dededf"
+            android:layout_gravity="bottom"
+            app:scale_base_width="1080"
+            app:scale_base_height="170">
+
+            <Button
+                android:id="@+id/home_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_home_menu_1"
+                app:scale_left="80"
+                app:scale_top="30"
+                app:scale_width="100"
+                app:scale_height="100"/>
+
+            <Button
+                android:id="@+id/search_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_home_menu_2"
+                app:scale_left="280"
+                app:scale_top="30"
+                app:scale_width="100"
+                app:scale_height="100"/>
+
+            <Button
+                android:id="@+id/upload_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_home_menu_3"
+                app:scale_left="480"
+                app:scale_top="30"
+                app:scale_width="100"
+                app:scale_height="100"/>
+
+            <Button
+                android:id="@+id/promote_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_home_menu_4"
+                app:scale_left="680"
+                app:scale_top="30"
+                app:scale_width="100"
+                app:scale_height="100"/>
+
+            <Button
+                android:id="@+id/my_page_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_home_menu_5"
+                app:scale_left="880"
+                app:scale_top="30"
+                app:scale_width="100"
+                app:scale_height="100"/>
+
+            <ImageView
+                android:id="@+id/home_menu_bar_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#505050"
+                app:scale_left="80"
+                app:scale_top="160"
+                app:scale_width="100"
+                app:scale_height="10"
+                />
+        </com.ssomai.android.scalablelayout.ScalableLayout>
+    </FrameLayout>>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="100"
+        android:layout_gravity="start"
+        android:clickable="true"
+        >
+
+        <com.ssomai.android.scalablelayout.ScalableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:scale_base_height="2100"
+            app:scale_base_width="1000"
+            android:background="#f8f8f9">
+
+            //로그인 사용자
+            <ImageView
+                android:id="@+id/home_login_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_login_profile"
+                app:scale_left="10"
+                app:scale_top="60"
+                app:scale_width="200"
+                app:scale_height="200"
+                />
+
+            <TextView
+                android:id="@+id/home_login_email_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="abce1234@gmail.com"
+                android:textColor="#5d5d5e"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "50"
+                app:scale_left="230"
+                app:scale_top="40"
+                app:scale_width="760"
+                app:scale_height="120"
+                />
+
+            <Button
+                android:id="@+id/logout_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="@string/logout_text"
+                android:textStyle="bold"
+                android:textColor="#49bcc9"
+                android:textAlignment="center"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "50"
+                app:scale_left="650"
+                app:scale_top="170"
+                app:scale_width="300"
+                app:scale_height="60"/>
+
+            <TextView
+                android:id="@+id/home_login_author_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/author_count_text"
+                android:textColor="#67625e"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "40"
+                app:scale_left="400"
+                app:scale_top="300"
+                app:scale_width="200"
+                app:scale_height="60"
+                />
+
+            <TextView
+                android:id="@+id/author_num_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:textColor="#67625e"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "40"
+                app:scale_left="400"
+                app:scale_top="360"
+                app:scale_width="200"
+                app:scale_height="60"
+                />
+
+            <TextView
+                android:id="@+id/comments_count_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/comments_count_text"
+                android:textColor="#67625e"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "40"
+                app:scale_left="700"
+                app:scale_top="300"
+                app:scale_width="250"
+                app:scale_height="60"
+                />
+
+
+            <TextView
+                android:id="@+id/comments_num_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="#67625e"
+                android:textStyle="bold"
+                android:textAlignment="center"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "40"
+                app:scale_left="700"
+                app:scale_top="360"
+                app:scale_width="250"
+                app:scale_height="90"
+                />
+
+            //비 로그인 사용자
+            <ImageView
+                android:id="@+id/home_guest_img"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#6ab8ec"
+                app:scale_left="0"
+                app:scale_top="0"
+                app:scale_width="1000"
+                app:scale_height="160"
+                />
+
+            <ImageView
+                android:id="@+id/home_guest_img2"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_person"
+                app:scale_left="450"
+                app:scale_top="30"
+                app:scale_width="100"
+                app:scale_height="100"
+                />
+
+            <TextView
+                android:id="@+id/home_guest_text1"
+                android:visibility="invisible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/login_guide_text"
+                android:textColor="#67625e"
+                android:textStyle="bold"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "36"
+                app:scale_left="20"
+                app:scale_top="170"
+                app:scale_width="600"
+                app:scale_height="50"
+                />
+
+            <Button
+                android:id="@+id/login_btn"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="@string/login_text"
+                android:textStyle="bold"
+                android:textColor="#49bcc9"
+                android:textAlignment="center"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "50"
+                app:scale_left="700"
+                app:scale_top="250"
+                app:scale_width="300"
+                app:scale_height="60"/>
+
+            <Button
+                android:id="@+id/join_membership_btn"
+                android:visibility="invisible"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="@string/join_membership_text"
+                android:textStyle="bold"
+                android:textColor="#49bcc9"
+                android:textAlignment="center"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "50"
+                app:scale_left="300"
+                app:scale_top="250"
+                app:scale_width="360"
+                app:scale_height="60"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#505050"
+                app:scale_left="50"
+                app:scale_top="450"
+                app:scale_width="900"
+                app:scale_height="2"
+                />
+
+            <ListView
+                android:id="@+id/home_menu_case_listview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                app:scale_left="20"
+                app:scale_top="500"
+                app:scale_width="1040"
+                app:scale_height="690"
+                >
+            </ListView>
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#505050"
+                app:scale_left="50"
+                app:scale_top="1200"
+                app:scale_width="900"
+                app:scale_height="2"
+                />
+
+            <Button
+            android:id="@+id/plan_case_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#8C8C8C"
+            android:text="@string/plan_text"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/khnphdbold"
+            android:paddingLeft="10dp"
+            app:scale_textsize = "50"
+            app:scale_left="50"
+            app:scale_top="1250"
+            app:scale_width="900"
+            app:scale_height="120"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#505050"
+                app:scale_left="50"
+                app:scale_top="1500"
+                app:scale_width="900"
+                app:scale_height="2"
+                />
+
+            <Button
+                android:id="@+id/Inquiry_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#8C8C8C"
+                android:text="@string/Inquiry_text"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:textAlignment="textStart"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "50"
+                app:scale_left="50"
+                app:scale_top="1530"
+                app:scale_width="900"
+                app:scale_height="120"/>
+
+            <Button
+                android:id="@+id/modify_profile_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#8C8C8C"
+                android:text="@string/modify_profile_text"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:textAlignment="textStart"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "50"
+                app:scale_left="50"
+                app:scale_top="1670"
+                app:scale_width="900"
+                app:scale_height="120"/>
+
+            <Button
+                android:id="@+id/admin_page_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#8C8C8C"
+                android:text="@string/admin_page_text"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:textAlignment="textStart"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "50"
+                app:scale_left="50"
+                app:scale_top="1810"
+                app:scale_width="900"
+                app:scale_height="120"/>
+
+        </com.ssomai.android.scalablelayout.ScalableLayout>
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>

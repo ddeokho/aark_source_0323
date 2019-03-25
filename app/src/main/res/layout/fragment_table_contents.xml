@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.fragment.TableContentsFragment"
+    android:orientation="vertical">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_height="310"
+        app:scale_base_width="1080"
+        >
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/table_contents_case_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textStyle="bold"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_height="80"
+            app:scale_left="20"
+            app:scale_textsize="50"
+            app:scale_top="20"
+            app:scale_width="1040" />
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/table_contents_year_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:itemCount="5"
+            tools:layoutManager="android.support.v7.widget.GridLayoutManager"
+            tools:listitem="@layout/list_item_year"
+            tools:orientation="horizontal"
+            app:scale_left="20"
+            app:scale_top="120"
+            app:scale_width="1040"
+            app:scale_height="160"
+            >
+        </android.support.v7.widget.RecyclerView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_left="20"
+            app:scale_top="300"
+            app:scale_width="1040"
+            app:scale_height="2"
+            />
+
+        <!--TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="정적사례"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize="60"
+            app:scale_left="0"
+            app:scale_top="320"
+            app:scale_width="1080"
+            app:scale_height="80"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_arrow_down"
+            app:scale_left="508"
+            app:scale_top="410"
+            app:scale_width="64"
+            app:scale_height="64"
+            />
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/contents_book_listview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:itemCount="5"
+            tools:layoutManager="android.support.v7.widget.GridLayoutManager"
+            tools:listitem="@layout/list_item_contents_category"
+            app:scale_left="20"
+            app:scale_top="490"
+            app:scale_width="1040"
+            app:scale_height="980"
+            >
+        </android.support.v7.widget.RecyclerView-->
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/table_contents_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_left="0"
+        app:scale_top="310"
+        app:scale_base_height="1090"
+        app:scale_base_width="1080"
+        >
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+</LinearLayout>

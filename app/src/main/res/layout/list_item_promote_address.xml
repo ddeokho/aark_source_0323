@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/promote_address_mapview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_width="1080"
+        app:scale_base_height="600">
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_width="1080"
+        app:scale_base_height="1160">
+
+        <!--TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="주소지"
+            android:textStyle="bold"
+            app:scale_textsize = "50"
+            app:scale_left="10"
+            app:scale_top="10"
+            app:scale_width="600"
+            app:scale_height="70"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_left="0"
+            app:scale_top="80"
+            app:scale_width="900"
+            app:scale_height="1"
+            /-->
+
+        <TextView
+            android:id="@+id/promote_address_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="인천 광역시 서구....."
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="690"
+            app:scale_width="1040"
+            app:scale_height="110"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="전화: "
+            app:scale_textsize = "40"
+            app:scale_left="10"
+            app:scale_top="810"
+            app:scale_width="200"
+            app:scale_height="70"/>
+        <TextView
+            android:id="@+id/promote_address_phone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            app:scale_textsize = "40"
+            app:scale_left="220"
+            app:scale_top="810"
+            app:scale_width="800"
+            app:scale_height="70"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_left="0"
+            app:scale_top="880"
+            app:scale_width="900"
+            app:scale_height="1"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="이메일: "
+            app:scale_textsize = "40"
+            app:scale_left="10"
+            app:scale_top="900"
+            app:scale_width="200"
+            app:scale_height="70"/>
+        <TextView
+            android:id="@+id/promote_address_email"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            app:scale_textsize = "40"
+            app:scale_left="220"
+            app:scale_top="900"
+            app:scale_width="800"
+            app:scale_height="70"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_left="0"
+            app:scale_top="970"
+            app:scale_width="900"
+            app:scale_height="1"
+            />
+
+        <Button
+            android:id="@+id/promote_address_edit_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#3072b1"
+            android:text="수정"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            app:scale_textsize = "40"
+            app:scale_left="290"
+            app:scale_top="1040"
+            app:scale_width="160"
+            app:scale_height="100"/>
+
+        <Button
+            android:id="@+id/promote_address_hide_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff0000"
+            android:text="숨김"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            app:scale_textsize = "40"
+            app:scale_left="490"
+            app:scale_top="1040"
+            app:scale_width="160"
+            app:scale_height="100"/>
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

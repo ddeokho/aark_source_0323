@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+tools:context=".activity.activity.SelectCategoryActivity">
+
+<com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    app:scale_base_height="1400"
+    app:scale_base_width="1080">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/khnphdbold"
+        android:text="규정집 선택"
+        app:scale_height="60"
+        app:scale_left="50"
+        app:scale_textsize="40"
+        app:scale_top="20"
+        app:scale_width="980" />
+
+    <Spinner
+        android:id="@+id/select_category_main_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:entries="@array/case_category"
+        android:fontFamily="@font/khnphdbold"
+        android:spinnerMode="dropdown"
+        app:scale_height="80"
+        app:scale_left="50"
+        app:scale_top="90"
+        app:scale_width="980" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/khnphdbold"
+        android:text="검사 항목"
+        app:scale_height="60"
+        app:scale_left="50"
+        app:scale_textsize="40"
+        app:scale_top="190"
+        app:scale_width="980" />
+
+    <Spinner
+        android:id="@+id/select_category_sub_spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:entries="@array/case_category"
+        android:fontFamily="@font/khnphdbold"
+        android:spinnerMode="dropdown"
+        app:scale_height="80"
+        app:scale_left="50"
+        app:scale_top="260"
+        app:scale_width="980" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/khnphdbold"
+        android:text="상세 항목"
+        app:scale_height="80"
+        app:scale_left="50"
+        app:scale_textsize="40"
+        app:scale_top="360"
+        app:scale_width="980" />
+
+    <Spinner
+        android:id="@+id/select_category_sub_spinner2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:entries="@array/case_category"
+        android:fontFamily="@font/khnphdbold"
+        android:spinnerMode="dropdown"
+        app:scale_height="80"
+        app:scale_left="50"
+        app:scale_top="450"
+        app:scale_width="980" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/khnphdbold"
+        android:text="상세 항목2"
+        app:scale_height="80"
+        app:scale_left="50"
+        app:scale_textsize="40"
+        app:scale_top="550"
+        app:scale_width="980" />
+
+    <Spinner
+        android:id="@+id/select_category_sub_spinner3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="5dp"
+        android:entries="@array/case_category"
+        android:fontFamily="@font/khnphdbold"
+        android:spinnerMode="dropdown"
+        app:scale_height="80"
+        app:scale_left="50"
+        app:scale_top="640"
+        app:scale_width="980" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/khnphdbold"
+        android:text="연도 선택"
+        android:textStyle="bold"
+        app:scale_height="60"
+        app:scale_left="50"
+        app:scale_textsize="40"
+        app:scale_top="780"
+        app:scale_width="980" />
+
+    <NumberPicker
+        android:id="@+id/select_category_year_picker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:scale_height="200"
+        app:scale_left="430"
+        app:scale_top="770"
+        app:scale_width="600" />
+    />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/khnphdbold"
+        android:text="이 경우 위의 항목을 선택하지 않으셔도 됩니다."
+        app:scale_height="80"
+        app:scale_left="50"
+        app:scale_textsize="40"
+        app:scale_top="1050"
+        app:scale_width="980" />
+
+    <CheckBox
+        android:id="@+id/category_popup_etc_checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기타 규정집"
+        android:fontFamily="@font/khnphdbold"
+        app:scale_textsize = "30"
+        app:scale_left="50"
+        app:scale_top="1100"
+        app:scale_width="900"
+        app:scale_height="100"/>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#505050"
+        app:scale_height="1"
+        app:scale_left="50"
+        app:scale_top="1275"
+        app:scale_width="980" />
+
+    <Button
+        android:id="@+id/select_category_cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fontFamily="@font/khnphdbold"
+        android:text="취소"
+        android:textColor="#383838"
+        app:scale_height="100"
+        app:scale_left="50"
+        app:scale_textsize="46"
+        app:scale_top="1290"
+        app:scale_width="490" />
+
+    <Button
+        android:id="@+id/select_category_ok_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:fontFamily="@font/khnphdbold"
+        android:text="적용"
+        android:textColor="#297fc2"
+        app:scale_height="100"
+        app:scale_left="540"
+        app:scale_textsize="46"
+        app:scale_top="1290"
+        app:scale_width="490" />
+</com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

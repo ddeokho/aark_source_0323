@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.fragment.TableContentsFragment">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1080"
+        app:scale_base_height="730"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <EditText
+            android:id="@+id/promote_sub_title"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/khnphdbold"
+            android:padding="10dp"
+            android:hint="소제목을 입력해주세요."
+            android:inputType="text"
+            app:scale_textsize = "40"
+            app:scale_left="40"
+            app:scale_top="10"
+            app:scale_width="1000"
+            app:scale_height="100"/>
+
+        <EditText
+            android:id="@+id/promote_sub_contents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="top"
+            android:padding="10dp"
+            android:background="@drawable/grid_row_border"
+            android:ems="10"
+            android:hint="소제목에 맞는 내용을 입력해주세요."
+            android:textAlignment="viewStart"
+            android:inputType="textMultiLine"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize="36"
+            app:scale_left="40"
+            app:scale_top="140"
+            app:scale_width="1000"
+            app:scale_height="400"/>
+
+        <TextView
+            android:id="@+id/promote_sub_photo_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/upload_poster_text"
+            android:textStyle="bold"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "32"
+            app:scale_left="50"
+            app:scale_top="560"
+            app:scale_width="700"
+            app:scale_height="90"/>
+
+        <ImageView
+            android:id="@+id/promote_sub_arrow_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_arrow"
+            app:scale_left="770"
+            app:scale_top="560"
+            app:scale_width="40"
+            app:scale_height="40"
+            />
+
+        <Button
+            android:id="@+id/promote_sub_photo_delete_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle_black"
+            android:visibility="invisible"
+            android:text="X"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:fontFamily="@font/khnphdbold"
+            android:textAlignment="center"
+            app:scale_textsize = "40"
+            app:scale_left="770"
+            app:scale_top="550"
+            app:scale_width="80"
+            app:scale_height="80"/>
+
+        <Button
+            android:id="@+id/promote_sub_photo_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_camera"
+            app:scale_left="900"
+            app:scale_top="550"
+            app:scale_width="80"
+            app:scale_height="70"/>
+
+        <Button
+            android:id="@+id/promote_sub_add_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E0E0E0"
+            android:text="+"
+            android:fontFamily="@font/khnphdbold"
+            android:textStyle="bold"
+            app:scale_textsize = "52"
+            app:scale_left="850"
+            app:scale_top="640"
+            app:scale_width="80"
+            app:scale_height="70"/>
+
+        <Button
+            android:id="@+id/promote_sub_delete_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#E0E0E0"
+            android:text="-"
+            android:fontFamily="@font/khnphdbold"
+            android:textStyle="bold"
+            app:scale_textsize = "52"
+            app:scale_left="950"
+            app:scale_top="640"
+            app:scale_width="80"
+            app:scale_height="70"/>
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

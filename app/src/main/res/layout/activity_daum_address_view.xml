@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.activity.DaumAddressView">
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_height="1920"
+        app:scale_base_width="1080">
+        <WebView
+            android:id="@+id/daum_webview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:scale_left="0"
+            app:scale_top="0"
+            app:scale_width="1080"
+            app:scale_height="1500"/>
+
+        <TextView
+            android:id="@+id/daum_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text=""
+            android:fontFamily="@font/khnphdbold"
+            android:textStyle="bold"
+            app:scale_textsize = "42"
+            app:scale_left="0"
+            app:scale_top="1600"
+            app:scale_width="1080"
+            app:scale_height="420"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    tools:context=".activity.fragment.TableContentsFragment">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1080"
+        app:scale_base_height="80"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/promote_poster_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="소주제"
+            app:scale_textsize = "50"
+            app:scale_left="10"
+            app:scale_top="10"
+            app:scale_width="600"
+            app:scale_height="70"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_left="0"
+            app:scale_top="90"
+            app:scale_width="900"
+            app:scale_height="1"
+            />
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+    <ImageView
+        android:id="@+id/promote_poster_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:adjustViewBounds="true"
+        />
+</LinearLayout>
+

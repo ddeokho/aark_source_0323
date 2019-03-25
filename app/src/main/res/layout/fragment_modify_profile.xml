@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1080"
+        app:scale_base_height="1400"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/modify_profile_email_text"
+            android:background="@drawable/grid_row_border_color"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/khnphdbold"
+            android:text="@string/join_membership_id_text"
+            android:padding="10dp"
+            app:scale_textsize = "40"
+            app:scale_left="50"
+            app:scale_top="30"
+            app:scale_width="910"
+            app:scale_height="100"/>
+
+        <EditText
+            android:id="@+id/modify_profile_pw_edit"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint="@string/password_text"
+            android:inputType="text"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="50"
+            app:scale_top="180"
+            app:scale_width="910"
+            app:scale_height="100"/>
+
+        <EditText
+            android:id="@+id/modify_profile_pw_edit2"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint="@string/confirm_pw_text"
+            android:inputType="text"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="50"
+            app:scale_top="300"
+            app:scale_width="910"
+            app:scale_height="100"/>
+
+        <CheckBox
+            android:id="@+id/modify_profile_male_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/male_text"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "30"
+            app:scale_left="80"
+            app:scale_top="420"
+            app:scale_width="200"
+            app:scale_height="100"/>
+
+        <CheckBox
+            android:id="@+id/modify_profile_female_checkBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/female_text"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "30"
+            app:scale_left="280"
+            app:scale_top="420"
+            app:scale_width="200"
+            app:scale_height="100"/>
+
+        <EditText
+            android:id="@+id/modify_profile_phone_edit"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint="@string/phone_text"
+            android:inputType="phone"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="50"
+            app:scale_top="540"
+            app:scale_width="910"
+            app:scale_height="100"/>
+
+        <EditText
+            android:id="@+id/modify_profile_name_edit"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint="@string/name_text"
+            android:inputType="text"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="50"
+            app:scale_top="660"
+            app:scale_width="910"
+            app:scale_height="100"/>
+
+        <EditText
+            android:id="@+id/modify_profile_univ_edit"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint="@string/citizen_text"
+            android:inputType="text"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="50"
+            app:scale_top="780"
+            app:scale_width="910"
+            app:scale_height="100"/>
+
+        <EditText
+            android:id="@+id/modify_profile_birth_edit"
+            android:background="@drawable/grid_row_border"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="textStart"
+            android:padding="10dp"
+            android:hint="@string/brith_text"
+            android:inputType="textEmailAddress"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="50"
+            app:scale_top="900"
+            app:scale_width="910"
+            app:scale_height="100"/>
+
+        <Button
+            android:id="@+id/modify_profile_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:text="@string/modify_text"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="230"
+            app:scale_top="1280"
+            app:scale_width="300"
+            app:scale_height="90"/>
+
+        <Button
+            android:id="@+id/modify_profile_withdrawal_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button_red"
+            android:text="@string/withdrawal_text"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="550"
+            app:scale_top="1280"
+            app:scale_width="300"
+            app:scale_height="90"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

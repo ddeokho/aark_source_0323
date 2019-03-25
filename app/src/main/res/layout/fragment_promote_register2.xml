@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1080"
+        app:scale_base_height="1400"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ListView
+            android:id="@+id/promote_register_sub_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:scale_height="1240"
+            app:scale_left="0"
+            app:scale_top="0"
+            app:scale_width="1080"
+            tools:listitem="@layout/list_item_promote_sub">
+        </ListView>
+
+        <Button
+            android:id="@+id/promote_register2_upload"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#64b6ee"
+            android:text="업로드"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            app:scale_textsize = "40"
+            app:scale_left="20"
+            app:scale_top="1270"
+            app:scale_width="1000"
+            app:scale_height="100"/>
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

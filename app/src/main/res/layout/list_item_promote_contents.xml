@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".activity.fragment.TableContentsFragment">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1080"
+        app:scale_base_height="420"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <TextView
+            android:id="@+id/promote_content_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="소주제"
+            app:scale_textsize = "50"
+            app:scale_left="10"
+            app:scale_top="10"
+            app:scale_width="600"
+            app:scale_height="70"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_left="0"
+            app:scale_top="90"
+            app:scale_width="900"
+            app:scale_height="1"
+            />
+
+        <TextView
+            android:id="@+id/promote_content_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="안녕하세요. 기업메일 전문기업 메일플러그 입니다.네이버 블로그에서 도메인을 등록하시면, 별도의 블로그 연결 IP를 할당해 줍니다.제공된 IP 는 등록한 도메인기관 업체에서 설정해주셔야 지만 정상적으로 연결되는데요.관련 IP 연결이 정상적으로 매칭되지 않아 해당 메시지가 띄어주는것으로 보여집니다.도메인등록기관에 관련 IP 설정이 정상적으로 되어 있는지 확인해 보세요"
+            app:scale_textsize = "32"
+            app:scale_left="20"
+            app:scale_top="110"
+            app:scale_width="860"
+            app:scale_height="300"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

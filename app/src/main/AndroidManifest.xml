@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="automacticphone.android.com.casebook">
+
+    <!-- 네트워크 사용에 대한 퍼미션 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!--uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /-->
+    <uses-feature android:name="android.hardware.camera2"/>
+
+    <application
+        android:name=".CaseBookApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        android:usesCleartextTraffic="true"
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        >
+
+        <!--
+            meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="d7db2a84ef68aa7830a11a9809c6f00b" /
+        -->
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="automacticphone.android.com.casebook"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="@string/kakaolink_host"
+                    android:scheme="@string/kakao_scheme" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="@string/kakao_app_key" />
+
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="31b85a6d0194c5bde914e2ada4d2177798940ed2" />
+
+        <activity
+            android:name=".activity.HomeActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="unspecified" />
+        <activity android:name=".activity.LoginActivity" />
+        <activity android:name=".activity.JoinMembershipActivity" />
+        <activity android:name=".activity.activity.AdminPageActivity" />
+        <activity android:name=".activity.activity.DaumAddressView" />
+
+        <service android:name=".activity.push.MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity android:name=".activity.activity.ImageViewActivity" />
+        <activity android:name=".activity.activity.SelectCategoryActivity" android:theme="@style/popupTheme" android:screenOrientation="unspecified"></activity>
+    </application>
+
+</manifest>

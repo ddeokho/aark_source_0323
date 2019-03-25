@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_width="1080"
+        app:scale_base_height="1920">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="회원 검색"
+            android:textStyle="bold"
+            app:scale_textsize = "34"
+            app:scale_left="50"
+            app:scale_top="20"
+            app:scale_width="200"
+            app:scale_height="50"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_row_border_color"
+            app:scale_left="50"
+            app:scale_top="80"
+            app:scale_width="980"
+            app:scale_height="70"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No."
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:scale_textsize = "34"
+            app:scale_left="80"
+            app:scale_top="85"
+            app:scale_width="100"
+            app:scale_height="50"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:scale_textsize = "34"
+            app:scale_left="300"
+            app:scale_top="85"
+            app:scale_width="300"
+            app:scale_height="50"/>
+
+        <ListView
+            android:id="@+id/bulletin_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:scale_left="50"
+            app:scale_top="150"
+            app:scale_width="980"
+            app:scale_height="400"
+            tools:listitem="@layout/list_item_admin_page">
+        </ListView>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_row_border"
+            android:hint="검색할 내용을 입력하세요."
+            android:inputType="textNoSuggestions"
+            android:textAlignment="textStart"
+            android:paddingLeft="30dp"
+            app:scale_left="50"
+            app:scale_textsize="30"
+            app:scale_top="600"
+            app:scale_width="800"
+            app:scale_height="70"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_search"
+            app:scale_left="870"
+            app:scale_top="600"
+            app:scale_width="70"
+            app:scale_height="70"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="게시글 검색"
+            android:textStyle="bold"
+            app:scale_textsize = "34"
+            app:scale_left="50"
+            app:scale_top="750"
+            app:scale_width="200"
+            app:scale_height="50"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_row_border_color"
+            app:scale_left="50"
+            app:scale_top="810"
+            app:scale_width="980"
+            app:scale_height="70"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No."
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:scale_textsize = "34"
+            app:scale_left="80"
+            app:scale_top="815"
+            app:scale_width="100"
+            app:scale_height="50"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Name"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            app:scale_textsize = "34"
+            app:scale_left="300"
+            app:scale_top="815"
+            app:scale_width="300"
+            app:scale_height="50"/>
+
+        <ListView
+            android:id="@+id/bulletin_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:scale_left="50"
+            app:scale_top="880"
+            app:scale_width="980"
+            app:scale_height="400"
+            tools:listitem="@layout/list_item_admin_contents">
+        </ListView>
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_row_border"
+            android:hint="검색할 내용을 입력하세요."
+            android:inputType="textNoSuggestions"
+            android:textAlignment="textStart"
+            android:paddingLeft="30dp"
+            app:scale_left="50"
+            app:scale_textsize="30"
+            app:scale_top="1330"
+            app:scale_width="800"
+            app:scale_height="70"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_search"
+            app:scale_left="870"
+            app:scale_top="1330"
+            app:scale_width="70"
+            app:scale_height="70"/>
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</LinearLayout>
