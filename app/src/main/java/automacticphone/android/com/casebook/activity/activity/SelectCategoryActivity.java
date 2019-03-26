@@ -51,7 +51,7 @@ public class SelectCategoryActivity extends AppCompatActivity {
 
         }
 
-        cateEtcCheckBox = (CheckBox) findViewById(R.id.category_popup_etc_checkBox);
+        cateEtcCheckBox = null; /*(CheckBox) findViewById(R.id.category_popup_etc_checkBox);*/
         selectCategoryMainSpinner = (Spinner)findViewById(R.id.select_category_main_spinner);
         selectCategoryMainSpinner.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {
