@@ -71,7 +71,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#3497da"
-            android:text="등급조절"
+            android:text="관리자"
             android:textStyle="bold"
             android:textColor="#FFF"
             android:fontFamily="@font/khnphdbold"

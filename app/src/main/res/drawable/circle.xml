@@ -6,8 +6,8 @@
         android:bottom="4dp"
         android:left="4dp">
         <shape android:shape="oval">
-            <solid android:color="#3497da"/>
-        </shape>
+        <solid android:color="#3497da"/>
+    </shape>
     </item>
 
     <!--item>

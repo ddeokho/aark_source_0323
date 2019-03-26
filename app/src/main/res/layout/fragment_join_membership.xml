@@ -40,10 +40,10 @@
             android:textColor="#FFF"
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
-            app:scale_left="800"
-            app:scale_top="40"
-            app:scale_width="160"
-            app:scale_height="80"/>
+            app:scale_left="830"
+            app:scale_top="30"
+            app:scale_width="180"
+            app:scale_height="100"/>
 
         <EditText
             android:id="@+id/join_membership_pw_input"
@@ -58,7 +58,7 @@
             app:scale_textsize = "40"
             app:scale_left="50"
             app:scale_top="180"
-            app:scale_width="910"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <EditText
@@ -74,7 +74,7 @@
             app:scale_textsize = "40"
             app:scale_left="50"
             app:scale_top="300"
-            app:scale_width="910"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <CheckBox
@@ -114,7 +114,7 @@
             app:scale_textsize = "40"
             app:scale_left="50"
             app:scale_top="540"
-            app:scale_width="910"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <EditText
@@ -130,7 +130,7 @@
             app:scale_textsize = "40"
             app:scale_left="50"
             app:scale_top="660"
-            app:scale_width="910"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <EditText
@@ -146,7 +146,7 @@
             app:scale_textsize = "40"
             app:scale_left="50"
             app:scale_top="780"
-            app:scale_width="910"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <EditText
@@ -162,7 +162,7 @@
             app:scale_textsize = "40"
             app:scale_left="50"
             app:scale_top="900"
-            app:scale_width="910"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <CheckBox
@@ -214,9 +214,9 @@
             android:textAlignment="center"
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
-            app:scale_left="90"
+            app:scale_left="50"
             app:scale_top="1280"
-            app:scale_width="900"
+            app:scale_width="980"
             app:scale_height="100"/>
         <Button
             android:visibility="invisible"

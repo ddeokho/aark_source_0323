@@ -80,65 +80,65 @@
             android:background="#dededf"
             android:layout_gravity="bottom"
             app:scale_base_width="1080"
-            app:scale_base_height="170">
+            app:scale_base_height="140">
 
             <Button
                 android:id="@+id/home_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_home_menu_1"
-                app:scale_left="80"
+                app:scale_left="90"
                 app:scale_top="30"
-                app:scale_width="100"
-                app:scale_height="100"/>
+                app:scale_width="80"
+                app:scale_height="80"/>
 
             <Button
                 android:id="@+id/search_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_home_menu_2"
-                app:scale_left="280"
+                app:scale_left="290"
                 app:scale_top="30"
-                app:scale_width="100"
-                app:scale_height="100"/>
+                app:scale_width="80"
+                app:scale_height="80"/>
 
             <Button
                 android:id="@+id/upload_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_home_menu_3"
-                app:scale_left="480"
+                app:scale_left="490"
                 app:scale_top="30"
-                app:scale_width="100"
-                app:scale_height="100"/>
+                app:scale_width="80"
+                app:scale_height="80"/>
 
             <Button
                 android:id="@+id/promote_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_home_menu_4"
-                app:scale_left="680"
+                app:scale_left="690"
                 app:scale_top="30"
-                app:scale_width="100"
-                app:scale_height="100"/>
+                app:scale_width="80"
+                app:scale_height="80"/>
 
             <Button
                 android:id="@+id/my_page_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_home_menu_5"
-                app:scale_left="880"
+                app:scale_left="890"
                 app:scale_top="30"
-                app:scale_width="100"
-                app:scale_height="100"/>
+                app:scale_width="80"
+                app:scale_height="80"/>
 
             <ImageView
                 android:id="@+id/home_menu_bar_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#505050"
-                app:scale_left="80"
-                app:scale_top="160"
+                app:scale_left="75"
+                app:scale_top="130"
                 app:scale_width="100"
                 app:scale_height="10"
                 />

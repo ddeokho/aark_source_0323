@@ -56,7 +56,7 @@
             app:scale_width="900"
             app:scale_height="80"/>
 
-        <ImageView
+        <!--<ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#505050"
@@ -64,7 +64,7 @@
             app:scale_top="760"
             app:scale_width="940"
             app:scale_height="1"
-            />
+            />-->
     </com.ssomai.android.scalablelayout.ScalableLayout>
 
 </FrameLayout>

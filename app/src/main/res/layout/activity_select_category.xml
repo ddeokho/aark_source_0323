@@ -124,6 +124,8 @@ tools:context=".activity.activity.SelectCategoryActivity">
         app:scale_top="780"
         app:scale_width="980" />
 
+
+
     <NumberPicker
         android:id="@+id/select_category_year_picker"
         android:layout_width="wrap_content"
@@ -134,7 +136,7 @@ tools:context=".activity.activity.SelectCategoryActivity">
         app:scale_width="600" />
     />
 
-    <TextView
+    <!--<TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fontFamily="@font/khnphdbold"
@@ -155,7 +157,7 @@ tools:context=".activity.activity.SelectCategoryActivity">
         app:scale_left="50"
         app:scale_top="1100"
         app:scale_width="900"
-        app:scale_height="100"/>
+        app:scale_height="100"/>-->
 
 
     <ImageView

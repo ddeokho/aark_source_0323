@@ -22,7 +22,7 @@
             android:textStyle="bold"
             android:textAlignment="textStart"
             app:scale_textsize = "40"
-            app:scale_left="20"
+            app:scale_left="30"
             app:scale_top="20"
             app:scale_width="500"
             app:scale_height="60"
