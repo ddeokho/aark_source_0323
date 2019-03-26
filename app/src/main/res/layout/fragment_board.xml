@@ -33,7 +33,7 @@
             app:scale_textsize = "40"
             app:scale_left="20"
             app:scale_top="140"
-            app:scale_width="900"
+            app:scale_width="1040"
             app:scale_height="50"/>
 
         <ListView
@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:scale_left="0"
-            app:scale_top="1300"
+            app:scale_top="915"
             app:scale_width="1080"
             app:scale_height="100"
             />

@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:scale_left="90"
-            app:scale_top="100"
+            app:scale_top="20"
             app:scale_width="900"
             app:scale_height="575">
         </android.support.v4.view.ViewPager>
@@ -35,17 +35,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_share"
-            app:scale_height="80"
-            app:scale_left="990"
-            app:scale_top="20"
-            app:scale_width="80" />
+            app:scale_height="60"
+            app:scale_left="905"
+            app:scale_top="620"
+            app:scale_width="60" />
 
         <android.support.design.widget.TabLayout
             android:id="@+id/contents_tab_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:scale_left="470"
-            app:scale_top="610"
+            app:scale_left="460"
+            app:scale_top="510"
             app:scale_width="160"
             app:scale_height="50"
             app:tabBackground="@drawable/tab_selector"
@@ -62,8 +62,8 @@
             app:scale_height="80"
             app:scale_left="90"
             app:scale_textsize="60"
-            app:scale_top="20"
-            app:scale_width="900" />
+            app:scale_top="610"
+            app:scale_width="780" />
 
         <TextView
             android:id="@+id/contents_view_name"
@@ -75,20 +75,20 @@
             app:scale_height="50"
             app:scale_left="90"
             app:scale_textsize="40"
-            app:scale_top="690"
+            app:scale_top="915"
             app:scale_width="500" />
 
         <TextView
             android:id="@+id/contents_view_date"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:text=""
             android:textAlignment="textEnd"
             android:textStyle="bold"
             app:scale_height="50"
             app:scale_left="750"
             app:scale_textsize="40"
-            app:scale_top="690"
+            app:scale_top="915"
             app:scale_width="240" />
 
         <TextView
@@ -102,7 +102,7 @@
             app:textview_wrapcontent_movesiblings="true"
             app:scale_textsize="40"
             app:scale_left="90"
-            app:scale_top="770"
+            app:scale_top="700"
             app:scale_width="900"
             app:scale_height="200"/>
 
@@ -146,7 +146,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/grid_row_border"
             android:paddingLeft="10dp"
-            android:hint="댓글 달기..."
+            android:hint="댓글 쓰기"
             android:inputType="textMultiLine"
             android:enabled="true"
             android:minLines="2"
@@ -158,24 +158,24 @@
             app:textview_wrapcontent_resizesurrounded="true"
             app:textview_wrapcontent_movesiblings="true"
             app:scale_textsize="30"
-            app:scale_left="90"
-            app:scale_top="1300"
-            app:scale_width="760"
+            app:scale_left="60"
+            app:scale_top="1200"
+            app:scale_width="780"
             app:scale_height="80"/>
 
         <Button
             android:id="@+id/content_view_comment_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@null"
-            android:text="게시"
-            android:textColor="#a4a4a5"
+            android:background="@drawable/round_button_white"
+            android:text="등록"
+            android:textColor="#000000"
             android:textStyle="bold"
-            app:scale_textsize="40"
-            app:scale_left="850"
-            app:scale_top="1290"
+            app:scale_textsize="30"
+            app:scale_left="870"
+            app:scale_top="1200"
             app:scale_width="150"
-            app:scale_height="80"/>
+            app:scale_height="70"/>
 
         <!--ListView
             android:id="@+id/content_view_comment_list"
@@ -195,11 +195,11 @@
             android:text="삭제"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            app:scale_height="80"
-            app:scale_left="800"
+            app:scale_height="60"
+            app:scale_left="825"
             app:scale_textsize="40"
-            app:scale_top="1050"
-            app:scale_width="220" />
+            app:scale_top="1070"
+            app:scale_width="195" />
 
         <Button
             android:id="@+id/content_view_edit_btn"
@@ -209,11 +209,11 @@
             android:text="수정"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            app:scale_height="80"
-            app:scale_left="50"
+            app:scale_height="60"
+            app:scale_left="60"
             app:scale_textsize="40"
-            app:scale_top="1050"
-            app:scale_width="220" />
+            app:scale_top="1070"
+            app:scale_width="195" />
 
         <Button
             android:id="@+id/content_view_good_btn"
@@ -223,11 +223,11 @@
             android:text="좋은 예"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            app:scale_height="80"
-            app:scale_left="50"
+            app:scale_height="60"
+            app:scale_left="315"
             app:scale_textsize="40"
-            app:scale_top="1160"
-            app:scale_width="220" />
+            app:scale_top="1070"
+            app:scale_width="195" />
 
         <Button
             android:id="@+id/content_view_bad_btn"
@@ -237,11 +237,11 @@
             android:text="안 좋은 예"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
-            app:scale_height="80"
-            app:scale_left="800"
+            app:scale_height="60"
+            app:scale_left="570"
             app:scale_textsize="40"
-            app:scale_top="1160"
-            app:scale_width="220" />
+            app:scale_top="1070"
+            app:scale_width="195" />
     </com.ssomai.android.scalablelayout.ScalableLayout>
     </LinearLayout>
 </ScrollView>
