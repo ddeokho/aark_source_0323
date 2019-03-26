@@ -29,7 +29,7 @@ import automacticphone.android.com.casebook.activity.fragment.UploadContentsFrag
 
 public class SelectCategoryActivity extends AppCompatActivity {
 
-    private CheckBox cateEtcCheckBox;
+   /* private CheckBox cateEtcCheckBox;*/
     private Spinner selectCategoryMainSpinner;
     private Spinner selectCategorySubSpinner1;
     private Spinner selectCategorySubSpinner2;
@@ -51,7 +51,7 @@ public class SelectCategoryActivity extends AppCompatActivity {
 
         }
 
-        cateEtcCheckBox = null; /*(CheckBox) findViewById(R.id.category_popup_etc_checkBox);*/
+        /*cateEtcCheckBox = (CheckBox) findViewById(R.id.category_popup_etc_checkBox);*/
         selectCategoryMainSpinner = (Spinner)findViewById(R.id.select_category_main_spinner);
         selectCategoryMainSpinner.setOnItemSelectedListener(
                 new AdapterView.OnItemSelectedListener() {
@@ -123,8 +123,12 @@ public class SelectCategoryActivity extends AppCompatActivity {
             {
                 UploadContentsFragment fragment = (UploadContentsFragment)HomeActivity.inst().getCurrentFragment();
                 CaseCategoryData data = new CaseCategoryData();
-                if( cateEtcCheckBox.isChecked() )
-                {
+
+                int st = 2;
+                /*카테고리 기타 태그 처리*/
+                if(st==1)
+                /*if( cateEtcCheckBox.isChecked() )*/
+                    {
                     int case_reg = DataManager.inst().getRegulMainSeq( "기타" );
                     data.setCateReg( case_reg );
                     RegulationMainData mainData = DataManager.inst().getRegulationMainData(case_reg );
