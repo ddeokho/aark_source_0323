@@ -22,7 +22,7 @@
             app:scale_textsize = "40"
             app:scale_left="0"
             app:scale_top="0"
-            app:scale_width="100"
+            app:scale_width="160"
             app:scale_height="60"/>
 
 
@@ -34,9 +34,9 @@
             android:textStyle="bold"
             android:textAlignment="center"
             app:scale_textsize = "40"
-            app:scale_left="100"
+            app:scale_left="160"
             app:scale_top="0"
-            app:scale_width="800"
+            app:scale_width="740"
             app:scale_height="60"/>
 
         <!--ImageView

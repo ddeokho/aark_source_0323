@@ -24,9 +24,9 @@
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize="28"
             app:scale_left="40"
-            app:scale_top="0"
+            app:scale_top="10"
             app:scale_width="200"
-            app:scale_height="250"/>
+            app:scale_height="220"/>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/upload_photo_list_view"
