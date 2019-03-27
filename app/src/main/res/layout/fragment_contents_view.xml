@@ -46,7 +46,7 @@
                 android:layout_height="wrap_content"
                 app:scale_height="30"
                 app:scale_left="495"
-                app:scale_top="640"
+                app:scale_top="610"
                 app:scale_width="90"
                 app:tabBackground="@drawable/tab_selector"
                 app:tabGravity="center"
