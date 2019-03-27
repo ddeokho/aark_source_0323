@@ -136,7 +136,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#505050"
-                app:scale_left="75"
+                app:scale_left="70"
                 app:scale_top="130"
                 app:scale_width="100"
                 app:scale_height="10"
