@@ -40,7 +40,7 @@
             android:textColor="#FFF"
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
-            app:scale_left="830"
+            app:scale_left="850"
             app:scale_top="30"
             app:scale_width="180"
             app:scale_height="100"/>

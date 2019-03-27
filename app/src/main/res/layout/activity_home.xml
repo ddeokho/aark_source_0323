@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
-                android:background="#64b6ee"
+                android:background="#ffffff"
                 app:scale_base_width="1080"
                 app:scale_base_height="170">
 
@@ -30,15 +30,15 @@
                     android:background="@drawable/ic_text_align_justify"
                     app:scale_left="0"
                     app:scale_top="20"
-                    app:scale_width="140"
-                    app:scale_height="160"/>
+                    app:scale_width="160"
+                    app:scale_height="140"/>
 
 
                 <EditText
                     android:id="@+id/home_search_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#FFF"
+                    android:background="@drawable/home_padding"
                     android:hint=""
                     android:inputType="textNoSuggestions"
                     android:textAlignment="textStart"
@@ -61,23 +61,22 @@
                     app:scale_width="100"
                     app:scale_height="100"/>
             </com.ssomai.android.scalablelayout.ScalableLayout>
-            <com.ssomai.android.scalablelayout.ScalableLayout
-                xmlns:android="http://schemas.android.com/apk/res/android"
-                xmlns:app="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/home_main_view"
-                android:layout_gravity="center"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:scale_base_width="1080"
-                app:scale_base_height="1400">
-            </com.ssomai.android.scalablelayout.ScalableLayout>
+
+        <com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/home_main_view"
+            android:layout_width="match_parent"
+            android:layout_height="1113dp"
+            android:layout_gravity="center"
+            app:scale_base_height="1400"
+            app:scale_base_width="1080"></com.ssomai.android.scalablelayout.ScalableLayout>
 
         <com.ssomai.android.scalablelayout.ScalableLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#dededf"
+            android:background="#ffffff"
             android:layout_gravity="bottom"
             app:scale_base_width="1080"
             app:scale_base_height="140">

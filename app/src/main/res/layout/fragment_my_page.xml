@@ -20,8 +20,8 @@
             android:textStyle="bold"
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "42"
-            app:scale_left="10"
-            app:scale_top="10"
+            app:scale_left="30"
+            app:scale_top="20"
             app:scale_width="760"
             app:scale_height="70"/>
 
@@ -35,8 +35,8 @@
             android:textColor="#FFF"
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "30"
-            app:scale_left="800"
-            app:scale_top="10"
+            app:scale_left="890"
+            app:scale_top="20"
             app:scale_width="160"
             app:scale_height="70"/>
 
@@ -48,7 +48,7 @@
             android:textStyle="bold"
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
-            app:scale_left="10"
+            app:scale_left="30"
             app:scale_top="120"
             app:scale_width="300"
             app:scale_height="70"/>
@@ -61,7 +61,7 @@
             android:textStyle="bold"
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
-            app:scale_left="310"
+            app:scale_left="330"
             app:scale_top="120"
             app:scale_width="300"
             app:scale_height="70"/>
@@ -76,8 +76,8 @@
             android:textColor="#FFF"
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "30"
-            app:scale_left="800"
-            app:scale_top="100"
+            app:scale_left="890"
+            app:scale_top="110"
             app:scale_width="160"
             app:scale_height="70"/>
 
@@ -87,7 +87,7 @@
             android:background="#505050"
             app:scale_left="0"
             app:scale_top="210"
-            app:scale_width="600"
+            app:scale_width="1080"
             app:scale_height="1"
             />
 

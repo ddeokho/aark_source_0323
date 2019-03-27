@@ -25,8 +25,8 @@
             android:padding="10dp"
             app:scale_textsize = "40"
             app:scale_left="50"
-            app:scale_top="30"
-            app:scale_width="910"
+            app:scale_top="80"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <EditText
@@ -41,8 +41,8 @@
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
             app:scale_left="50"
-            app:scale_top="180"
-            app:scale_width="910"
+            app:scale_top="230"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <EditText
@@ -57,8 +57,8 @@
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
             app:scale_left="50"
-            app:scale_top="300"
-            app:scale_width="910"
+            app:scale_top="380"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <CheckBox
@@ -69,7 +69,7 @@
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "30"
             app:scale_left="80"
-            app:scale_top="420"
+            app:scale_top="520"
             app:scale_width="200"
             app:scale_height="100"/>
 
@@ -81,7 +81,7 @@
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "30"
             app:scale_left="280"
-            app:scale_top="420"
+            app:scale_top="520"
             app:scale_width="200"
             app:scale_height="100"/>
 
@@ -97,8 +97,8 @@
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
             app:scale_left="50"
-            app:scale_top="540"
-            app:scale_width="910"
+            app:scale_top="660"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <EditText
@@ -113,8 +113,8 @@
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
             app:scale_left="50"
-            app:scale_top="660"
-            app:scale_width="910"
+            app:scale_top="810"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <EditText
@@ -129,8 +129,8 @@
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
             app:scale_left="50"
-            app:scale_top="780"
-            app:scale_width="910"
+            app:scale_top="960"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <EditText
@@ -145,8 +145,8 @@
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
             app:scale_left="50"
-            app:scale_top="900"
-            app:scale_width="910"
+            app:scale_top="1110"
+            app:scale_width="980"
             app:scale_height="100"/>
 
         <Button
@@ -161,7 +161,7 @@
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
             app:scale_left="230"
-            app:scale_top="1280"
+            app:scale_top="1260"
             app:scale_width="300"
             app:scale_height="90"/>
 
@@ -177,7 +177,7 @@
             android:fontFamily="@font/khnphdbold"
             app:scale_textsize = "40"
             app:scale_left="550"
-            app:scale_top="1280"
+            app:scale_top="1260"
             app:scale_width="300"
             app:scale_height="90"/>
     </com.ssomai.android.scalablelayout.ScalableLayout>

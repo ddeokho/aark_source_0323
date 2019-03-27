@@ -24,8 +24,8 @@
             android:hint="업체명을 입력해주세요."
             android:inputType="text"
             app:scale_textsize = "40"
-            app:scale_left="20"
-            app:scale_top="10"
+            app:scale_left="40"
+            app:scale_top="80"
             app:scale_width="1000"
             app:scale_height="100"/>
 
@@ -39,8 +39,8 @@
             android:hint="제목을 입력해주세요."
             android:inputType="text"
             app:scale_textsize = "40"
-            app:scale_left="20"
-            app:scale_top="130"
+            app:scale_left="40"
+            app:scale_top="220"
             app:scale_width="1000"
             app:scale_height="100"/>
 
@@ -51,16 +51,16 @@
             android:text="메인에 보일 로고를 올려주세요."
             android:textStyle="bold"
             app:scale_textsize = "34"
-            app:scale_left="20"
-            app:scale_top="260"
+            app:scale_left="40"
+            app:scale_top="370"
             app:scale_width="600"
             app:scale_height="50"/>
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#505050"
-            app:scale_left="20"
-            app:scale_top="330"
+            app:scale_left="40"
+            app:scale_top="430"
             app:scale_width="1000"
             app:scale_height="1"
             />
@@ -69,10 +69,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_arrow"
-            app:scale_left="630"
-            app:scale_top="260"
-            app:scale_width="40"
-            app:scale_height="40"
+            app:scale_left="680"
+            app:scale_top="373"
+            app:scale_width="60"
+            app:scale_height="45"
             />
 
         <Button
@@ -80,8 +80,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/ic_camera"
-            app:scale_left="800"
-            app:scale_top="245"
+            app:scale_left="960"
+            app:scale_top="355"
             app:scale_width="80"
             app:scale_height="70"/>
 
@@ -95,8 +95,8 @@
             android:hint="다음 주소 검색"
             android:inputType="text"
             app:scale_textsize = "40"
-            app:scale_left="20"
-            app:scale_top="370"
+            app:scale_left="40"
+            app:scale_top="470"
             app:scale_width="780"
             app:scale_height="100"/>
 
@@ -109,8 +109,8 @@
             android:textStyle="bold"
             android:textColor="#FFF"
             app:scale_textsize = "40"
-            app:scale_left="820"
-            app:scale_top="370"
+            app:scale_left="840"
+            app:scale_top="470"
             app:scale_width="200"
             app:scale_height="100"/>
 
@@ -124,12 +124,12 @@
             android:hint="상세 주소"
             android:inputType="text"
             app:scale_textsize = "40"
-            app:scale_left="20"
-            app:scale_top="480"
+            app:scale_left="40"
+            app:scale_top="610"
             app:scale_width="1000"
             app:scale_height="100"/>
 
-        <ImageView
+       <!-- <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#505050"
@@ -137,7 +137,7 @@
             app:scale_top="620"
             app:scale_width="1000"
             app:scale_height="1"
-            />
+            />-->
 
 
         <EditText
@@ -150,8 +150,8 @@
             android:hint="회사/동아리 연락처를 입력해 주세요.(선택)"
             android:inputType="text"
             app:scale_textsize = "40"
-            app:scale_left="20"
-            app:scale_top="660"
+            app:scale_left="40"
+            app:scale_top="790"
             app:scale_width="1000"
             app:scale_height="100"/>
 
@@ -165,12 +165,12 @@
             android:hint="이메일을 입력해 주세요.(선택)"
             android:inputType="text"
             app:scale_textsize = "40"
-            app:scale_left="20"
-            app:scale_top="770"
+            app:scale_left="40"
+            app:scale_top="930"
             app:scale_width="1000"
             app:scale_height="100"/>
 
-        <ImageView
+        <!--<ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#505050"
@@ -178,7 +178,7 @@
             app:scale_top="900"
             app:scale_width="1000"
             app:scale_height="1"
-            />
+            />-->
 
         <Button
             android:id="@+id/promote_register_next_btn"
@@ -189,7 +189,7 @@
             android:textStyle="bold"
             android:textColor="#FFF"
             app:scale_textsize = "40"
-            app:scale_left="20"
+            app:scale_left="40"
             app:scale_top="1270"
             app:scale_width="1000"
             app:scale_height="100"/>

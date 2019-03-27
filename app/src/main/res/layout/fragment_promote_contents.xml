@@ -37,7 +37,7 @@
             android:background="#505050"
             app:scale_left="0"
             app:scale_top="100"
-            app:scale_width="500"
+            app:scale_width="600"
             app:scale_height="1"
             />
 
@@ -47,9 +47,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/ic_share"
             app:scale_left="940"
-            app:scale_top="10"
-            app:scale_width="90"
-            app:scale_height="90"/>
+            app:scale_top="30"
+            app:scale_width="60"
+            app:scale_height="60"/>
 
         <!--ListView
             android:id="@+id/promote_content_list_view"

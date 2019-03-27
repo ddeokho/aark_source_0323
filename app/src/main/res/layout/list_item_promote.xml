@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:scale_base_width="1080"
-        app:scale_base_height="800"
+        app:scale_base_height="620"
         xmlns:android="http://schemas.android.com/apk/res/android">
         <TextView
             android:id="@+id/item_promote_name"
@@ -20,7 +20,7 @@
             android:textStyle="bold"
             app:scale_textsize = "50"
             app:scale_left="90"
-            app:scale_top="10"
+            app:scale_top="30"
             app:scale_width="600"
             app:scale_height="70"/>
         <TextView
@@ -31,7 +31,7 @@
             android:textAlignment="textEnd"
             app:scale_textsize = "36"
             app:scale_left="690"
-            app:scale_top="20"
+            app:scale_top="40"
             app:scale_width="300"
             app:scale_height="50"/>
 
@@ -39,10 +39,10 @@
             android:id="@+id/item_promote_logo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:scale_left="90"
-            app:scale_top="80"
-            app:scale_width="900"
-            app:scale_height="575"
+            app:scale_left="315"
+            app:scale_top="150"
+            app:scale_width="450"
+            app:scale_height="300"
             />
 
         <TextView
@@ -52,7 +52,7 @@
             android:text="간단한 설명이 보여지는 공간 입니다. 몇글자까지.."
             app:scale_textsize = "40"
             app:scale_left="90"
-            app:scale_top="670"
+            app:scale_top="500"
             app:scale_width="900"
             app:scale_height="80"/>
 
