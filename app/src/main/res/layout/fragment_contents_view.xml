@@ -24,9 +24,9 @@
             android:id="@+id/contents_photo_viewpager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:scale_left="90"
-            app:scale_top="20"
-            app:scale_width="900"
+            app:scale_left="0"
+            app:scale_top="90"
+            app:scale_width="1080"
             app:scale_height="575">
         </android.support.v4.view.ViewPager>
 
@@ -37,17 +37,17 @@
             android:background="@drawable/ic_share"
             app:scale_height="60"
             app:scale_left="905"
-            app:scale_top="620"
+            app:scale_top="690"
             app:scale_width="60" />
 
         <android.support.design.widget.TabLayout
             android:id="@+id/contents_tab_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:scale_left="460"
-            app:scale_top="510"
-            app:scale_width="160"
-            app:scale_height="50"
+            app:scale_height="20"
+            app:scale_left="510"
+            app:scale_top="580"
+            app:scale_width="60"
             app:tabBackground="@drawable/tab_selector"
             app:tabGravity="center"
             app:tabIndicatorHeight="0dp" />
@@ -62,7 +62,7 @@
             app:scale_height="80"
             app:scale_left="90"
             app:scale_textsize="60"
-            app:scale_top="610"
+            app:scale_top="680"
             app:scale_width="780" />
 
         <TextView
@@ -75,7 +75,7 @@
             app:scale_height="50"
             app:scale_left="90"
             app:scale_textsize="40"
-            app:scale_top="915"
+            app:scale_top="20"
             app:scale_width="500" />
 
         <TextView
@@ -88,7 +88,7 @@
             app:scale_height="50"
             app:scale_left="750"
             app:scale_textsize="40"
-            app:scale_top="915"
+            app:scale_top="20"
             app:scale_width="240" />
 
         <TextView
@@ -102,7 +102,7 @@
             app:textview_wrapcontent_movesiblings="true"
             app:scale_textsize="40"
             app:scale_left="90"
-            app:scale_top="700"
+            app:scale_top="785"
             app:scale_width="900"
             app:scale_height="200"/>
 
