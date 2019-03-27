@@ -34,7 +34,7 @@
             android:textStyle="bold"
             android:textColor="#FFF"
             app:scale_textsize = "40"
-            app:scale_left="20"
+            app:scale_left="40"
             app:scale_top="1270"
             app:scale_width="1000"
             app:scale_height="100"/>

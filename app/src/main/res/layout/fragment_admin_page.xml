@@ -40,7 +40,7 @@
             android:textStyle="bold"
             android:textAlignment="center"
             app:scale_textsize = "34"
-            app:scale_left="50"
+            app:scale_left="80"
             app:scale_top="85"
             app:scale_width="100"
             app:scale_height="50"/>
@@ -52,7 +52,7 @@
             android:textStyle="bold"
             android:textAlignment="center"
             app:scale_textsize = "34"
-            app:scale_left="356"
+            app:scale_left="376"
             app:scale_top="85"
             app:scale_width="300"
             app:scale_height="50"/>
@@ -121,7 +121,7 @@
             android:textStyle="bold"
             android:textAlignment="center"
             app:scale_textsize = "34"
-            app:scale_left="50"
+            app:scale_left="80"
             app:scale_top="785"
             app:scale_width="100"
             app:scale_height="50"/>
