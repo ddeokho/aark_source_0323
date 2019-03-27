@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:scale_base_width="1080"
-        app:scale_base_height="600"
+        app:scale_base_height="460"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:background="@drawable/background_outline">
 
