@@ -24,9 +24,9 @@
             android:id="@+id/contents_photo_viewpager"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:scale_left="0"
+            app:scale_left="90"
             app:scale_top="90"
-            app:scale_width="1080"
+            app:scale_width="900"
             app:scale_height="575">
         </android.support.v4.view.ViewPager>
 
