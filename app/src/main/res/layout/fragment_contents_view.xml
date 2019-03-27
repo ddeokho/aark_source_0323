@@ -12,236 +12,236 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical">
 
-    <com.ssomai.android.scalablelayout.ScalableLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:scale_base_width="1080"
-        app:scale_base_height="1400">
-
-        <android.support.v4.view.ViewPager
-            android:id="@+id/contents_photo_viewpager"
+        <com.ssomai.android.scalablelayout.ScalableLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:scale_left="90"
-            app:scale_top="90"
-            app:scale_width="900"
-            app:scale_height="575">
-        </android.support.v4.view.ViewPager>
+            app:scale_base_width="1080"
+            app:scale_base_height="1400">
 
-        <Button
-            android:id="@+id/content_view_share_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/ic_share"
-            app:scale_height="60"
-            app:scale_left="905"
-            app:scale_top="690"
-            app:scale_width="60" />
+            <android.support.v4.view.ViewPager
+                android:id="@+id/contents_photo_viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:scale_left="90"
+                app:scale_top="90"
+                app:scale_width="900"
+                app:scale_height="575">
+            </android.support.v4.view.ViewPager>
 
-        <android.support.design.widget.TabLayout
-            android:id="@+id/contents_tab_layout"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:scale_height="20"
-            app:scale_left="510"
-            app:scale_top="580"
-            app:scale_width="60"
-            app:tabBackground="@drawable/tab_selector"
-            app:tabGravity="center"
-            app:tabIndicatorHeight="0dp" />
+            <Button
+                android:id="@+id/content_view_share_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_share"
+                app:scale_height="60"
+                app:scale_left="905"
+                app:scale_top="690"
+                app:scale_width="60" />
 
-        <TextView
-            android:id="@+id/contents_view_title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text=""
-            android:textAlignment="textStart"
-            android:textStyle="bold"
-            app:scale_height="80"
-            app:scale_left="90"
-            app:scale_textsize="60"
-            app:scale_top="680"
-            app:scale_width="780" />
+            <android.support.design.widget.TabLayout
+                android:id="@+id/contents_tab_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:scale_height="30"
+                app:scale_left="495"
+                app:scale_top="640"
+                app:scale_width="90"
+                app:tabBackground="@drawable/tab_selector"
+                app:tabGravity="center"
+                app:tabIndicatorHeight="0dp" />
 
-        <TextView
-            android:id="@+id/contents_view_name"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="sungiin0879"
-            android:textAlignment="textStart"
-            android:textStyle="bold"
-            app:scale_height="50"
-            app:scale_left="90"
-            app:scale_textsize="40"
-            app:scale_top="20"
-            app:scale_width="500" />
+            <TextView
+                android:id="@+id/contents_view_title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                app:scale_height="80"
+                app:scale_left="90"
+                app:scale_textsize="60"
+                app:scale_top="680"
+                app:scale_width="780" />
 
-        <TextView
-            android:id="@+id/contents_view_date"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textAlignment="textEnd"
-            android:textStyle="bold"
-            app:scale_height="50"
-            app:scale_left="750"
-            app:scale_textsize="40"
-            app:scale_top="20"
-            app:scale_width="240" />
+            <TextView
+                android:id="@+id/contents_view_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="sungiin0879"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                app:scale_height="50"
+                app:scale_left="90"
+                app:scale_textsize="40"
+                app:scale_top="20"
+                app:scale_width="500" />
 
-        <TextView
-            android:id="@+id/contents_view_body_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="혁신 성공 사례집은 중소기업중앙회 홈페이지, 페이스북, 블로그(행복한 중기씨)에서 확인할 수 있다. 책자는 참여기업, 정부, 국회 및 관련 관계 기관에 배포되며혁신 성공 사례집은 중소기업중앙회 홈페이지, 페이스북, 블로그(행복한 중기씨)에서 확인할 수 있다. 책자는 참여기업, 정부, 국회 및 관련 관계 기관에 배포되며"
-            android:textAlignment="textStart"
-            app:textview_wrapcontent_direction="bottom"
-            app:textview_wrapcontent_resizesurrounded="true"
-            app:textview_wrapcontent_movesiblings="true"
-            app:scale_textsize="40"
-            app:scale_left="90"
-            app:scale_top="785"
-            app:scale_width="900"
-            app:scale_height="200"/>
+            <TextView
+                android:id="@+id/contents_view_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAlignment="textEnd"
+                android:textStyle="bold"
+                app:scale_height="50"
+                app:scale_left="750"
+                app:scale_textsize="40"
+                app:scale_top="20"
+                app:scale_width="240" />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="#505050"
-            app:scale_height="1"
-            app:scale_left="0"
-            app:scale_top="1020"
-            app:scale_width="1080" />
+            <TextView
+                android:id="@+id/contents_view_body_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="혁신 성공 사례집은 중소기업중앙회 홈페이지, 페이스북, 블로그(행복한 중기씨)에서 확인할 수 있다. 책자는 참여기업, 정부, 국회 및 관련 관계 기관에 배포되며혁신 성공 사례집은 중소기업중앙회 홈페이지, 페이스북, 블로그(행복한 중기씨)에서 확인할 수 있다. 책자는 참여기업, 정부, 국회 및 관련 관계 기관에 배포되며"
+                android:textAlignment="textStart"
+                app:textview_wrapcontent_direction="bottom"
+                app:textview_wrapcontent_resizesurrounded="true"
+                app:textview_wrapcontent_movesiblings="true"
+                app:scale_textsize="40"
+                app:scale_left="90"
+                app:scale_top="785"
+                app:scale_width="900"
+                app:scale_height="200"/>
 
-        <!--TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="댓글 0"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            app:scale_height="60"
-            app:scale_left="90"
-            app:scale_textsize="50"
-            app:scale_top="1140"
-            app:scale_width="200" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#505050"
+                app:scale_height="1"
+                app:scale_left="0"
+                app:scale_top="1020"
+                app:scale_width="1080" />
 
-        <Button
-            android:id="@+id/join_membership_certified_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@null"
-            android:text="댓글쓰기"
-            android:textStyle="bold"
-            app:scale_height="80"
-            app:scale_left="770"
-            app:scale_textsize="40"
-            app:scale_top="1140"
-            app:scale_width="220" /-->
+            <!--TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="댓글 0"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                app:scale_height="60"
+                app:scale_left="90"
+                app:scale_textsize="50"
+                app:scale_top="1140"
+                app:scale_width="200" />
 
-        <EditText
-            android:id="@+id/content_view_comment_edit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/grid_row_border"
-            android:paddingLeft="10dp"
-            android:hint="댓글 쓰기"
-            android:inputType="textMultiLine"
-            android:enabled="true"
-            android:minLines="2"
-            android:maxLines="5"
-            android:isScrollContainer="true"
-            android:focusable="true"
-            android:fontFamily="@font/khnphdbold"
-            app:textview_wrapcontent_direction="bottom"
-            app:textview_wrapcontent_resizesurrounded="true"
-            app:textview_wrapcontent_movesiblings="true"
-            app:scale_textsize="30"
-            app:scale_left="60"
-            app:scale_top="1200"
-            app:scale_width="780"
-            app:scale_height="80"/>
+            <Button
+                android:id="@+id/join_membership_certified_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:text="댓글쓰기"
+                android:textStyle="bold"
+                app:scale_height="80"
+                app:scale_left="770"
+                app:scale_textsize="40"
+                app:scale_top="1140"
+                app:scale_width="220" /-->
 
-        <Button
-            android:id="@+id/content_view_comment_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_button_white"
-            android:text="등록"
-            android:textColor="#000000"
-            android:textStyle="bold"
-            app:scale_textsize="30"
-            app:scale_left="870"
-            app:scale_top="1200"
-            app:scale_width="150"
-            app:scale_height="70"/>
+            <EditText
+                android:id="@+id/content_view_comment_edit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_row_border"
+                android:paddingLeft="10dp"
+                android:hint="댓글 쓰기"
+                android:inputType="textMultiLine"
+                android:enabled="true"
+                android:minLines="2"
+                android:maxLines="5"
+                android:isScrollContainer="true"
+                android:focusable="true"
+                android:fontFamily="@font/khnphdbold"
+                app:textview_wrapcontent_direction="bottom"
+                app:textview_wrapcontent_resizesurrounded="true"
+                app:textview_wrapcontent_movesiblings="true"
+                app:scale_textsize="30"
+                app:scale_left="60"
+                app:scale_top="1200"
+                app:scale_width="780"
+                app:scale_height="80"/>
 
-        <!--ListView
-            android:id="@+id/content_view_comment_list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:scale_left="90"
-            app:scale_top="1340"
-            app:scale_width="900"
-            app:scale_height="450"
-            tools:listitem="@layout/list_item_comment" /-->
+            <Button
+                android:id="@+id/content_view_comment_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_white"
+                android:text="등록"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                app:scale_textsize="30"
+                app:scale_left="870"
+                app:scale_top="1200"
+                app:scale_width="150"
+                app:scale_height="70"/>
 
-        <Button
-            android:id="@+id/content_view_delete_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_button_red"
-            android:text="삭제"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:scale_height="60"
-            app:scale_left="825"
-            app:scale_textsize="40"
-            app:scale_top="1070"
-            app:scale_width="195" />
+            <!--ListView
+                android:id="@+id/content_view_comment_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:scale_left="90"
+                app:scale_top="1340"
+                app:scale_width="900"
+                app:scale_height="450"
+                tools:listitem="@layout/list_item_comment" /-->
 
-        <Button
-            android:id="@+id/content_view_edit_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_button"
-            android:text="수정"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:scale_height="60"
-            app:scale_left="60"
-            app:scale_textsize="40"
-            app:scale_top="1070"
-            app:scale_width="195" />
+            <Button
+                android:id="@+id/content_view_delete_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_red"
+                android:text="삭제"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:scale_height="60"
+                app:scale_left="825"
+                app:scale_textsize="40"
+                app:scale_top="1070"
+                app:scale_width="195" />
 
-        <Button
-            android:id="@+id/content_view_good_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_button"
-            android:text="좋은 예"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:scale_height="60"
-            app:scale_left="315"
-            app:scale_textsize="40"
-            app:scale_top="1070"
-            app:scale_width="195" />
+            <Button
+                android:id="@+id/content_view_edit_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:text="수정"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:scale_height="60"
+                app:scale_left="60"
+                app:scale_textsize="40"
+                app:scale_top="1070"
+                app:scale_width="195" />
 
-        <Button
-            android:id="@+id/content_view_bad_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_button_red"
-            android:text="안 좋은 예"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:scale_height="60"
-            app:scale_left="570"
-            app:scale_textsize="40"
-            app:scale_top="1070"
-            app:scale_width="195" />
-    </com.ssomai.android.scalablelayout.ScalableLayout>
+            <Button
+                android:id="@+id/content_view_good_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button"
+                android:text="좋은 예"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:scale_height="60"
+                app:scale_left="315"
+                app:scale_textsize="40"
+                app:scale_top="1070"
+                app:scale_width="195" />
+
+            <Button
+                android:id="@+id/content_view_bad_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_button_red"
+                android:text="안 좋은 예"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                app:scale_height="60"
+                app:scale_left="570"
+                app:scale_textsize="40"
+                app:scale_top="1070"
+                app:scale_width="195" />
+        </com.ssomai.android.scalablelayout.ScalableLayout>
     </LinearLayout>
 </ScrollView>
