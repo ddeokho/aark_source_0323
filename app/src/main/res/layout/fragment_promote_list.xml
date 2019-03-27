@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:scale_base_width="1080"
-        app:scale_base_height="1400">
+        app:scale_base_height="1530">
 
         <android.support.design.widget.TabLayout
             android:id="@+id/fragment_promote_list_tabs"
@@ -28,12 +28,11 @@
             android:id="@+id/promote_list_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            app:scale_height="1410"
             app:scale_left="0"
             app:scale_top="120"
             app:scale_width="1080"
-            app:scale_height="1280"
-            tools:listitem="@layout/list_item_promote">
-        </ListView>
+            tools:listitem="@layout/list_item_promote"></ListView>
 
         <Button
             android:id="@+id/fragment_promote_Add_btn"

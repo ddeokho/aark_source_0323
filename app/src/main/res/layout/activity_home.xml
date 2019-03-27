@@ -56,7 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/ic_search3"
-                    app:scale_left="910"
+                    app:scale_left="940"
                     app:scale_top="40"
                     app:scale_width="100"
                     app:scale_height="100"/>
@@ -68,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="1113dp"
             android:layout_gravity="center"
-            app:scale_base_height="1400"
+            app:scale_base_height="1530"
             app:scale_base_width="1080"></com.ssomai.android.scalablelayout.ScalableLayout>
 
         <com.ssomai.android.scalablelayout.ScalableLayout

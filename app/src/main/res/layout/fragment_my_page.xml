@@ -9,93 +9,92 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:scale_base_height="1400"
+        app:scale_base_height="1530"
         app:scale_base_width="1080">
 
         <TextView
             android:id="@+id/my_page_id_text"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
             android:text="로그인 해주세요."
             android:textStyle="bold"
-            android:fontFamily="@font/khnphdbold"
-            app:scale_textsize = "42"
+            app:scale_height="70"
             app:scale_left="30"
+            app:scale_textsize="42"
             app:scale_top="20"
-            app:scale_width="760"
-            app:scale_height="70"/>
+            app:scale_width="760" />
 
         <Button
             android:id="@+id/my_page_setup_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#3497da"
-            android:text="설정"
-            android:textStyle="bold"
-            android:textColor="#FFF"
             android:fontFamily="@font/khnphdbold"
-            app:scale_textsize = "30"
+            android:text="설정"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            app:scale_height="70"
             app:scale_left="890"
+            app:scale_textsize="30"
             app:scale_top="20"
-            app:scale_width="160"
-            app:scale_height="70"/>
+            app:scale_width="160" />
 
         <TextView
             android:id="@+id/my_page_write_count"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
             android:text="작성글 수 : 0"
             android:textStyle="bold"
-            android:fontFamily="@font/khnphdbold"
-            app:scale_textsize = "40"
+            app:scale_height="70"
             app:scale_left="30"
+            app:scale_textsize="40"
             app:scale_top="120"
-            app:scale_width="300"
-            app:scale_height="70"/>
+            app:scale_width="300" />
 
         <TextView
             android:id="@+id/my_page_comment_count"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
             android:text="댓글 수 : 0"
             android:textStyle="bold"
-            android:fontFamily="@font/khnphdbold"
-            app:scale_textsize = "40"
+            app:scale_height="70"
             app:scale_left="330"
+            app:scale_textsize="40"
             app:scale_top="120"
-            app:scale_width="300"
-            app:scale_height="70"/>
+            app:scale_width="300" />
 
         <Button
             android:id="@+id/my_page_grade_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#3497da"
-            android:text="관리자"
-            android:textStyle="bold"
-            android:textColor="#FFF"
             android:fontFamily="@font/khnphdbold"
-            app:scale_textsize = "30"
+            android:text="관리자"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            app:scale_height="70"
             app:scale_left="890"
+            app:scale_textsize="30"
             app:scale_top="110"
-            app:scale_width="160"
-            app:scale_height="70"/>
+            app:scale_width="160" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#505050"
+            app:scale_height="1"
             app:scale_left="0"
             app:scale_top="210"
-            app:scale_width="1080"
-            app:scale_height="1"
-            />
+            app:scale_width="1080" />
 
         <ListView
             android:id="@+id/my_page_list_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:scale_height="1170"
+            app:scale_height="1300"
             app:scale_left="0"
             app:scale_top="230"
             app:scale_width="1080"

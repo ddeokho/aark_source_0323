@@ -30,7 +30,7 @@
             android:layout_height="match_parent"
             app:scale_left="0"
             app:scale_top="120"
-            app:scale_height="1280"
+            app:scale_height="1410"
             app:scale_width="1080"/>
 
         <Button
