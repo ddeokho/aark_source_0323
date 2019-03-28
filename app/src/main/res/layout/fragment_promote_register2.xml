@@ -11,14 +11,14 @@
         android:layout_height="wrap_content"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:scale_base_width="1080"
-        app:scale_base_height="1400"
+        app:scale_base_height="1530"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
         <ListView
             android:id="@+id/promote_register_sub_list_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:scale_height="1240"
+            app:scale_height="1370"
             app:scale_left="0"
             app:scale_top="0"
             app:scale_width="1080"
@@ -35,7 +35,7 @@
             android:textColor="#FFF"
             app:scale_textsize = "40"
             app:scale_left="40"
-            app:scale_top="1270"
+            app:scale_top="1400"
             app:scale_width="1000"
             app:scale_height="100"/>
 
