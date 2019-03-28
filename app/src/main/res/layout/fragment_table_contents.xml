@@ -99,7 +99,7 @@
         android:layout_height="wrap_content"
         app:scale_left="0"
         app:scale_top="310"
-        app:scale_base_height="1090"
+        app:scale_base_height="1220"
         app:scale_base_width="1080"
         >
     </com.ssomai.android.scalablelayout.ScalableLayout>
