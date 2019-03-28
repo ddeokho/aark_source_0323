@@ -146,7 +146,7 @@ public class PromoteRegisterFragment extends Fragment
 
         if( name.length() == 0 )
         {
-            HomeActivity.inst().ShowAlertDialog( "업체명을 입력 해주세요." );
+            HomeActivity.inst().ShowAlertDialog( "동아리 / 업체명을 입력해주세요." );
             return;
         }
 
