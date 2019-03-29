@@ -209,6 +209,37 @@ public class PromoteContentsFragment extends Fragment
                     address = address.replace("@", " ");
                     textView.setText(address);
 
+                    /*주소를 오래 클릭했을 때 복사처리 되는 문 수정*/
+                    textView.setLongClickable(true);
+                    textView.setOnLongClickListener(new View.OnLongClickListener(){
+                        @Override
+                        public boolean onLongClick(View v){
+                          TextView tv = (TextView) v;
+                          final  String m = tv.getText().toString();
+                          if(m.length() ==0)
+                              return false;
+
+                          AlertDialog.Builder dial = new AlertDialog.Builder(getContext());
+                          dial.setTitle("주소");
+
+                          final CharSequence[] items = {"복사"};
+
+                          dial.setItems(items, new DialogInterface.OnClickListener() {
+                              @Override
+                              public void onClick(DialogInterface dialog, int which) {
+                                  ClipboardManager clip = (ClipboardManager)getContext().getSystemService(Context.CLIPBOARD_SERVICE);
+                                  clip.setPrimaryClip(ClipData.newPlainText("text",m));
+                                  dialog.dismiss();
+                              }
+                          });
+                            dial.show();
+                            return false;
+                        }
+
+                    });
+
+
+                    //이메일, 전화번호 복사
                     TextView phoneTextView = (TextView) subView.findViewById(R.id.promote_address_phone);
                     phoneTextView.setText(promotionData.getPhone());
                     phoneTextView.setLongClickable(true);
