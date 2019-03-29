@@ -235,9 +235,7 @@ public class PromoteContentsFragment extends Fragment
                             dial.show();
                             return false;
                         }
-
                     });
-
 
                     //이메일, 전화번호 복사
                     TextView phoneTextView = (TextView) subView.findViewById(R.id.promote_address_phone);
