@@ -30,7 +30,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="푸쉬 알림 해제"
+            android:text="푸쉬 알림 on/off"
             android:textStyle="bold"
             app:scale_textsize = "34"
             app:scale_left="50"
