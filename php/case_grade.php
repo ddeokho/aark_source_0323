@@ -33,7 +33,7 @@
             echo json_encode( array('packet_id' => $data->packet_id, 'result' => 'false' ) );
 
         $title = "AARK 사례집";
-        $message = "AARK 사례집에 판별이 난 사례가 있어요!";
+        $message = "올린 사례가 판별되었어요!";
         $channel_id = "notice";
         $arr = array( 'title' => $title, 'message' => $message, 'channel_id' => $channel_id );
         //$arr['title'] = $title;
