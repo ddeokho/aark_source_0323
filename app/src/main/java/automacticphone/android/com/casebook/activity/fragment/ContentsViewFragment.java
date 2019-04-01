@@ -271,7 +271,7 @@ public class ContentsViewFragment extends Fragment
                     {
                         if( jsonObj.get("result").equals("true") )
                         {
-                           DataManager.inst().ParsingWriteList( jsonObj );
+                            DataManager.inst().ParsingWriteList( jsonObj );
                         }
                     }
                     else if(jsonObj.get("packet_id").equals("write_comment_count"))
@@ -585,6 +585,7 @@ public class ContentsViewFragment extends Fragment
             jsonObj.put("packet_id", "case_grade");
             jsonObj.put("token", HomeActivity.inst().getToken() );
             jsonObj.put("seq", caseData.getSeq() );
+            jsonObj.put("member_seq", caseData.getMember_seq() );
             jsonObj.put("grade", Define.GOOD_CASE );
 
             ContentValues values = new ContentValues();
@@ -610,6 +611,7 @@ public class ContentsViewFragment extends Fragment
             jsonObj.put("packet_id", "case_grade");
             jsonObj.put("token", HomeActivity.inst().getToken() );
             jsonObj.put("seq", caseData.getSeq() );
+            jsonObj.put("member_seq", caseData.getMember_seq() );
             jsonObj.put("grade", Define.BAD_CASE );
 
             ContentValues values = new ContentValues();
