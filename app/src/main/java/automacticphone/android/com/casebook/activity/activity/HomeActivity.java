@@ -174,7 +174,7 @@ public class HomeActivity extends AppCompatActivity
         pushAlarm = sf.getBoolean("push", true );
     }
 
-   public void SetFcmPush( boolean bAlarm )
+    public void SetFcmPush( boolean bAlarm )
     {
         if( bAlarm )
         {
@@ -461,12 +461,11 @@ public class HomeActivity extends AppCompatActivity
                     }
                     else if(jsonObj.get("packet_id").equals("promotion_data"))
                     {
-                        if( jsonObj.get("result").equals("true") )
-                        {
+                        ChangeFragment(new PromoteListFragment(), "PromoteListFragment");
+                        if( jsonObj.get("result").equals("true") ) {
                             DataManager.inst().ClearPromotionDataList();
-                            if( DataManager.inst().ParsingPromotionData( jsonObj ) )
-                            {
-                                ChangeFragment(new PromoteListFragment(), "PromoteListFragment");
+                            if (DataManager.inst().ParsingPromotionData(jsonObj)) {
+                                //ChangeFragment(new PromoteListFragment(), "PromoteListFragment");
                             }
                         }
                     }
@@ -548,11 +547,11 @@ public class HomeActivity extends AppCompatActivity
         {
             switch (view.getId()) {
                 case R.id.home_menu_btn:
-                    {
-                        SetDrawerUserInfo();
-                        drawerLayout.openDrawer(Gravity.LEFT);
-                    }
-                    break;
+                {
+                    SetDrawerUserInfo();
+                    drawerLayout.openDrawer(Gravity.LEFT);
+                }
+                break;
                 case R.id.home_btn:
                     OnHomeBtnClick();
                     break;
@@ -1192,19 +1191,19 @@ public class HomeActivity extends AppCompatActivity
         {
             case "AdminPageFragment":       { ChangeFragment( new AdminPageFragment(), "AdminPageFragment"); }  break;
             case "BoardFragment":
+            {
+                BoardFragment boardFragment = new BoardFragment();
+                if( searchText.length() > 0 )
+                    boardFragment.setSearchText( searchText );
+
+                if( param.length() > 0 )
                 {
-                    BoardFragment boardFragment = new BoardFragment();
-                    if( searchText.length() > 0 )
-                        boardFragment.setSearchText( searchText );
-
-                    if( param.length() > 0 )
-                    {
-                        BoardFragment.selectTab = Integer.valueOf( param );
-                    }
-
-                    ChangeFragment( boardFragment, "BoardFragment");
+                    BoardFragment.selectTab = Integer.valueOf( param );
                 }
-                break;
+
+                ChangeFragment( boardFragment, "BoardFragment");
+            }
+            break;
             case "ContentsViewFragment":    { ChangeFragment( new ContentsViewFragment(), "ContentsViewFragment"); }  break;
             case "JoinMembershipFragment":  { ChangeFragment( new JoinMembershipFragment(), "JoinMembershipFragment"); }  break;
             case "LoginFragment":           { ChangeFragment( new LoginFragment(), "LoginFragment"); }  break;
@@ -1223,11 +1222,11 @@ public class HomeActivity extends AppCompatActivity
             break;
             case "PromoteFragment":         { ChangeFragment( new PromoteFragment(), "PromoteFragment"); }  break;
             case "PromoteListFragment":
-                {
-                    PromoteListFragment fragment = PromoteListFragment.newInstance( String.valueOf( PromoteListFragment.selectTab ) );
-                    ChangeFragment( fragment, "PromoteListFragment");
-                }
-                break;
+            {
+                PromoteListFragment fragment = PromoteListFragment.newInstance( String.valueOf( PromoteListFragment.selectTab ) );
+                ChangeFragment( fragment, "PromoteListFragment");
+            }
+            break;
             case "PromoteRegisterFragment":
             {
                 PromoteRegisterFragment fragment = new PromoteRegisterFragment();
@@ -1242,10 +1241,10 @@ public class HomeActivity extends AppCompatActivity
             }
             break;
             case "PromoteRegisterFragment2":
-                {
-                    ChangeFragment( new PromoteListFragment(), "PromoteListFragment");
-                }
-                break;
+            {
+                ChangeFragment( new PromoteListFragment(), "PromoteListFragment");
+            }
+            break;
             case "QuestionsFragment":       { ChangeFragment( new QuestionsFragment(), "QuestionsFragment"); }  break;
             case "TableContentsFragment":   { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }  break;
             case "UploadContentsFragment":   { ChangeFragment( new UploadContentsFragment(), "UploadContentsFragment"); }  break;
