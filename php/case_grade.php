@@ -1,31 +1,37 @@
-<?php       
-    require('function.php'); 
-    include_once('config.php');  
+<?php
+    require('function.php');
+    include_once('config.php');
 
     $param = $_POST['param'];
     //$out_put = json_encode( $param, JSON_UNESCAPED_UNICODE );
-    $data = json_decode($param);    
-        
-    $conn = connect_db(); 
+    $data = json_decode($param);
+
+    $conn = connect_db();
 
         $query = "update case_text set grade='$data->grade' where seq='$data->seq'";
         $tokens = array();
         if( $result = mysqli_query($conn, $query) )
-        {        
+        {
             echo json_encode( array('packet_id' => $data->packet_id, 'result' => 'true', "seq" => $data->seq, "grade" => $data->grade ) );
-            $query = "select token from fcm_token";
+            $query = "select * from member where seq = '".$data->member_seq."'";
             $result = mysqli_query($conn,$query);
-            if(mysqli_num_rows($result) > 0 ){
+            if( mysqli_num_rows($result) > 0 )
+            {
+                $row = mysqli_fetch_assoc($result);
+                $query = "select token from fcm_token where email = '".$row['email']."'";
+                $result = mysqli_query($conn,$query);
+                if(mysqli_num_rows($result) > 0 ){
 
-                while ($row = mysqli_fetch_assoc($result)) 
-                {               
-                    $tokens[] = $row["token"];
+                    while ($row = mysqli_fetch_assoc($result))
+                    {
+                        $tokens[] = $row["token"];
+                    }
                 }
             }
         }
         else
             echo json_encode( array('packet_id' => $data->packet_id, 'result' => 'false' ) );
-            
+
         $title = "AARK 사례집";
         $message = "AARK 사례집에 판별이 난 사례가 있어요!";
         $channel_id = "notice";
