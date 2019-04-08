@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="automacticphone.android.com.casebook">
+    package="automacticphone.android.com.casebook"
+    android:versionCode="3"
+    android:versionName="1.0.2"
+    >
 
     <!-- 네트워크 사용에 대한 퍼미션 -->
     <uses-permission android:name="android.permission.INTERNET" />
@@ -9,7 +12,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!--uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /-->
-    <uses-feature android:name="android.hardware.camera2"/>
+    <uses-feature android:name="android.hardware.camera2" /> <!-- android:required="false" -->
 
     <application
         android:name=".CaseBookApplication"

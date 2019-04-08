@@ -73,7 +73,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="scalingPercent" value="66" />
+                                                <entry key="scalingPercent" value="71" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -85,7 +85,7 @@
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
                                       <entry key="backgroundColor" value="ffffff" />
-                                      <entry key="foregroundImage" value="C:\Users\kdh\Desktop\casebook\des\icons\icon.jpg" />
+                                      <entry key="foregroundImage" value="C:\Users\kdh\Desktop\casebook\des\upload\icon.jpg" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -151,11 +151,6 @@
                                 </PersistentState>
                               </value>
                             </entry>
-                          </map>
-                        </option>
-                        <option name="values">
-                          <map>
-                            <entry key="outputIconType" value="LAUNCHER_LEGACY" />
                           </map>
                         </option>
                       </PersistentState>
