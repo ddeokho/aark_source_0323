@@ -578,6 +578,11 @@ public class HomeActivity extends AppCompatActivity
                     break;
                 case R.id.plan_case_btn:
                     break;
+
+                case R.id.youtube_btn:
+                    OnYoutubeBtnClick();
+                    break;
+
                 case R.id.Inquiry_btn:
                     OnInquiryBtnClick();
                     break;
@@ -648,6 +653,9 @@ public class HomeActivity extends AppCompatActivity
 
         btn = (Button)findViewById(R.id.plan_case_btn);
         btn.setOnClickListener( onClickListener );
+
+        btn = (Button)findViewById(R.id.youtube_btn);
+        btn.setOnClickListener( onClickListener);
 
         btn = (Button)findViewById(R.id.Inquiry_btn);
         btn.setOnClickListener( onClickListener );
@@ -931,6 +939,15 @@ public class HomeActivity extends AppCompatActivity
         drawerLayout.closeDrawers();
         ChangeFragment(new JoinMembershipFragment(), "JoinMembershipFragment");
     }
+
+    //유투브
+    void OnYoutubeBtnClick()
+    {
+        drawerLayout.closeDrawers();
+        Intent i=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCbDMBZg-GwskhUNX5by5E3w/featured"));
+        startActivity(i);
+    }
+
 
     void OnInquiryBtnClick()
     {

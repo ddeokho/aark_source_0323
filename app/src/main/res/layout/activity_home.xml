@@ -375,13 +375,13 @@
                 android:layout_height="wrap_content"
                 android:background="#505050"
                 app:scale_left="50"
-                app:scale_top="1200"
+                app:scale_top="1180"
                 app:scale_width="900"
                 app:scale_height="2"
                 />
 
             <Button
-            android:id="@+id/plan_case_btn"
+                android:id="@+id/plan_case_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#8C8C8C"
@@ -393,9 +393,26 @@
             android:paddingLeft="10dp"
             app:scale_textsize = "50"
             app:scale_left="50"
-            app:scale_top="1250"
+            app:scale_top="1210"
             app:scale_width="900"
             app:scale_height="120"/>
+
+            <Button
+                android:id="@+id/youtube_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#8C8C8C"
+                android:text="@string/youtube_text"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/khnphdbold"
+                android:paddingLeft="10dp"
+                app:scale_textsize = "50"
+                app:scale_left="50"
+                app:scale_top="1350"
+                app:scale_width="900"
+                app:scale_height="120"/>
 
             <ImageView
                 android:layout_width="wrap_content"
