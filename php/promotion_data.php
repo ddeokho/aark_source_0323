@@ -7,8 +7,16 @@
     
     $start = $data->start;
     $size = $data->size;   
-    $query = "select * from promotion where show_state=0 and type='$data->type' LIMIT $start, $size";
+    
+    if($data->type == 1){
+        $query = "select * from promotion where show_state=0 and type='$data->type' LIMIT $start, $size";//동아리홍보
+    }
+    else{
+        $query = "select * from promotion where show_state=0 and type='$data->type' order by TIMESTAMP desc LIMIT $start, $size";//order by TIMESTAMP desc 추가 업체홍보 변경
+    }
+    
 
+      
     if( $result = mysqli_query($conn, $query) )
     {  
         $count = mysqli_num_rows($result);

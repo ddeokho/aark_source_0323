@@ -129,15 +129,30 @@
             app:scale_height="100"/>
 
         <Button
-            android:id="@+id/promote_address_hide_btn"
+        android:id="@+id/promote_address_hide_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ff0000"
+        android:text="숨김"
+        android:textStyle="bold"
+        android:textColor="#FFF"
+        app:scale_textsize = "40"
+        app:scale_left="590"
+        app:scale_top="1020"
+        app:scale_width="160"
+        app:scale_height="100"/>
+
+        <!--위로 버튼 추가 -->
+        <Button
+            android:id="@+id/promote_time_update_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#ff0000"
-            android:text="숨김"
+            android:background="#000000"
+            android:text="위로"
             android:textStyle="bold"
             android:textColor="#FFF"
             app:scale_textsize = "40"
-            app:scale_left="590"
+            app:scale_left="850"
             app:scale_top="1020"
             app:scale_width="160"
             app:scale_height="100"/>

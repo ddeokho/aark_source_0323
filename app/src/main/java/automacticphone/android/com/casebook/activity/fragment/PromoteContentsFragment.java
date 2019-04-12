@@ -101,6 +101,12 @@ public class PromoteContentsFragment extends Fragment
                     HidePromotion();
                 }
                 break;
+                //위로 업로드 하는 버튼
+                case R.id.promote_time_update_btn:
+                    {
+                        timeUpPromotion();
+                }
+                break;
             }
         }
     }
@@ -188,19 +194,29 @@ public class PromoteContentsFragment extends Fragment
 
                 Button hideBtn = (Button) subView.findViewById(R.id.promote_address_hide_btn);
                 hideBtn.setOnClickListener(onClickListener);
+
+                //시간 업데이트 버튼, 안보이게 처리
+                Button timeupBtn = (Button) subView.findViewById(R.id.promote_time_update_btn);
+                timeupBtn.setOnClickListener(onClickListener);
+
                 UserData userData = DataManager.inst().getUserData();
                 PromotionData promotionData = subData.getPromotionData();
                 if (userData != null) {
                     if (userData.getGrade() == Define.GRADE_ADMIN || userData.getSeq() == promotionData.getMemberSeq()) {
                         editBtn.setVisibility(View.VISIBLE);
                         hideBtn.setVisibility(View.VISIBLE);
+                        timeupBtn.setVisibility(View.VISIBLE);
+
                     } else {
                         editBtn.setVisibility(View.INVISIBLE);
                         hideBtn.setVisibility(View.INVISIBLE);
+                        timeupBtn.setVisibility(View.INVISIBLE);
+
                     }
                 } else {
                     editBtn.setVisibility(View.INVISIBLE);
                     hideBtn.setVisibility(View.INVISIBLE);
+                    timeupBtn.setVisibility(View.INVISIBLE);
                 }
 
                 if (promotionData != null) {
@@ -342,6 +358,19 @@ public class PromoteContentsFragment extends Fragment
                             HomeActivity.inst().ChangeFragment( new PromoteListFragment(), "PromoteListFragment");
                         }
                     }
+
+                    //시간 변화 팝업창 추가 후 리스트로 돌아가기
+                    else if(jsonObj.get("packet_id").equals("time_up_promotion"))
+                    {
+                        if( jsonObj.get("result").equals("true") )
+                        {
+                            HomeActivity.inst().ShowAlertDialog( "최상단으로 올라갑니다." );
+                            PromotionData promotionData = DataManager.inst().getSelectPromotionData();
+                            DataManager.inst().DeletePromotionData( promotionData.getSeq() );
+                            HomeActivity.inst().ChangeFragment( new PromoteListFragment(), "PromoteListFragment");
+                        }
+                    }
+
                 }
                 catch(JSONException e)
                 {
@@ -407,4 +436,29 @@ public class PromoteContentsFragment extends Fragment
             e.printStackTrace();
         }
     }
+
+    //업체 홍보 시간 업데이트 php 연결
+    void timeUpPromotion()
+    {
+        JSONObject jsonObj = new JSONObject();
+        try
+        {
+            PromotionData promotionData = DataManager.inst().getSelectPromotionData();
+            jsonObj.put("packet_id", "time_up_promotion");
+            jsonObj.put("seq", promotionData.getSeq() );
+            ContentValues values = new ContentValues();
+            values.put("param", jsonObj.toString() );
+
+            String url = RequestHttpURLConnection.serverIp + "/time_update_promotion.php";
+            HttpConnectTask httpConnectTask = new HttpConnectTask(url, values, getContext());
+            httpConnectTask.SetCallBack(mCallBack);
+            httpConnectTask.execute();
+
+        }
+        catch (JSONException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
 }

@@ -6,8 +6,16 @@
     $conn = connect_db();
     
     $start = $data->start;
-    $size = $data->size;   
-    $query = "select * from promotion where (title like '%$data->search_text%' or name like '%$data->search_text%') and type = '$data->type' order by TIMESTAMP desc LIMIT $start, $size";
+    $size = $data->size;
+    
+    if($data->type == 1){
+        $query = "select * from promotion where (title like '%$data->search_text%' or name like '%$data->search_text%') and type = '$data->type' LIMIT $start, $size";//동아리
+    }
+    else{
+        $query = "select * from promotion where (title like '%$data->search_text%' or name like '%$data->search_text%') and type = '$data->type' order by TIMESTAMP desc LIMIT $start, $size";//업체
+    }
+  
+    
     if( $result = mysqli_query($conn, $query) )
     {  
         $count = mysqli_num_rows($result);
