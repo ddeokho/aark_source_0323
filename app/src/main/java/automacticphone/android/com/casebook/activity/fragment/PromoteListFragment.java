@@ -270,6 +270,8 @@ public class PromoteListFragment extends Fragment
         return view;
     }
 
+
+
     private void SelectTab( int idx )
     {
         if( mTabLayout == null )
