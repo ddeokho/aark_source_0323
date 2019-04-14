@@ -31,6 +31,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
 import android.widget.TextView;
@@ -579,6 +580,10 @@ public class HomeActivity extends AppCompatActivity
                 case R.id.plan_case_btn:
                     break;
 
+                case R.id.regu_btn:
+                    ReguPopupBtnClick();
+                    break;
+
                 case R.id.youtube_btn:
                     OnYoutubeBtnClick();
                     break;
@@ -653,6 +658,9 @@ public class HomeActivity extends AppCompatActivity
 
         btn = (Button)findViewById(R.id.plan_case_btn);
         btn.setOnClickListener( onClickListener );
+
+        btn = (Button)findViewById(R.id.regu_btn);
+        btn.setOnClickListener( onClickListener);
 
         btn = (Button)findViewById(R.id.youtube_btn);
         btn.setOnClickListener( onClickListener);
@@ -946,6 +954,61 @@ public class HomeActivity extends AppCompatActivity
         drawerLayout.closeDrawers();
         Intent i=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCbDMBZg-GwskhUNX5by5E3w/featured"));
         startActivity(i);
+    }
+
+    //규정집 팝업 이동
+    void ReguPopupBtnClick()
+    {
+        View popupView = getLayoutInflater().inflate(R.layout.select_regu_popup, null);
+        mPopupWindow = new PopupWindow(popupView, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        //popupView 에서 (LinearLayout 을 사용) 레이아웃이 둘러싸고 있는
+        //        mPopupWindow.setFocusable(true); 컨텐츠의 크기 만큼 팝업 크기를 지정
+
+        // 외부 영역 선택히 PopUp 종료
+
+        mPopupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+
+        Button KsaeFormulaBtn = (Button) popupView.findViewById(R.id.select_ksae_formula_btn);
+        KsaeFormulaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("http://aarkapp.iptime.org/reg_file/KSAE_Formula.pdf"));
+                startActivity(i);
+
+            }
+        });
+
+        Button KsaeBajaBtn = (Button) popupView.findViewById(R.id.select_ksae_baja_btn);
+        KsaeBajaBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("http://aarkapp.iptime.org/reg_file/KSAE_BAJA.pdf"));
+                startActivity(i);
+
+            }
+        });
+
+        Button KsaeEvBtn = (Button) popupView.findViewById(R.id.select_ksae_ev_btn);
+        KsaeEvBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("http://aarkapp.iptime.org/reg_file/KSAE_EV.pdf"));
+                startActivity(i);
+            }
+        });
+
+
+        Button cancelBtn = (Button) popupView.findViewById(R.id.select_regu_cancel_btn);
+        cancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPopupWindow.dismiss();
+            }
+        });
     }
 
 

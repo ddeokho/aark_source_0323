@@ -375,10 +375,27 @@
                 android:layout_height="wrap_content"
                 android:background="#505050"
                 app:scale_left="50"
-                app:scale_top="1180"
+                app:scale_top="1040"
                 app:scale_width="900"
                 app:scale_height="2"
                 />
+
+            <Button
+                android:id="@+id/regu_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#8C8C8C"
+                android:text="@string/regu_text"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/khnphdbold"
+                android:paddingLeft="10dp"
+                app:scale_textsize = "50"
+                app:scale_left="50"
+                app:scale_top="1070"
+                app:scale_width="900"
+                app:scale_height="120"/>
 
             <Button
                 android:id="@+id/plan_case_btn"
