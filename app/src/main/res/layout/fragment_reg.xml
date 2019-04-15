@@ -12,11 +12,12 @@
         app:scale_base_height="1540"
         app:scale_base_width="1080">
 
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/khnphdbold"
-            android:text="KSAE 대회 : 8/16(금)~18(일)"
+            android:text="영남대 Baja 대회 : 7/17(수)~20(토)"
             android:textAlignment="viewStart"
             android:textStyle="bold"
             app:scale_height="80"
@@ -29,13 +30,68 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/khnphdbold"
+            android:text="1. 참가팀 접수 마감 : 5/31~6/14"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="35"
+            app:scale_top="120"
+            app:scale_width="1000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="2. 논문 및 안전보고서 마감일 : 7/5"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="35"
+            app:scale_top="180"
+            app:scale_width="1000" />
+
+
+        <Button
+            android:id="@+id/select_sae_baja_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:text="Baja 규정"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:scale_textsize="40"
+            app:scale_top="260"
+            app:scale_left="50"
+            app:scale_width="300"
+            app:scale_height="80"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="KSAE 대회 : 8/16(금)~18(일)"
+            android:textAlignment="viewStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="45"
+            app:scale_top="400"
+            app:scale_width="1000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
             android:text="1. 참가팀 접수 마감 : 4/1~4/30"
             android:textAlignment="textStart"
             android:textStyle="bold"
             app:scale_height="80"
             app:scale_left="35"
             app:scale_textsize="40"
-            app:scale_top="120"
+            app:scale_top="480"
             app:scale_width="1000" />
 
         <TextView
@@ -48,7 +104,7 @@
             app:scale_height="80"
             app:scale_left="40"
             app:scale_textsize="35"
-            app:scale_top="180"
+            app:scale_top="540"
             app:scale_width="1000" />
 
         <TextView
@@ -61,7 +117,7 @@
             app:scale_height="80"
             app:scale_left="40"
             app:scale_textsize="35"
-            app:scale_top="240"
+            app:scale_top="600"
             app:scale_width="1000" />
 
         <TextView
@@ -74,7 +130,7 @@
             app:scale_height="80"
             app:scale_left="35"
             app:scale_textsize="40"
-            app:scale_top="300"
+            app:scale_top="660"
             app:scale_width="1000" />
 
 
@@ -89,7 +145,7 @@
             app:scale_height="80"
             app:scale_left="50"
             app:scale_textsize="40"
-            app:scale_top="380"
+            app:scale_top="740"
             app:scale_width="300" />
 
         <Button
@@ -103,7 +159,7 @@
             app:scale_height="80"
             app:scale_left="390"
             app:scale_textsize="40"
-            app:scale_top="380"
+            app:scale_top="740"
             app:scale_width="300" />
 
 
@@ -118,63 +174,8 @@
             app:scale_height="80"
             app:scale_left="730"
             app:scale_textsize="40"
-            app:scale_top="380"
+            app:scale_top="740"
             app:scale_width="300" />
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="@font/khnphdbold"
-            android:text="영남대 Baja 대회 : 7/17(수)~20(토)"
-            android:textAlignment="viewStart"
-            android:textStyle="bold"
-            app:scale_height="80"
-            app:scale_left="40"
-            app:scale_textsize="45"
-            app:scale_top="530"
-            app:scale_width="1000" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="@font/khnphdbold"
-            android:text="1. 참가팀 접수 마감 : 5/31~6/14"
-            android:textAlignment="textStart"
-            android:textStyle="bold"
-            app:scale_height="80"
-            app:scale_left="40"
-            app:scale_textsize="35"
-            app:scale_top="610"
-            app:scale_width="1000" />
-
-        <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fontFamily="@font/khnphdbold"
-        android:text="2. 논문 및 안전보고서 마감일 : 7/5"
-        android:textAlignment="textStart"
-        android:textStyle="bold"
-        app:scale_height="80"
-        app:scale_left="40"
-        app:scale_textsize="35"
-        app:scale_top="670"
-        app:scale_width="1000" />
-
-
-        <Button
-            android:id="@+id/select_sae_baja_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round_button"
-            android:text="Baja 규정"
-            android:textColor="#FFFFFF"
-            android:textStyle="bold"
-            app:scale_textsize="40"
-            app:scale_top="750"
-            app:scale_left="50"
-            app:scale_width="300"
-            app:scale_height="80"/>
 
 
         <TextView
