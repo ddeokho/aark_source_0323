@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:scale_base_width="1080"
-        app:scale_base_height="600"
+        app:scale_base_height="740"
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:background="@drawable/background_outline">
 
@@ -57,6 +57,20 @@
         app:scale_height="100"/>
 
         <Button
+            android:id="@+id/select_sae_baja_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:text="영남대 Baja"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:scale_textsize="40"
+            app:scale_top="460"
+            app:scale_left="90"
+            app:scale_width="900"
+            app:scale_height="100"/>
+
+        <Button
             android:id="@+id/select_regu_cancel_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -65,7 +79,7 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:scale_textsize="40"
-            app:scale_top="460"
+            app:scale_top="600"
             app:scale_left="90"
             app:scale_width="900"
             app:scale_height="100"/>

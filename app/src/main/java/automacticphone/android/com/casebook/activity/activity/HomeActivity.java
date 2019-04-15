@@ -70,6 +70,7 @@ import automacticphone.android.com.casebook.activity.fragment.PromoteRegisterFra
 import automacticphone.android.com.casebook.activity.fragment.QuestionsFragment;
 import automacticphone.android.com.casebook.activity.fragment.TableContentsFragment;
 import automacticphone.android.com.casebook.activity.fragment.UploadContentsFragment;
+import automacticphone.android.com.casebook.activity.fragment.reguViewFragment;
 import automacticphone.android.com.casebook.activity.network.HttpConnectTask;
 import automacticphone.android.com.casebook.activity.network.HttpTaskCallBack;
 import automacticphone.android.com.casebook.activity.network.NetworkManager;
@@ -959,7 +960,11 @@ public class HomeActivity extends AppCompatActivity
     //규정집 팝업 이동
     void ReguPopupBtnClick()
     {
-        View popupView = getLayoutInflater().inflate(R.layout.select_regu_popup, null);
+        drawerLayout.closeDrawers();
+        ChangeFragment(new reguViewFragment(), "reguViewFragment");
+
+
+        /*        View popupView = getLayoutInflater().inflate(R.layout.select_regu_popup, null);
         mPopupWindow = new PopupWindow(popupView, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         //popupView 에서 (LinearLayout 을 사용) 레이아웃이 둘러싸고 있는
         //        mPopupWindow.setFocusable(true); 컨텐츠의 크기 만큼 팝업 크기를 지정
@@ -1001,6 +1006,16 @@ public class HomeActivity extends AppCompatActivity
             }
         });
 
+        Button SaeBajaBtn = (Button) popupView.findViewById(R.id.select_sae_baja_btn);
+        SaeBajaBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setData(Uri.parse("http://aarkapp.iptime.org/reg_file/SAE_BAJA.pdf"));
+                startActivity(i);
+            }
+        });
+
 
         Button cancelBtn = (Button) popupView.findViewById(R.id.select_regu_cancel_btn);
         cancelBtn.setOnClickListener(new View.OnClickListener() {
@@ -1008,7 +1023,7 @@ public class HomeActivity extends AppCompatActivity
             public void onClick(View v) {
                 mPopupWindow.dismiss();
             }
-        });
+        });*/
     }
 
 

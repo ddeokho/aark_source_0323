@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.fragment.TableContentsFragment">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:scale_base_height="1540"
+        app:scale_base_width="1080">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="KSAE 대회"
+            android:textAlignment="viewStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="50"
+            app:scale_top="40"
+            app:scale_width="1000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="1. 참가팀 접수 마감 : 4/1~4/30"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="40"
+            app:scale_top="120"
+            app:scale_width="1000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="2. 1차 드라이버 안전교육 : 6월말 or 7월초, 미정"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="40"
+            app:scale_top="180"
+            app:scale_width="1000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="3. 참가팀 변경 및 소개자료, 보고서 제출 마감 : 7/14"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="40"
+            app:scale_top="240"
+            app:scale_width="1000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="4. 2차 드라이버 안전교육 : 8/15, 새만금군산경주장"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="40"
+            app:scale_top="300"
+            app:scale_width="1000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="5. 대회일정 : 8/16(금)~18(일)"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="40"
+            app:scale_top="360"
+            app:scale_width="1000" />
+
+        <Button
+            android:id="@+id/select_ksae_formula_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:text="Formula 규정"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="50"
+            app:scale_textsize="40"
+            app:scale_top="440"
+            app:scale_width="300" />
+
+        <Button
+            android:id="@+id/select_ksae_baja_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:text="Baja 규정"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="390"
+            app:scale_textsize="40"
+            app:scale_top="440"
+            app:scale_width="300" />
+
+
+        <Button
+            android:id="@+id/select_ksae_ev_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:text="EV 규정"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="730"
+            app:scale_textsize="40"
+            app:scale_top="440"
+            app:scale_width="300" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="영남대 SAE Baja 대회"
+            android:textAlignment="viewStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="50"
+            app:scale_top="590"
+            app:scale_width="1000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="1. 참가팀 접수 마감 : 5/31~6/14"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="40"
+            app:scale_top="670"
+            app:scale_width="1000" />
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/khnphdbold"
+        android:text="2. 논문 및 안전보고서 마감일 : 7/5"
+        android:textAlignment="textStart"
+        android:textStyle="bold"
+        app:scale_height="80"
+        app:scale_left="40"
+        app:scale_textsize="40"
+        app:scale_top="730"
+        app:scale_width="1000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="3. 대회 일정 : 7/17(수)~20(토)"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="40"
+            app:scale_top="790"
+            app:scale_width="1000" />
+
+        <Button
+            android:id="@+id/select_sae_baja_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:text="Baja 규정"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:scale_textsize="40"
+            app:scale_top="870"
+            app:scale_left="50"
+            app:scale_width="300"
+            app:scale_height="80"/>
+
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="그린카 대회"
+            android:textAlignment="viewStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="50"
+            app:scale_top="1010"
+            app:scale_width="1000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="1. 참가팀 접수 마감(자율주행부분) : 4/12"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="40"
+            app:scale_top="1090"
+            app:scale_width="1000" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="2. 대회일정 : 9/6(금)~7(토)"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="40"
+            app:scale_textsize="40"
+            app:scale_top="1150"
+            app:scale_width="1000" />
+
+        <Button
+            android:id="@+id/select_green_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round_button"
+            android:text="그린카 규정"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            app:scale_textsize="40"
+            app:scale_top="1230"
+            app:scale_left="50"
+            app:scale_width="300"
+            app:scale_height="80"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/khnphdbold"
+            android:text="*공지 예정"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="80"
+            app:scale_left="80"
+            app:scale_textsize="30"
+            app:scale_top="1320"
+            app:scale_width="960" />
+
+
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+</FrameLayout>
