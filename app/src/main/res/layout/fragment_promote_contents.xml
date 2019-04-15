@@ -17,7 +17,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:scale_base_width="1080"
-        app:scale_base_height="120">
+        app:scale_base_height="130">
 
         <TextView
             android:id="@+id/promote_content_name"
@@ -26,8 +26,8 @@
             android:text="동아리 이름"
             android:textStyle="bold"
             app:scale_textsize = "70"
-            app:scale_left="10"
-            app:scale_top="10"
+            app:scale_left="20"
+            app:scale_top="20"
             app:scale_width="600"
             app:scale_height="90"/>
 
@@ -36,7 +36,7 @@
             android:layout_height="wrap_content"
             android:background="#505050"
             app:scale_left="0"
-            app:scale_top="100"
+            app:scale_top="110"
             app:scale_width="600"
             app:scale_height="1"
             />

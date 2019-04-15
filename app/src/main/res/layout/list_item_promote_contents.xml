@@ -19,7 +19,7 @@
             android:layout_height="match_parent"
             android:text="소주제"
             app:scale_textsize = "50"
-            app:scale_left="10"
+            app:scale_left="20"
             app:scale_top="10"
             app:scale_width="600"
             app:scale_height="70"/>

@@ -15,13 +15,13 @@
         app:scale_base_width="1080">
 
         <ImageView
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/title_logo"
             app:scale_height="350"
-            app:scale_left="190"
+            app:scale_left="180"
             app:scale_top="600"
-            app:scale_width="700" />
+            app:scale_width="720" />
     </com.ssomai.android.scalablelayout.ScalableLayout>+        `
 
 </FrameLayout>
