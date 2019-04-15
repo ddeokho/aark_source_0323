@@ -16,12 +16,12 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/khnphdbold"
-            android:text="KSAE 대회"
+            android:text="KSAE 대회 : 8/16(금)~18(일)"
             android:textAlignment="viewStart"
             android:textStyle="bold"
             app:scale_height="80"
             app:scale_left="40"
-            app:scale_textsize="50"
+            app:scale_textsize="45"
             app:scale_top="40"
             app:scale_width="1000" />
 
@@ -33,7 +33,7 @@
             android:textAlignment="textStart"
             android:textStyle="bold"
             app:scale_height="80"
-            app:scale_left="40"
+            app:scale_left="35"
             app:scale_textsize="40"
             app:scale_top="120"
             app:scale_width="1000" />
@@ -47,7 +47,7 @@
             android:textStyle="bold"
             app:scale_height="80"
             app:scale_left="40"
-            app:scale_textsize="40"
+            app:scale_textsize="35"
             app:scale_top="180"
             app:scale_width="1000" />
 
@@ -60,7 +60,7 @@
             android:textStyle="bold"
             app:scale_height="80"
             app:scale_left="40"
-            app:scale_textsize="40"
+            app:scale_textsize="35"
             app:scale_top="240"
             app:scale_width="1000" />
 
@@ -72,23 +72,11 @@
             android:textAlignment="textStart"
             android:textStyle="bold"
             app:scale_height="80"
-            app:scale_left="40"
+            app:scale_left="35"
             app:scale_textsize="40"
             app:scale_top="300"
             app:scale_width="1000" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="@font/khnphdbold"
-            android:text="5. 대회일정 : 8/16(금)~18(일)"
-            android:textAlignment="textStart"
-            android:textStyle="bold"
-            app:scale_height="80"
-            app:scale_left="40"
-            app:scale_textsize="40"
-            app:scale_top="360"
-            app:scale_width="1000" />
 
         <Button
             android:id="@+id/select_ksae_formula_btn"
@@ -101,7 +89,7 @@
             app:scale_height="80"
             app:scale_left="50"
             app:scale_textsize="40"
-            app:scale_top="440"
+            app:scale_top="380"
             app:scale_width="300" />
 
         <Button
@@ -115,7 +103,7 @@
             app:scale_height="80"
             app:scale_left="390"
             app:scale_textsize="40"
-            app:scale_top="440"
+            app:scale_top="380"
             app:scale_width="300" />
 
 
@@ -130,7 +118,7 @@
             app:scale_height="80"
             app:scale_left="730"
             app:scale_textsize="40"
-            app:scale_top="440"
+            app:scale_top="380"
             app:scale_width="300" />
 
 
@@ -138,13 +126,13 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/khnphdbold"
-            android:text="영남대 SAE Baja 대회"
+            android:text="영남대 Baja 대회 : 7/17(수)~20(토)"
             android:textAlignment="viewStart"
             android:textStyle="bold"
             app:scale_height="80"
             app:scale_left="40"
-            app:scale_textsize="50"
-            app:scale_top="590"
+            app:scale_textsize="45"
+            app:scale_top="530"
             app:scale_width="1000" />
 
         <TextView
@@ -156,8 +144,8 @@
             android:textStyle="bold"
             app:scale_height="80"
             app:scale_left="40"
-            app:scale_textsize="40"
-            app:scale_top="670"
+            app:scale_textsize="35"
+            app:scale_top="610"
             app:scale_width="1000" />
 
         <TextView
@@ -169,22 +157,10 @@
         android:textStyle="bold"
         app:scale_height="80"
         app:scale_left="40"
-        app:scale_textsize="40"
-        app:scale_top="730"
+        app:scale_textsize="35"
+        app:scale_top="670"
         app:scale_width="1000" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="@font/khnphdbold"
-            android:text="3. 대회 일정 : 7/17(수)~20(토)"
-            android:textAlignment="textStart"
-            android:textStyle="bold"
-            app:scale_height="80"
-            app:scale_left="40"
-            app:scale_textsize="40"
-            app:scale_top="790"
-            app:scale_width="1000" />
 
         <Button
             android:id="@+id/select_sae_baja_btn"
@@ -195,24 +171,23 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:scale_textsize="40"
-            app:scale_top="870"
+            app:scale_top="750"
             app:scale_left="50"
             app:scale_width="300"
             app:scale_height="80"/>
-
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/khnphdbold"
-            android:text="그린카 대회"
+            android:text="그린카 대회 : 9/6(금)~7(토)"
             android:textAlignment="viewStart"
             android:textStyle="bold"
             app:scale_height="80"
             app:scale_left="40"
-            app:scale_textsize="50"
-            app:scale_top="1010"
+            app:scale_textsize="45"
+            app:scale_top="890"
             app:scale_width="1000" />
 
         <TextView
@@ -224,21 +199,8 @@
             android:textStyle="bold"
             app:scale_height="80"
             app:scale_left="40"
-            app:scale_textsize="40"
-            app:scale_top="1090"
-            app:scale_width="1000" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fontFamily="@font/khnphdbold"
-            android:text="2. 대회일정 : 9/6(금)~7(토)"
-            android:textAlignment="textStart"
-            android:textStyle="bold"
-            app:scale_height="80"
-            app:scale_left="40"
-            app:scale_textsize="40"
-            app:scale_top="1150"
+            app:scale_textsize="35"
+            app:scale_top="970"
             app:scale_width="1000" />
 
         <Button
@@ -250,7 +212,7 @@
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:scale_textsize="40"
-            app:scale_top="1230"
+            app:scale_top="1050"
             app:scale_left="50"
             app:scale_width="300"
             app:scale_height="80"/>
@@ -265,7 +227,7 @@
             app:scale_height="80"
             app:scale_left="80"
             app:scale_textsize="30"
-            app:scale_top="1320"
+            app:scale_top="1140"
             app:scale_width="960" />
 
 
