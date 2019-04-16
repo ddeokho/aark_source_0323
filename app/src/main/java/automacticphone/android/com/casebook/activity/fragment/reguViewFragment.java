@@ -12,6 +12,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.FrameLayout;
+import android.widget.ScrollView;
 import android.widget.Toast;
 
 import com.zyao89.view.zloading.ZLoadingDialog;
@@ -25,6 +26,7 @@ public class reguViewFragment extends Fragment {
 
     private HttpTaskCallBack mCallBack = null;
     private ZLoadingDialog loadingDialog;
+    ScrollView scrollView;
 
 
     public reguViewFragment(){
@@ -77,6 +79,9 @@ public class reguViewFragment extends Fragment {
 
         btn = view.findViewById(R.id.select_green_btn);
         btn.setOnClickListener(onClickListener);
+
+        scrollView = (ScrollView) view.findViewById(R.id.horScrollVIew);
+        scrollView.setHorizontalScrollBarEnabled(true);
 
        /* mCallBack = new HttpTaskCallBack()
         {
