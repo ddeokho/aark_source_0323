@@ -69,6 +69,7 @@ import automacticphone.android.com.casebook.activity.network.RequestHttpURLConne
 public class PromoteContentsFragment extends Fragment
 {
     private PromotionData promotionData;
+    private PromotionSubData promotionSubData;
     private MapView mapView = null;
     private HttpTaskCallBack mCallBack = null;
 
@@ -384,18 +385,22 @@ public class PromoteContentsFragment extends Fragment
 
     void OnShareBtnClick()
     {
-        String param = String.format( "promotion_seq=%d", promotionData.getSeq() );
+        String param = String.format( "promotion_seq=%d", promotionData.getSeq());
         TextTemplate params = TextTemplate.newBuilder(promotionData.getTitle(), LinkObject.newBuilder().setAndroidExecutionParams( param ).build()).setButtonTitle("앱에서 바로 확인").build();
 
         Map<String, String> serverCallbackArgs = new HashMap<String, String>();
         serverCallbackArgs.put("user_id", "${current_user_id}");
         serverCallbackArgs.put("product_id", "${shared_product_id}");
 
+        //이미지
+        String url ="http://aarkapp.iptime.org/reg_file/share_img.jpg";
+
+
         KakaoLinkService.getInstance().sendDefault(getContext(), params, serverCallbackArgs, new ResponseCallback<KakaoLinkResponse>() {
             @Override
             public void onFailure(ErrorResult errorResult) {
                 Logger.e(errorResult.toString());
-            }
+                }
 
             @Override
             public void onSuccess(KakaoLinkResponse result) {

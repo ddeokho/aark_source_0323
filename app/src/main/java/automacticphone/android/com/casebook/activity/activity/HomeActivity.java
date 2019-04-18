@@ -455,9 +455,13 @@ public class HomeActivity extends AppCompatActivity
                             {
                                 int seq = Integer.parseInt( jsonObj.get("seq").toString() );
                                 PromotionData data = DataManager.inst().getPromotionData( seq );
-                                PromoteContentsFragment fragment = new PromoteContentsFragment();
+                                DataManager.inst().setSelectPromotionData(data);
+                                RequestPromoteSubData(data);
+
+                                //경고지역 minSDK문제 있을 수 있음
+                               /* PromoteContentsFragment fragment = new PromoteContentsFragment();
                                 fragment.setPromotionData( data );
-                                HomeActivity.inst().ChangeFragment( fragment, "PromoteContentsFragment");
+                                HomeActivity.inst().ChangeFragment( fragment, "PromoteContentsFragment");*/
                             }
                         }
                     }
@@ -469,6 +473,32 @@ public class HomeActivity extends AppCompatActivity
                             if (DataManager.inst().ParsingPromotionData(jsonObj)) {
                                 //ChangeFragment(new PromoteListFragment(), "PromoteListFragment");
                             }
+                        }
+                    }
+                    else if(jsonObj.get("packet_id").equals("promotion_sub_data"))
+                    {
+                        if(jsonObj.get("result").equals("true"))
+                        {
+                            if(DataManager.inst().ParsingPromotionSubData(jsonObj))
+                            {
+                                PromotionData selectPromotionData = DataManager.inst().getSelectPromotionData();
+                                NetworkManager.inst().UpdatePromotionFeq(HomeActivity.this, mCallBack, selectPromotionData.getSeq(), selectPromotionData.getFeq()+1);
+                            }
+                        }
+
+                    }
+                    else if(jsonObj.get("packet_id").equals("update_promotion_feq"))
+                    {
+                        if( jsonObj.get("result").equals("true") )
+                        {
+                            int seq = Integer.parseInt( jsonObj.get("seq").toString() );
+                            int feq = Integer.parseInt( jsonObj.get("feq").toString() );
+                            DataManager.inst().UpdatePromotionFeq( seq, feq );
+
+                            PromoteContentsFragment fragment = new PromoteContentsFragment();
+                            PromotionData selectPromotionData = DataManager.inst().getSelectPromotionData();
+                            fragment.setPromotionData( selectPromotionData );
+                            HomeActivity.inst().ChangeFragment( fragment, "PromoteContentsFragment");
                         }
                     }
                     else if(jsonObj.get("packet_id").equals("case_year_list"))
@@ -1345,4 +1375,29 @@ public class HomeActivity extends AppCompatActivity
             case "UploadContentsFragment":   { ChangeFragment( new UploadContentsFragment(), "UploadContentsFragment"); }  break;
         }
     }
+
+
+    //네트워크매니저에 있어야하는 부분
+    void RequestPromoteSubData( PromotionData data )
+    {
+        JSONObject jsonObj = new JSONObject();
+        try
+        {
+            jsonObj.put("packet_id", "promotion_sub_data");
+            jsonObj.put("ad_title_seq", data.getSeq() );
+            ContentValues values = new ContentValues();
+            values.put("param", jsonObj.toString() );
+
+            String url = RequestHttpURLConnection.serverIp + "/promotion_sub_data.php";
+            HttpConnectTask httpConnectTask = new HttpConnectTask(url, values, this);
+            httpConnectTask.SetCallBack(mCallBack);
+            httpConnectTask.execute();
+
+        }
+        catch (JSONException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
 }
