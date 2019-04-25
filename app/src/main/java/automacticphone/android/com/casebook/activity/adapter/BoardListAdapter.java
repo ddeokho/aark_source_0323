@@ -96,6 +96,9 @@ public class BoardListAdapter extends BaseAdapter
                 TextView textView = view.findViewById(R.id.list_bulletin_title);
                 textView.setText( dataList.get(position).getTitle() );
 
+                textView = view.findViewById(R.id.list_bulletin_category);
+                textView.setText( dataList.get(position).getCategoryText() );
+
                 textView = view.findViewById(R.id.list_bulletin_content);
                 textView.setText( dataList.get(position).getContent() );
 
@@ -124,6 +127,9 @@ public class BoardListAdapter extends BaseAdapter
 
                 TextView textView = view.findViewById(R.id.list_bulletin_text_title);
                 textView.setText( dataList.get(position).getTitle() );
+
+                textView = view.findViewById(R.id.list_bulletin_text_category);
+                textView.setText( dataList.get(position).getCategoryText() );
 
                 textView = view.findViewById(R.id.list_bulletin_text_content);
                 textView.setText( dataList.get(position).getContent() );

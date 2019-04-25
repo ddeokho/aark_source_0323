@@ -6,6 +6,12 @@ public class Define
     public static final int GRADE_GRADUATE = 1;
     public static final int GRADE_TRADER = 2;
     public static final int GRADE_PRESIDENT = 3;
+
+    //검차
+    public static final int GRADE_INSPEC = 4;
+    //운영위
+    public static final int GRADE_COMUNI = 5;
+
     public static final int GRADE_ADMIN = 9;
 
     public static final int PROMOTION_STUDENT = 1;          //홍보글 학생.

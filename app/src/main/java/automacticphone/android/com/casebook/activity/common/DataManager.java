@@ -52,6 +52,8 @@ public class DataManager
         this.regulSubDataList3 = regulSubDataList3;
     }
 
+
+
     public PromotionData getSelectPromotionData() {
         return selectPromotionData;
     }
@@ -280,30 +282,32 @@ public class DataManager
     }
 
     public boolean ParsingRegulationMainData( JSONObject jsonObj )
-    {
-        regulMainDataList.clear();
-        try{
-            JSONArray dataArray = jsonObj.getJSONArray("regulation_list");
-            for(int i=0; i < dataArray.length(); i++){
-                RegulationMainData data = new RegulationMainData();
-                JSONObject jObject = dataArray.getJSONObject(i);
-                int seq = Integer.valueOf( jObject.getString("seq") );
-                String regul = jObject.getString("regul");
-                String content = jObject.getString("content");
-                data.setSeq( seq );
-                data.setRegul( regul );
-                data.setContent( content );
-                regulMainDataList.add( data );
-            }
+{
+    regulMainDataList.clear();
+    try{
+        JSONArray dataArray = jsonObj.getJSONArray("regulation_list");
+        for(int i=0; i < dataArray.length(); i++){
+            RegulationMainData data = new RegulationMainData();
+            JSONObject jObject = dataArray.getJSONObject(i);
+            int seq = Integer.valueOf( jObject.getString("seq") );
+            String regul = jObject.getString("regul");
+            String content = jObject.getString("content");
+            data.setSeq( seq );
+            data.setRegul( regul );
+            data.setContent( content );
+            regulMainDataList.add( data );
         }
-        catch (JSONException e)
-        {
-            e.printStackTrace();
-            return false;
-        }
-
-        return true;
     }
+    catch (JSONException e)
+    {
+        e.printStackTrace();
+        return false;
+    }
+
+    return true;
+}
+
+
 
     public boolean ParsingRegulationSub1Data( JSONObject jsonObj )
     {
@@ -333,6 +337,7 @@ public class DataManager
         return true;
     }
 
+
     public boolean ParsingRegulationSub2Data( JSONObject jsonObj )
     {
         regulSubDataList2.clear();
@@ -360,6 +365,20 @@ public class DataManager
 
         return true;
     }
+
+
+    ///레귤레이션 추가(4/25)
+    public RegulationSubData2 getRegulSubData2( int sub2_seq )
+    {
+        for( int i = 0; i < regulSubDataList2.size(); ++i )
+        {
+            if( regulSubDataList2.get(i).getSeq() == sub2_seq )
+                return regulSubDataList2.get(i);
+        }
+
+        return null;
+    }
+    ////
 
     public boolean ParsingRegulationSub3Data( JSONObject jsonObj )
     {

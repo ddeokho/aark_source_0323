@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -53,7 +54,13 @@ import automacticphone.android.com.casebook.activity.common.Define;
 import automacticphone.android.com.casebook.activity.common.Util;
 import automacticphone.android.com.casebook.activity.data.CaseData;
 import automacticphone.android.com.casebook.activity.data.CommentData;
+import automacticphone.android.com.casebook.activity.data.RegulationMainData;
+import automacticphone.android.com.casebook.activity.data.RegulationSubData2;
+import automacticphone.android.com.casebook.activity.data.RegulationSubData3;
+import automacticphone.android.com.casebook.activity.data.SubTreeCaseData;
 import automacticphone.android.com.casebook.activity.data.UserData;
+
+
 import automacticphone.android.com.casebook.activity.network.HttpConnectTask;
 import automacticphone.android.com.casebook.activity.network.HttpTaskCallBack;
 import automacticphone.android.com.casebook.activity.network.NetworkManager;
@@ -175,6 +182,10 @@ public class ContentsViewFragment extends Fragment
 
         textView = view.findViewById( R.id.contents_view_date);
         textView.setText( dateText );
+
+        //새로추가
+        textView = view.findViewById( R.id.contents_view_category_text);
+        textView.setText( caseData.getCategoryText() );
 
         textView = view.findViewById( R.id.contents_view_body_text);
         textView.setText( caseData.getContent() );
@@ -656,6 +667,8 @@ public class ContentsViewFragment extends Fragment
             e.printStackTrace();
         }
     }
+
+
 
     void OnContentShareBtnClick()
     {

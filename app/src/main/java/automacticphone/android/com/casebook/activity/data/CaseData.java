@@ -4,6 +4,8 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import automacticphone.android.com.casebook.activity.common.DataManager;
+
 public class CaseData
 {
     private int seq;
@@ -161,4 +163,31 @@ public class CaseData
 
         return false;
     }
+
+    //
+    public String getCategoryText()
+    {
+        String categoryText = "";
+        RegulationMainData regulMainData = DataManager.inst().getRegulationMainData( cate_reg );
+        if( regulMainData != null )
+            categoryText = categoryText.concat( regulMainData.getRegul().substring(0, regulMainData.getRegul().length()-5) );
+
+        RegulationSubData2 subData2 = DataManager.inst().getRegulSubData2( cate_2);
+        RegulationSubData3 subData3 = DataManager.inst().getRegulSubData3( cate_3 );
+        if( subData2 != null )
+        {
+            if( subData3 != null )
+            {
+                if( subData3.getRegul().equals(".") )
+                    categoryText = categoryText.concat( ":"+subData2.getRegul() );
+                else
+                    categoryText = categoryText.concat( ":"+subData3.getRegul() );
+            }
+            else
+                categoryText = categoryText.concat( ":"+subData2.getRegul() );
+        }
+
+        return categoryText;
+    }
+    //
 }

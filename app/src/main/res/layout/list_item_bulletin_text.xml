@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         app:scale_base_width="1080"
-        app:scale_base_height="280"
+        app:scale_base_height="350"
         xmlns:android="http://schemas.android.com/apk/res/android">
 
         <TextView
@@ -34,6 +34,20 @@
             app:scale_top="100"
             app:scale_width="1000"
             app:scale_height="100"/>
+
+        <TextView
+            android:id="@+id/list_bulletin_text_category"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="KSAE Formula 평가항목:기타"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="60"
+            app:scale_left="30"
+            app:scale_textsize="30"
+            app:scale_top="220"
+            app:scale_width="1000" />
+
         <TextView
             android:id="@+id/list_bulletin_text_hits"
             android:layout_width="match_parent"
@@ -41,7 +55,7 @@
             android:text="조회수: 1024"
             app:scale_textsize = "40"
             app:scale_left="300"
-            app:scale_top="220"
+            app:scale_top="290"
             app:scale_width="250"
             app:scale_height="50"/>
 
@@ -53,7 +67,7 @@
             android:textAlignment="textEnd"
             app:scale_textsize = "40"
             app:scale_left="630"
-            app:scale_top="220"
+            app:scale_top="290"
             app:scale_width="400"
             app:scale_height="50"/>
     </com.ssomai.android.scalablelayout.ScalableLayout>
