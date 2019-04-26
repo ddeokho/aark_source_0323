@@ -584,6 +584,9 @@ public class DataManager
                 data.setFeq( Integer.parseInt( jObject.get("feq").toString() ) );
                 data.setShowState( Integer.parseInt( jObject.get("feq").toString() ) );
                 data.setTimestamp( jObject.get("timestamp").toString() );
+                //url 추가
+                data.setUrl(jObject.get("url").toString());
+                //
 
                 promotionDataList.add( data );
             }
@@ -635,6 +638,9 @@ public class DataManager
             data.setFeq( Integer.parseInt( jsonObject.get("feq").toString() ) );
             data.setShowState( Integer.parseInt( jsonObject.get("feq").toString() ) );
             data.setTimestamp( jsonObject.get("timestamp").toString() );
+            //url추가
+            data.setUrl(jsonObject.get("url").toString());
+            //
 
             if( bAddData )
             {

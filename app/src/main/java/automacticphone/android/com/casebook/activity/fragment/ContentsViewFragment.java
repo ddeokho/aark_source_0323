@@ -405,28 +405,62 @@ public class ContentsViewFragment extends Fragment
         if( caseData.getGrade() == Define.QUESTION_CASE )
         {
             int userSeq = DataManager.inst().getUserData().getSeq();
-            if( DataManager.inst().getUserData() != null )
+            if( DataManager.inst().getUserData() != null )//로그인 했을 경우
             {
-                if( DataManager.inst().getUserData().getGrade() == Define.GRADE_ADMIN  )
+                if(DataManager.inst().getUserData().getGrade()==Define.GRADE_COMUNI||DataManager.inst().getUserData().getGrade()==Define.GRADE_INSPEC || DataManager.inst().getUserData().getGrade()==Define.GRADE_GRADUATE){
+                    //검차, 운영위, 오비의 경우
+                    if(DataManager.inst().getContentOwnerData() != null){
+                        if( DataManager.inst().getContentOwnerData().getSeq() == userSeq )
+                            {//자신이 쓴 글을 봤을 경우
+                                goodBtn.setVisibility( View.VISIBLE );
+                                badBtn.setVisibility( View.VISIBLE );
+                                editBtn.setVisibility( View.VISIBLE );
+                                deleteBtn.setVisibility( View.VISIBLE );
+                            }else{//자신이 쓴 글이 아닐 경우, 탈퇴 x
+                                goodBtn.setVisibility( View.VISIBLE );
+                                badBtn.setVisibility( View.VISIBLE );
+                            }
+                    }else{//탈퇴한 회원일 경우
+                        goodBtn.setVisibility( View.VISIBLE );
+                        badBtn.setVisibility( View.VISIBLE );
+                    }
+                }else if(DataManager.inst().getUserData().getGrade() == Define.GRADE_ADMIN )
+                    {//관리자는 모든 글에 4개 탈퇴 가능
+                        goodBtn.setVisibility( View.VISIBLE );
+                        badBtn.setVisibility( View.VISIBLE );
+                        editBtn.setVisibility( View.VISIBLE );
+                        deleteBtn.setVisibility( View.VISIBLE );
+                }else{
+                    if(DataManager.inst().getContentOwnerData() != null)
+                        {//일반,홍보, 동아리는 자신이 쓴 글에만 버튼이 보이게, 탈퇴한 회원이 아니라면
+                            if( DataManager.inst().getContentOwnerData().getSeq() == userSeq )
+                            {
+                                editBtn.setVisibility( View.VISIBLE );
+                                deleteBtn.setVisibility( View.VISIBLE );
+                            }
+                        }
+                }
+
+                /*if( DataManager.inst().getUserData().getGrade() == Define.GRADE_ADMIN  )//관리자일 경우
                 {
                     goodBtn.setVisibility( View.VISIBLE );
                     badBtn.setVisibility( View.VISIBLE );
                     editBtn.setVisibility( View.VISIBLE );
                     deleteBtn.setVisibility( View.VISIBLE );
                 }
-                else if( DataManager.inst().getUserData().getGrade() == Define.GRADE_GRADUATE )
+                else if( DataManager.inst().getUserData().getGrade() == Define.GRADE_GRADUATE )//ob일 경우, 글쓴이가 없을 경우
                 {
                     goodBtn.setVisibility( View.VISIBLE );
                     badBtn.setVisibility( View.VISIBLE );
                 }
-                else if( DataManager.inst().getContentOwnerData() != null )
+                else if( DataManager.inst().getContentOwnerData() != null )//글쓴이가 있을 경우
                 {
                     if( DataManager.inst().getContentOwnerData().getSeq() == userSeq )
                     {
                         editBtn.setVisibility( View.VISIBLE );
                         deleteBtn.setVisibility( View.VISIBLE );
                     }
-                }
+                }*/
             }
         }
     }

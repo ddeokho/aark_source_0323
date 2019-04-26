@@ -18,8 +18,8 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:scale_base_width="1080"
-        app:scale_base_height="1160">
+        app:scale_base_height="1160"
+        app:scale_base_width="1080">
 
         <!--TextView
             android:layout_width="match_parent"
@@ -47,72 +47,105 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="인천 광역시 서구....."
-            app:scale_textsize = "40"
+            app:scale_height="70"
             app:scale_left="50"
-            app:scale_top="690"
-            app:scale_width="980"
-            app:scale_height="70"/>
+            app:scale_textsize="40"
+            app:scale_top="640"
+            app:scale_width="980" />
 
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="전화  :  "
-            app:scale_textsize = "40"
+            app:scale_height="70"
             app:scale_left="50"
-            app:scale_top="790"
-            app:scale_width="980"
-            app:scale_height="70"/>
+            app:scale_textsize="40"
+            app:scale_top="740"
+            app:scale_width="980" />
+
         <TextView
             android:id="@+id/promote_address_phone"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text=""
-            app:scale_textsize = "40"
+            app:scale_height="70"
             app:scale_left="170"
-            app:scale_top="790"
-            app:scale_width="830"
-            app:scale_height="70"/>
+            app:scale_textsize="40"
+            app:scale_top="740"
+            app:scale_width="830" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#505050"
-            app:scale_left="50"
-            app:scale_top="860"
-            app:scale_width="980"
             app:scale_height="1"
-            />
+            app:scale_left="50"
+            app:scale_top="820"
+            app:scale_width="980" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Email  :  "
-            app:scale_textsize = "40"
+            app:scale_height="70"
             app:scale_left="50"
-            app:scale_top="900"
-            app:scale_width="980"
-            app:scale_height="70"/>
+            app:scale_textsize="40"
+            app:scale_top="860"
+            app:scale_width="980" />
+
         <TextView
             android:id="@+id/promote_address_email"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text=""
-            app:scale_textsize = "40"
+            app:scale_height="70"
             app:scale_left="200"
-            app:scale_top="900"
-            app:scale_width="800"
-            app:scale_height="70"/>
+            app:scale_textsize="40"
+            app:scale_top="860"
+            app:scale_width="800" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#505050"
-            app:scale_left="50"
-            app:scale_top="970"
-            app:scale_width="980"
             app:scale_height="1"
-            />
+            app:scale_left="50"
+            app:scale_top="930"
+            app:scale_width="980" />
+
+        //url 추가
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="홈페이지  :  "
+            app:scale_height="70"
+            app:scale_left="50"
+            app:scale_textsize="40"
+            app:scale_top="980"
+            app:scale_width="980" />
+
+        <TextView
+            android:id="@+id/promote_address_url"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            app:scale_height="70"
+            app:scale_left="230"
+            app:scale_textsize="40"
+            app:scale_top="980"
+            app:scale_width="770" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_height="1"
+            app:scale_left="50"
+            app:scale_top="1050"
+            app:scale_width="980" />
+        //
 
         <Button
             android:id="@+id/promote_address_edit_btn"
@@ -120,27 +153,27 @@
             android:layout_height="wrap_content"
             android:background="#3072b1"
             android:text="수정"
-            android:textStyle="bold"
             android:textColor="#FFF"
-            app:scale_textsize = "40"
+            android:textStyle="bold"
+            app:scale_height="60"
             app:scale_left="330"
-            app:scale_top="1020"
-            app:scale_width="160"
-            app:scale_height="100"/>
+            app:scale_textsize="40"
+            app:scale_top="1080"
+            app:scale_width="160" />
 
         <Button
-        android:id="@+id/promote_address_hide_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#ff0000"
-        android:text="숨김"
-        android:textStyle="bold"
-        android:textColor="#FFF"
-        app:scale_textsize = "40"
-        app:scale_left="590"
-        app:scale_top="1020"
-        app:scale_width="160"
-        app:scale_height="100"/>
+            android:id="@+id/promote_address_hide_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ff0000"
+            android:text="숨김"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            app:scale_height="60"
+            app:scale_left="590"
+            app:scale_textsize="40"
+            app:scale_top="1080"
+            app:scale_width="160" />
 
         <!--위로 버튼 추가 -->
         <Button
@@ -149,13 +182,13 @@
             android:layout_height="wrap_content"
             android:background="#000000"
             android:text="위로"
-            android:textStyle="bold"
             android:textColor="#FFF"
-            app:scale_textsize = "40"
+            android:textStyle="bold"
+            app:scale_height="60"
             app:scale_left="850"
-            app:scale_top="1020"
-            app:scale_width="160"
-            app:scale_height="100"/>
+            app:scale_textsize="40"
+            app:scale_top="1080"
+            app:scale_width="160" />
 
     </com.ssomai.android.scalablelayout.ScalableLayout>
 

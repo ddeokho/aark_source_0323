@@ -934,9 +934,9 @@ public class HomeActivity extends AppCompatActivity
     {
         if( DataManager.inst().getUserData() != null )
         {
-            if( DataManager.inst().getUserData().getGrade() == Define.GRADE_ADMIN || DataManager.inst().getUserData().getGrade() == Define.GRADE_GRADUATE )
+            if( DataManager.inst().getUserData().getGrade() == Define.GRADE_ADMIN  )//|| DataManager.inst().getUserData().getGrade() == Define.GRADE_GRADUATE 관리자만 못하도록 막음
             {
-                ShowAlertDialog( "관리자와 졸업생은 사례글을 작성할 수 없습니다." );
+                ShowAlertDialog( "관리자는 사례글을 작성할 수 없습니다." );
                 return;
             }
             DataManager.inst().setSelectCaseData( null );

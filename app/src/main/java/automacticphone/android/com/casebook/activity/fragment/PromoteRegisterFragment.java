@@ -28,6 +28,8 @@ public class PromoteRegisterFragment extends Fragment
     private EditText detailAddressEdit;
     private EditText phoneEdit;
     private EditText emailEdit;
+    //url 추가
+    private EditText urlEdit;
     private TextView logoFileText;
     private Double lot;
     private Double lnt;
@@ -77,6 +79,7 @@ public class PromoteRegisterFragment extends Fragment
         detailAddressEdit = view.findViewById( R.id.promote_register_detail_address);
         phoneEdit = view.findViewById( R.id.promote_register_phone );
         emailEdit = view.findViewById( R.id.promote_register_email );
+        urlEdit = view.findViewById(R.id.promote_register_url);
         logoFileText = view.findViewById( R.id.promote_register_logo );
 
         PromoteRegisterFragment.BtnOnClickListener onClickListener = new PromoteRegisterFragment.BtnOnClickListener();
@@ -102,6 +105,9 @@ public class PromoteRegisterFragment extends Fragment
 
             phoneEdit.setText( promotionData.getPhone() );
             emailEdit.setText( promotionData.getEmail() );
+            //url 추가
+            urlEdit.setText(promotionData.getUrl());
+            //
             logoFileText.setText( promotionData.getLogImg() );
             lot = promotionData.getLatitude();
             lnt = promotionData.getLongitude();
@@ -123,7 +129,10 @@ public class PromoteRegisterFragment extends Fragment
                     detailAddressEdit.setText( splitText[1] );
 
                 phoneEdit.setText( promoteRegisterData.getPhone() );
-                emailEdit.setText( promoteRegisterData.getEmail() );
+                emailEdit.setText( promoteRegisterData.getEmail());
+                //url추가
+                urlEdit.setText(promoteRegisterData.getUrl());
+                //
                 logoFileText.setText( promoteRegisterData.getLogoImg() );
                 lot = promoteRegisterData.getLnt();
                 lnt = promoteRegisterData.getLot();
@@ -142,6 +151,9 @@ public class PromoteRegisterFragment extends Fragment
         String detailAddress = detailAddressEdit.getText().toString();
         String phone = phoneEdit.getText().toString();
         String email = emailEdit.getText().toString();
+        //url 추가
+        String url=urlEdit.getText().toString();
+        //
         String logoImg = logoFileText.getText().toString();
 
         if( name.length() == 0 )
@@ -183,6 +195,9 @@ public class PromoteRegisterFragment extends Fragment
         promoteRegisterData.setTitle( title );
         promoteRegisterData.setName( name );
         promoteRegisterData.setEmail( email );
+        //url 추가
+        promoteRegisterData.setUrl(url);
+        //
         promoteRegisterData.setAddress( address );
         promoteRegisterData.setLot( lot );
         promoteRegisterData.setLnt( lnt );

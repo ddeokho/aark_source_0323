@@ -141,7 +141,8 @@ public class BoardFragment extends Fragment
 
         if( DataManager.inst().getUserData() != null )
         {
-            if( DataManager.inst().getUserData().getGrade() == Define.GRADE_ADMIN || DataManager.inst().getUserData().getGrade() == Define.GRADE_GRADUATE )
+            if( DataManager.inst().getUserData().getGrade() == Define.GRADE_ADMIN || DataManager.inst().getUserData().getGrade() == Define.GRADE_GRADUATE
+                || DataManager.inst().getUserData().getGrade()==Define.GRADE_INSPEC || DataManager.inst().getUserData().getGrade()==Define.GRADE_COMUNI)//검차, 운영위 추가
             {
                 mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text1));
                 mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text2));

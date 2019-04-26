@@ -147,7 +147,7 @@
             android:layout_height="wrap_content"
             android:textAlignment="textStart"
             android:padding="10dp"
-            android:hint="동아리 /업체 연락처를 입력해 주세요.(선택)"
+            android:hint="연락처를 입력해 주세요.(선택)"
             android:inputType="text"
             app:scale_textsize = "40"
             app:scale_left="40"
@@ -156,17 +156,32 @@
             app:scale_height="100"/>
 
         <EditText
-            android:id="@+id/promote_register_email"
+        android:id="@+id/promote_register_email"
+        android:background="@drawable/grid_row_border"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="textStart"
+        android:padding="10dp"
+        android:hint="이메일을 입력해 주세요.(선택)"
+        android:inputType="text"
+        app:scale_textsize = "40"
+        app:scale_left="40"
+        app:scale_top="930"
+        app:scale_width="1000"
+        app:scale_height="100"/>
+
+        <EditText
+            android:id="@+id/promote_register_url"
             android:background="@drawable/grid_row_border"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAlignment="textStart"
             android:padding="10dp"
-            android:hint="이메일을 입력해 주세요.(선택)"
+            android:hint="홈페이지 주소를 입력해 주세요.(선택)"
             android:inputType="text"
             app:scale_textsize = "40"
             app:scale_left="40"
-            app:scale_top="930"
+            app:scale_top="1070"
             app:scale_width="1000"
             app:scale_height="100"/>
 

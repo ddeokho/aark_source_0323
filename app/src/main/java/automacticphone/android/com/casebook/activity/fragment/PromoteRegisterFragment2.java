@@ -199,6 +199,9 @@ public class PromoteRegisterFragment2 extends Fragment {
             jsonObj.put("title",  data.getTitle());
             jsonObj.put("name",  data.getName());
             jsonObj.put("email",  data.getEmail());
+            //url추가
+            jsonObj.put("url", data.getUrl());
+            //
             jsonObj.put("address",  data.getAddress() );
             jsonObj.put("latitude",  data.getLot());
             jsonObj.put("longitude",  data.getLnt());

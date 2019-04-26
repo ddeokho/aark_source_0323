@@ -8,6 +8,9 @@ public class PromoteRegisterData
     private String title;
     private String name;
     private String email;
+    //url추가
+    private String url;
+    //
     private String address;
     private Double lot;
     private Double lnt;
@@ -55,6 +58,12 @@ public class PromoteRegisterData
     public void setEmail(String email) {
         this.email = email;
     }
+
+    //url추가
+    public String getUrl(){return url;}
+
+    public void setUrl(String url){this.url = url;}
+    //
 
     public String getAddress() {
         return address;

@@ -317,6 +317,27 @@ public class PromoteContentsFragment extends Fragment
                         }
                     });
 
+                    //url 추가
+                    TextView urlTextView =(TextView)subView.findViewById(R.id.promote_address_url);
+                    urlTextView.setText(promotionData.getUrl());
+                    //오래 클릭하면 해당 웹사이트로 이동
+                    urlTextView.setOnLongClickListener(new View.OnLongClickListener() {
+                        @Override
+                        public boolean onLongClick(View v) {
+                            TextView tv = (TextView) v;
+                            final String m = tv.getText().toString();
+                            if(m.length()==0 || m=="null")
+                                return false;
+
+                            Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse(m));
+                            startActivity(i);
+
+                            return false;
+                        }
+                    });
+
+
+
                     // java code
                     if (mapView == null)
                     {

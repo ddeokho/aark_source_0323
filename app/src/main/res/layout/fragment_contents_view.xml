@@ -125,7 +125,7 @@
                 android:background="#505050"
                 app:scale_height="1"
                 app:scale_left="0"
-                app:scale_top="1020"
+                app:scale_top="1150"
                 app:scale_width="1080" />
 
             <!--TextView

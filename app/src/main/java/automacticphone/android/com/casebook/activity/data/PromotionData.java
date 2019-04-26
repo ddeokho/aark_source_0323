@@ -13,6 +13,7 @@ public class PromotionData
     private String name;
     private String title;
     private String email;
+    private String url;
     private String address;
     private double latitude;
     private double longitude;
@@ -94,6 +95,15 @@ public class PromotionData
     public void setEmail(String email) {
         this.email = email;
     }
+
+
+    //url 추가
+    public String getUrl(){return url;}
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+    //
 
     public String getAddress() {
         return address;
