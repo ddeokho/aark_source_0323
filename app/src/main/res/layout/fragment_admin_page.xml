@@ -9,7 +9,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:scale_base_height="1400"
+        app:scale_base_height="1520"
         app:scale_base_width="1080">
 
         <TextView
@@ -170,6 +170,33 @@
             android:background="@drawable/ic_search"
             app:scale_left="950"
             app:scale_top="1310"
+            app:scale_width="70"
+            app:scale_height="70"/>
+
+        <EditText
+            android:id="@+id/admin_page_push_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_row_border"
+            android:hint="푸시알림으로 보낼 내용을 입력하세요."
+            android:inputType="textNoSuggestions"
+            android:textAlignment="textStart"
+            android:paddingLeft="10dp"
+            app:scale_left="50"
+            app:scale_textsize="30"
+            app:scale_top="1420"
+            app:scale_width="860"
+            app:scale_height="70"/>
+
+        <Button
+            android:id="@+id/admin_page_push_select_btn"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/round_button"
+            android:text="보내기"
+            app:scale_textsize="20"
+            app:scale_left="950"
+            app:scale_top="1420"
             app:scale_width="70"
             app:scale_height="70"/>
     </com.ssomai.android.scalablelayout.ScalableLayout>

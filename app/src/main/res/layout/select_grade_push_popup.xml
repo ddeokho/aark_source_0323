@@ -15,11 +15,11 @@
         android:background="@drawable/background_outline">
 
         <Button
-            android:id="@+id/select_ksae_formula_btn"
+            android:id="@+id/select_in_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/round_button"
-            android:text="KSAE Formula 차량기술규정"
+            android:text="검차위원"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:scale_textsize="40"
@@ -29,11 +29,11 @@
             app:scale_height="100"/>
 
         <Button
-            android:id="@+id/select_ksae_baja_btn"
+            android:id="@+id/select_in_co_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/round_button"
-            android:text="KSAE Baja 차량기술규정"
+            android:text="검차위원 + 운영위"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:scale_textsize="40"
@@ -43,11 +43,11 @@
             app:scale_height="100"/>
 
         <Button
-        android:id="@+id/select_ksae_ev_btn"
+        android:id="@+id/select_in_co_gr_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/round_button"
-        android:text="KSAE EV 차량기술규정"
+        android:text="검차위원 + 운영위 + 오비"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:scale_textsize="40"
@@ -57,11 +57,11 @@
         app:scale_height="100"/>
 
         <Button
-            android:id="@+id/select_sae_baja_btn"
+            android:id="@+id/select_all_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/round_button"
-            android:text="영남대 Baja"
+            android:text="전체"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:scale_textsize="40"
@@ -71,7 +71,7 @@
             app:scale_height="100"/>
 
         <Button
-            android:id="@+id/select_regu_cancel_btn"
+            android:id="@+id/select_push_cancel_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/round_button2"

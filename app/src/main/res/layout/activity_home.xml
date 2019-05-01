@@ -492,6 +492,23 @@
                 app:scale_width="900"
                 app:scale_height="120"/>
 
+            <Button
+                android:id="@+id/announce_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#8C8C8C"
+                android:text="공지사항"
+                android:textStyle="bold"
+                android:textColor="#FFF"
+                android:textAlignment="textStart"
+                android:paddingLeft="10dp"
+                android:fontFamily="@font/khnphdbold"
+                app:scale_textsize = "50"
+                app:scale_left="50"
+                app:scale_top="1950"
+                app:scale_width="900"
+                app:scale_height="120"/>
+
         </com.ssomai.android.scalablelayout.ScalableLayout>
     </LinearLayout>
 

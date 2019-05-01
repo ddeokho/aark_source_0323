@@ -446,4 +446,29 @@ public class NetworkManager {
             e.printStackTrace();
         }
     }
+
+    //공지 가져오기
+    public void RequestAnnounceData( Context context, HttpTaskCallBack callBack,String packetName, int start, int size )
+    {
+        JSONObject jsonObj = new JSONObject();
+        try
+        {
+            jsonObj.put("packet_id", packetName );
+            jsonObj.put("start", start);
+            jsonObj.put("size", size);
+
+            ContentValues values = new ContentValues();
+            values.put("param", jsonObj.toString() );
+
+            String url = RequestHttpURLConnection.serverIp + "/announce_select.php";
+            HttpConnectTask httpConnectTask = new HttpConnectTask(url, values, context );
+            httpConnectTask.SetCallBack(callBack);
+            httpConnectTask.execute();
+        }
+        catch (JSONException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
 }

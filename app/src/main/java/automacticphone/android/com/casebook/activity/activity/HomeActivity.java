@@ -12,6 +12,7 @@ import android.database.Cursor;
 import android.graphics.Rect;
 import android.net.Uri;
 import android.os.Build;
+import android.provider.ContactsContract;
 import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -70,6 +71,7 @@ import automacticphone.android.com.casebook.activity.fragment.PromoteRegisterFra
 import automacticphone.android.com.casebook.activity.fragment.QuestionsFragment;
 import automacticphone.android.com.casebook.activity.fragment.TableContentsFragment;
 import automacticphone.android.com.casebook.activity.fragment.UploadContentsFragment;
+import automacticphone.android.com.casebook.activity.fragment.annonceFragment;
 import automacticphone.android.com.casebook.activity.fragment.reguViewFragment;
 import automacticphone.android.com.casebook.activity.network.HttpConnectTask;
 import automacticphone.android.com.casebook.activity.network.HttpTaskCallBack;
@@ -531,6 +533,19 @@ public class HomeActivity extends AppCompatActivity
                         }
                     }
 
+                    //공지
+                    if(jsonObj.get("packet_id").equals("announce_data"))
+                    {
+                        if(jsonObj.get("result").equals("true"))
+                        {
+
+                            if(DataManager.inst().ParsingAnnounceData(jsonObj))
+                            {
+                                ChangeFragment(new annonceFragment(), "announceFragment");
+                            }
+                        }
+                    }
+
                     if( caseRequestDataCount == 3 )
                     {
                         ContentsViewFragment fragment = new ContentsViewFragment();
@@ -619,6 +634,11 @@ public class HomeActivity extends AppCompatActivity
                     OnYoutubeBtnClick();
                     break;
 
+                    //공지사항 버튼
+                case R.id.announce_btn:
+                    OnAnnounceBtnClick();
+                    break;
+
                 case R.id.Inquiry_btn:
                     OnInquiryBtnClick();
                     break;
@@ -695,6 +715,10 @@ public class HomeActivity extends AppCompatActivity
 
         btn = (Button)findViewById(R.id.youtube_btn);
         btn.setOnClickListener( onClickListener);
+
+        //공지사항버튼
+        btn = (Button)findViewById(R.id.announce_btn) ;
+        btn.setOnClickListener(onClickListener);
 
         btn = (Button)findViewById(R.id.Inquiry_btn);
         btn.setOnClickListener( onClickListener );
@@ -985,6 +1009,13 @@ public class HomeActivity extends AppCompatActivity
         drawerLayout.closeDrawers();
         Intent i=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCbDMBZg-GwskhUNX5by5E3w/featured"));
         startActivity(i);
+    }
+
+    //공지사항
+    void OnAnnounceBtnClick(){
+        DataManager.inst().ClearAnnounceDataList();
+        drawerLayout.closeDrawers();
+        NetworkManager.inst().RequestAnnounceData(HomeActivity.this, mCallBack, "announce_data",0, 15);
     }
 
     //규정집 팝업 이동

@@ -79,6 +79,7 @@ public class PromoteRegisterFragment extends Fragment
         detailAddressEdit = view.findViewById( R.id.promote_register_detail_address);
         phoneEdit = view.findViewById( R.id.promote_register_phone );
         emailEdit = view.findViewById( R.id.promote_register_email );
+        //url추가
         urlEdit = view.findViewById(R.id.promote_register_url);
         logoFileText = view.findViewById( R.id.promote_register_logo );
 

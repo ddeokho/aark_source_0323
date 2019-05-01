@@ -2,6 +2,7 @@ package automacticphone.android.com.casebook.activity.common;
 
 
 import android.content.ContentValues;
+import android.content.Intent;
 import android.os.Build;
 import android.support.annotation.RequiresApi;
 
@@ -16,6 +17,7 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.HashMap;
 
+import automacticphone.android.com.casebook.activity.data.AnnounceData;
 import automacticphone.android.com.casebook.activity.data.CaseData;
 import automacticphone.android.com.casebook.activity.data.CommentData;
 import automacticphone.android.com.casebook.activity.data.PromoteRegisterData;
@@ -143,6 +145,7 @@ public class DataManager
         this.contentOwnerData = contentOwnerData;
     }
 
+
     private ArrayList<CommentData> commentDataList = new ArrayList<CommentData>();
     public ArrayList<CommentData> getCommentDataList() {
         return commentDataList;
@@ -151,6 +154,15 @@ public class DataManager
     public void setCommentDataList(ArrayList<CommentData> commentDataList) {
         this.commentDataList = commentDataList;
     }
+
+    //공지 리스트
+    private ArrayList<AnnounceData> announceDataList = new ArrayList<AnnounceData>();
+    public ArrayList<AnnounceData> getAnnounceDataList(){return announceDataList;}
+
+    public void setAnnounceDataList(ArrayList<AnnounceData> announceDataList){
+        this.announceDataList = announceDataList;
+    }
+
 
     private ArrayList<CaseData> myWriteList = new ArrayList<CaseData>();
     public ArrayList<CaseData> getMyWriteList() {
@@ -560,6 +572,32 @@ public class DataManager
         }
         return true;
     }
+
+    //공지사항 파싱
+    public boolean ParsingAnnounceData(JSONObject jsonObject)
+    {
+        try{
+            JSONArray dataArray = jsonObject.getJSONArray("data_list");
+            for(int i=0; i < dataArray.length(); i++){
+                AnnounceData data = new AnnounceData();
+                JSONObject jObject = dataArray.getJSONObject(i);
+
+                data.setSeq( Integer.parseInt( jObject.get("seq").toString() ) );
+                data.setContent(jObject.get("content").toString());
+                data.setGrade(jObject.get("grade").toString());
+                data.setTimeStamp(jObject.get("Timestamp").toString());
+
+                announceDataList.add( data );
+            }
+        }
+        catch (JSONException e)
+        {
+            e.printStackTrace();
+            return false;
+        }
+        return true;
+    }
+
 
     public boolean ParsingPromotionData( JSONObject jsonObject )
     {
@@ -1135,6 +1173,11 @@ public class DataManager
     public void ClearPromotionDataList()
     {
         promotionDataList.clear();
+    }
+
+    public void ClearAnnounceDataList()
+    {
+        announceDataList.clear();
     }
 
     // String 내림차순
