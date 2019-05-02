@@ -291,6 +291,19 @@ public class HomeActivity extends AppCompatActivity
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+       /* String str = getIntent().getStringExtra("annonceFragment");
+        if(str !=null)
+        {
+            if(str.equals("notiIntent"))
+            {
+                //DataManager.inst().ClearAnnounceDataList();
+                //drawerLayout.closeDrawers();
+                //NetworkManager.inst().RequestAnnounceData(HomeActivity.this, mCallBack, "announce_data",0, 15);
+                OnAnnounceBtnClick();
+            }
+        }*/
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
         getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);

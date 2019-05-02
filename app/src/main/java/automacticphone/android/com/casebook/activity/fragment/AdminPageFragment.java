@@ -78,7 +78,12 @@ public class AdminPageFragment extends Fragment {
                     OnCaseTextSearchBtnClick();
                     break;
                 case R.id.admin_page_push_select_btn:
-                    OnGrageSearchBtnClick();
+                    if(gradePushEdit.getText().toString()==""){
+                        Toast.makeText(getContext(), "공지글을 적어주세요.",Toast.LENGTH_SHORT).show();
+                    }
+                    else{
+                        OnGrageSearchBtnClick();
+                    }
                     break;
             }
         }
@@ -452,6 +457,7 @@ public class AdminPageFragment extends Fragment {
             e.printStackTrace();
         }
     }
+
     //전체 검차+운영회+오비 알림
     void InCoObUserPush()
     {
@@ -481,6 +487,5 @@ public class AdminPageFragment extends Fragment {
             e.printStackTrace();
         }
     }
-
 
 }
