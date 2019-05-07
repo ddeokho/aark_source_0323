@@ -205,13 +205,15 @@ public class AdminPageFragment extends Fragment {
                             mPopupWindow.dismiss();
                             Toast.makeText(getContext(), "전체 유저에게 알림이 발송 되었습니다.",Toast.LENGTH_SHORT).show();
                         }
-                    }else if(jsonObj.get("packet_id").equals("in_User_Push")){
+                    }else if(jsonObj.get("packet_id").equals("User_Push")){
                         loadingDialog.cancel();
                         if(jsonObj.get("result").equals("true")){
                             mPopupWindow.dismiss();
-                            Toast.makeText(getContext(), "검차위원에게 알림이 발송 되었습니다.",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getContext(), "알림이 발송 되었습니다.",Toast.LENGTH_SHORT).show();
                         }
-                    }else if(jsonObj.get("packet_id").equals("in_co_User_Push")){
+                    }
+
+                    /*else if(jsonObj.get("packet_id").equals("in_co_User_Push")){
                         loadingDialog.cancel();
                         if(jsonObj.get("result").equals("true")){
                             mPopupWindow.dismiss();
@@ -223,7 +225,7 @@ public class AdminPageFragment extends Fragment {
                             mPopupWindow.dismiss();
                             Toast.makeText(getContext(), "검차위원+운영위+오비에게 알림이 발송 되었습니다.", Toast.LENGTH_SHORT).show();
                         }
-                    }
+                    }*/
 
 
                     if(jsonObj.get("packet_id").equals("content_owner_data"))
@@ -344,23 +346,29 @@ public class AdminPageFragment extends Fragment {
         selectInbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                InUserPush();
+                String push_grade = "5";
+                int grade = 5;
+                UserPush(push_grade, grade);
             }
         });
 
-        Button selectInCobtn = (Button) popupView.findViewById(R.id.select_in_co_btn);//검차+운영
+        Button selectInCobtn = (Button) popupView.findViewById(R.id.select_co_btn);//운영
         selectInCobtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                InCoUserPush();
+                String push_grade = "4";
+                int grade = 4;
+                UserPush(push_grade, grade);
             }
         });
 
-        Button selectInCoGrbtn = (Button) popupView.findViewById(R.id.select_in_co_gr_btn);//검차+ 운영+ 오비
-        selectInCoGrbtn.setOnClickListener(new View.OnClickListener(){
+        Button selectobBtn = (Button) popupView.findViewById(R.id.select_ob_btn);//오비
+        selectobBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-                InCoObUserPush();
+                String push_grade = "9";
+                int grade = 9;
+                UserPush(push_grade, grade);
             }
         });
 
@@ -401,23 +409,24 @@ public class AdminPageFragment extends Fragment {
             e.printStackTrace();
         }
     }
-    //전체 검차위원 알림
-    void InUserPush()
+    //해당등급 알림
+    void UserPush(String push_grade, int grade)
     {
         String pushText = gradePushEdit.getText().toString();
 
         JSONObject jsonObj = new JSONObject();
         try
             {
-            jsonObj.put("packet_id", "in_User_Push");
+            jsonObj.put("packet_id", "User_Push");
             jsonObj.put("push_text", pushText );
             jsonObj.put("token", HomeActivity.inst().getToken() );
-            jsonObj.put("grade","5");
+            jsonObj.put("grade",grade);//푸시알림 대상
+            jsonObj.put("push_grade",push_grade);//저장
 
             ContentValues values = new ContentValues();
             values.put("param", jsonObj.toString() );
 
-            String url = RequestHttpURLConnection.serverIp + "/push_case_grade_in.php";
+            String url = RequestHttpURLConnection.serverIp + "/push_case_grade.php";
             HttpConnectTask httpConnectTask = new HttpConnectTask(url, values, getContext() );
             httpConnectTask.SetCallBack(mCallBack);
             httpConnectTask.execute();
@@ -429,8 +438,8 @@ public class AdminPageFragment extends Fragment {
         }
     }
 
-    //전체 검차+운영회 알림
-    void InCoUserPush()
+    /*//운영회 알림
+    void InCoUserPush(String push_grade)
     {
         String pushText = gradePushEdit.getText().toString();
 
@@ -440,13 +449,15 @@ public class AdminPageFragment extends Fragment {
             jsonObj.put("packet_id", "in_co_User_Push");
             jsonObj.put("push_text", pushText );
             jsonObj.put("token", HomeActivity.inst().getToken() );
-            jsonObj.put("grade_in","5");
-            jsonObj.put("grade_co","4");
+            jsonObj.put("push_grade", push_grade);
+            //jsonObj.put("grade_in","5");
+            jsonObj.put("grade","4");
+
 
             ContentValues values = new ContentValues();
             values.put("param", jsonObj.toString() );
 
-            String url = RequestHttpURLConnection.serverIp + "/push_case_grade_in_co.php";
+            String url = RequestHttpURLConnection.serverIp + "/push_case_grade.php";
             HttpConnectTask httpConnectTask = new HttpConnectTask(url, values, getContext() );
             httpConnectTask.SetCallBack(mCallBack);
             httpConnectTask.execute();
@@ -458,8 +469,8 @@ public class AdminPageFragment extends Fragment {
         }
     }
 
-    //전체 검차+운영회+오비 알림
-    void InCoObUserPush()
+    //오비 알림 - 테스트 -> 관리자
+    void InCoObUserPush(String push_grade)
     {
         String pushText = gradePushEdit.getText().toString();
 
@@ -469,14 +480,15 @@ public class AdminPageFragment extends Fragment {
             jsonObj.put("packet_id", "in_co_ob_User_Push");
             jsonObj.put("push_text", pushText );
             jsonObj.put("token", HomeActivity.inst().getToken() );
-            jsonObj.put("grade_in","5");
-            jsonObj.put("grade_co","4");
-            jsonObj.put("grade_ob","1");
+            jsonObj.put("push_grade",push_grade);//저장
+            //jsonObj.put("grade_in","5");
+           //jsonObj.put("grade_co","4");
+            jsonObj.put("grade","9");//푸시알림
 
             ContentValues values = new ContentValues();
             values.put("param", jsonObj.toString() );
 
-            String url = RequestHttpURLConnection.serverIp + "/push_case_grade_in_co_ob.php";
+            String url = RequestHttpURLConnection.serverIp + "/push_case_grade.php";
             HttpConnectTask httpConnectTask = new HttpConnectTask(url, values, getContext() );
             httpConnectTask.SetCallBack(mCallBack);
             httpConnectTask.execute();
@@ -486,6 +498,6 @@ public class AdminPageFragment extends Fragment {
         {
             e.printStackTrace();
         }
-    }
+    }*/
 
 }

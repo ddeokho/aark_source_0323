@@ -29,11 +29,11 @@
             app:scale_height="100"/>
 
         <Button
-            android:id="@+id/select_in_co_btn"
+            android:id="@+id/select_co_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/round_button"
-            android:text="검차위원 + 운영위"
+            android:text="운영위"
             android:textColor="#FFFFFF"
             android:textStyle="bold"
             app:scale_textsize="40"
@@ -43,11 +43,11 @@
             app:scale_height="100"/>
 
         <Button
-        android:id="@+id/select_in_co_gr_btn"
+        android:id="@+id/select_ob_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/round_button"
-        android:text="검차위원 + 운영위 + 오비"
+        android:text="오비"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:scale_textsize="40"

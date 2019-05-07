@@ -554,7 +554,7 @@ public class HomeActivity extends AppCompatActivity
 
                             if(DataManager.inst().ParsingAnnounceData(jsonObj))
                             {
-                                ChangeFragment(new annonceFragment(), "announceFragment");
+                                ChangeFragment(new annonceFragment(), "annonceFragment");
                             }
                         }
                     }
@@ -809,9 +809,12 @@ public class HomeActivity extends AppCompatActivity
                 selectBarImg.setX( homeMenuBtnList.get(3).getX() );
                 break;
             case "MyPageFragment":
+            case "annonceFragment":
+            case "reguViewFragment":
             case "AdminPageFragment":
                 selectBarImg.setX( homeMenuBtnList.get(4).getX() );
                 break;
+
         }
 
     }
@@ -1313,10 +1316,7 @@ public class HomeActivity extends AppCompatActivity
 
     public boolean IsShowExitPopup()
     {
-        if( currentFragmentTag.equals( "TableContentsFragment" ) ||
-                currentFragmentTag.equals( "BoardFragment" ) ||
-                currentFragmentTag.equals( "PromoteListFragment" ) ||
-                currentFragmentTag.equals( "MyPageFragment" ) )
+        if( currentFragmentTag.equals( "TableContentsFragment" )  )// || currentFragmentTag.equals( "BoardFragment" ) || currentFragmentTag.equals( "PromoteListFragment" ) || currentFragmentTag.equals( "MyPageFragment" )
         {
             return true;
         }
@@ -1373,7 +1373,7 @@ public class HomeActivity extends AppCompatActivity
                 ChangeFragment( boardFragment, "BoardFragment");
             }
             break;
-            case "ContentsViewFragment":    { ChangeFragment( new ContentsViewFragment(), "ContentsViewFragment"); }  break;
+            case "ContentsViewFragment":    { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }  break; //{ ChangeFragment( new ContentsViewFragment(), "ContentsViewFragment"); }  break;
             case "JoinMembershipFragment":  { ChangeFragment( new JoinMembershipFragment(), "JoinMembershipFragment"); }  break;
             case "LoginFragment":           { ChangeFragment( new LoginFragment(), "LoginFragment"); }  break;
             case "ModifyProfileFragment":   { ChangeFragment( new ModifyProfileFragment(), "ModifyProfileFragment"); }  break;
@@ -1386,7 +1386,8 @@ public class HomeActivity extends AppCompatActivity
                 if( data != null )
                     fragment.setPromotionData(data);
 
-                ChangeFragment( fragment, "PromoteContentsFragment");
+                //ChangeFragment( fragment, "PromoteContentsFragment");
+                ChangeFragment( new TableContentsFragment(), "TableContentsFragment");
             }
             break;
             case "PromoteFragment":         { ChangeFragment( new PromoteFragment(), "PromoteFragment"); }  break;
@@ -1414,9 +1415,12 @@ public class HomeActivity extends AppCompatActivity
                 ChangeFragment( new PromoteListFragment(), "PromoteListFragment");
             }
             break;
-            case "QuestionsFragment":       { ChangeFragment( new QuestionsFragment(), "QuestionsFragment"); }  break;
+            case "QuestionsFragment":       { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }  break;//
             case "TableContentsFragment":   { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }  break;
             case "UploadContentsFragment":   { ChangeFragment( new UploadContentsFragment(), "UploadContentsFragment"); }  break;
+
+            case "annonceFragment": {ChangeFragment(new TableContentsFragment(),"TableContentsFragment");} break;//
+            case "reguViewFragment": {ChangeFragment(new TableContentsFragment(),"TableContentsFragment");}break;//
         }
     }
 

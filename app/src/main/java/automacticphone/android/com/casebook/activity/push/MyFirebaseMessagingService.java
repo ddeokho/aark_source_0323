@@ -100,7 +100,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         String title = remoteMessage.getData().get("title");
         String body = remoteMessage.getData().get("message");
-        //, click_action String click_action = remoteMessage.getData().get("clickAction");
+        //String click_action = remoteMessage.getData().get("click_action");
         sendNotification( Channel.NOTICE, title, body);
     }
 
@@ -120,7 +120,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             title = "푸시알림"; //기본제목을 적어 주자.
         }
 
-        Intent intent=new Intent();
+        Intent intent;
+        intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
         /*if(click_action.equals("annonceFragment")){
             Intent notiIconClickIntent = new Intent(this, HomeActivity.class);
@@ -137,8 +139,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
             intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         }
 */
-        intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);
 
