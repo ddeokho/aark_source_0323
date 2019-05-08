@@ -66,9 +66,9 @@
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/home_main_view"
             android:layout_width="match_parent"
-            android:layout_height="1113dp"
+            android:layout_height="608dp"
             android:layout_gravity="center"
-            app:scale_base_height="1530"
+            app:scale_base_height="1590"
             app:scale_base_width="1080"></com.ssomai.android.scalablelayout.ScalableLayout>
 
         <com.ssomai.android.scalablelayout.ScalableLayout

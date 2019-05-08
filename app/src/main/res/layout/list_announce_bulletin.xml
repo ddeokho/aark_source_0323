@@ -37,6 +37,18 @@
             app:scale_width="400"
             app:scale_height="40"/>
 
+        <TextView
+            android:id="@+id/list_announcd_grade_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textAlignment="textEnd"
+            app:scale_textsize = "25"
+            app:scale_left="640"
+            app:scale_top="20"
+            app:scale_width="400"
+            app:scale_height="40"/>
+
     </com.ssomai.android.scalablelayout.ScalableLayout>
 
 </FrameLayout>

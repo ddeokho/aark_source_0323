@@ -8,9 +8,9 @@ public class Define
     public static final int GRADE_PRESIDENT = 3;
 
     //검차
-    public static final int GRADE_INSPEC = 4;
+    public static final int GRADE_INSPEC = 5;
     //운영위
-    public static final int GRADE_COMUNI = 5;
+    public static final int GRADE_COMUNI = 4;
 
     public static final int GRADE_ADMIN = 9;
 

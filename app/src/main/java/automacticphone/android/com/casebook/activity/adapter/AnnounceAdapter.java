@@ -19,6 +19,7 @@ import java.util.Date;
 
 import automacticphone.android.com.casebook.MainActivity;
 import automacticphone.android.com.casebook.R;
+import automacticphone.android.com.casebook.activity.common.DataManager;
 import automacticphone.android.com.casebook.activity.common.Define;
 import automacticphone.android.com.casebook.activity.data.AnnounceData;
 import automacticphone.android.com.casebook.activity.data.PromotionData;
@@ -78,6 +79,11 @@ public class AnnounceAdapter extends BaseAdapter {
 
         textView = (TextView) view.findViewById(R.id.list_announcd_date_data);
         textView.setText( dateText );
+
+        if(DataManager.inst().getUserData().getGrade()==Define.GRADE_ADMIN) {
+            textView = (TextView) view.findViewById(R.id.list_announcd_grade_data);
+            textView.setText(dataList.get(position).getGrade());
+        }
 
         return view;
     }

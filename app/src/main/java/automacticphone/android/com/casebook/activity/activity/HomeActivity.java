@@ -1031,7 +1031,45 @@ public class HomeActivity extends AppCompatActivity
     void OnAnnounceBtnClick(){
         DataManager.inst().ClearAnnounceDataList();
         drawerLayout.closeDrawers();
-        NetworkManager.inst().RequestAnnounceData(HomeActivity.this, mCallBack, "announce_data",0, 15);
+        //로그인 유저
+        if(DataManager.inst().getUserData()!=null){
+            int user=DataManager.inst().getUserData().getGrade();
+
+            switch(user) {
+                case Define.GRADE_ADMIN: {
+                    NetworkManager.inst().RequestAnnounceData(HomeActivity.this, mCallBack, "announce_data", 0, 20);
+                }break;//관리자
+                case Define.GRADE_STUDENT: {
+                    NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 0);
+                }break;//일반
+                case Define.GRADE_GRADUATE: {
+                    NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 1);
+                }break;//오비
+                case Define.GRADE_TRADER: {
+                    NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 0);
+                }break;//업체
+                case Define.GRADE_PRESIDENT: {
+                    NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 0);
+                }break;//동아리장
+                case Define.GRADE_COMUNI: {
+                    NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 4);
+                }break;//운영위
+                case Define.GRADE_INSPEC: {
+                    NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 5);
+                }break;//검차
+            }
+        }else{
+            //로그아웃 유저 처리
+            NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 0);
+            //Intent i=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCbDMBZg-GwskhUNX5by5E3w/featured"));
+            //startActivity(i);
+        }
+
+
+
+
+
+
     }
 
     //규정집 팝업 이동

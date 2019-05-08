@@ -447,7 +447,7 @@ public class NetworkManager {
         }
     }
 
-    //공지 가져오기
+    //전체 공지 가져오기
     public void RequestAnnounceData( Context context, HttpTaskCallBack callBack,String packetName, int start, int size )
     {
         JSONObject jsonObj = new JSONObject();
@@ -461,6 +461,31 @@ public class NetworkManager {
             values.put("param", jsonObj.toString() );
 
             String url = RequestHttpURLConnection.serverIp + "/announce_select.php";
+            HttpConnectTask httpConnectTask = new HttpConnectTask(url, values, context );
+            httpConnectTask.SetCallBack(callBack);
+            httpConnectTask.execute();
+        }
+        catch (JSONException e)
+        {
+            e.printStackTrace();
+        }
+    }
+
+    //해당 등급별 공지 가져오기
+    public void RequestAnnounceGradeData( Context context, HttpTaskCallBack callBack,String packetName, int start, int size, int grade )
+    {
+        JSONObject jsonObj = new JSONObject();
+        try
+        {
+            jsonObj.put("packet_id", packetName );
+            jsonObj.put("start", start);
+            jsonObj.put("size", size);
+            jsonObj.put("grade",grade);
+
+            ContentValues values = new ContentValues();
+            values.put("param", jsonObj.toString() );
+
+            String url = RequestHttpURLConnection.serverIp + "/announce_select_grade.php";
             HttpConnectTask httpConnectTask = new HttpConnectTask(url, values, context );
             httpConnectTask.SetCallBack(callBack);
             httpConnectTask.execute();
