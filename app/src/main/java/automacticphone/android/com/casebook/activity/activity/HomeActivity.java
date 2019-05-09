@@ -649,7 +649,12 @@ public class HomeActivity extends AppCompatActivity
 
                     //공지사항 버튼
                 case R.id.announce_btn:
-                    OnAnnounceBtnClick();
+                    //로그인
+                    if(DataManager.inst().getUserData()!=null){
+                        OnAnnounceLoginBtnClick();
+                    }else{//로그아웃
+                        OnAnnounceBtnClick();
+                    }
                     break;
 
                 case R.id.Inquiry_btn:
@@ -1027,49 +1032,57 @@ public class HomeActivity extends AppCompatActivity
         startActivity(i);
     }
 
-    //공지사항
+    //공지사항 로그인
     void OnAnnounceBtnClick(){
+        //DataManager.inst().ClearAnnounceDataList();
+        //drawerLayout.closeDrawers();
+        //NetworkManager.inst().RequestAnnounceData(HomeActivity.this, mCallBack, "announce_data", 0, 15);
+
         DataManager.inst().ClearAnnounceDataList();
         drawerLayout.closeDrawers();
-        //로그인 유저
-        if(DataManager.inst().getUserData()!=null){
-            int user=DataManager.inst().getUserData().getGrade();
+        NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data",0, 15, 0);
+        //Intent i=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCbDMBZg-GwskhUNX5by5E3w/featured"));
+        //startActivity(i);
+    }
 
-            switch(user) {
-                case Define.GRADE_ADMIN: {
-                    NetworkManager.inst().RequestAnnounceData(HomeActivity.this, mCallBack, "announce_data", 0, 20);
-                }break;//관리자
-                case Define.GRADE_STUDENT: {
-                    NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 0);
-                }break;//일반
-                case Define.GRADE_GRADUATE: {
-                    NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 1);
-                }break;//오비
-                case Define.GRADE_TRADER: {
-                    NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 0);
-                }break;//업체
-                case Define.GRADE_PRESIDENT: {
-                    NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 0);
-                }break;//동아리장
-                case Define.GRADE_COMUNI: {
-                    NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 4);
-                }break;//운영위
-                case Define.GRADE_INSPEC: {
-                    NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 5);
-                }break;//검차
+    //로그인 유저
+    void OnAnnounceLoginBtnClick(){
+        DataManager.inst().ClearAnnounceDataList();
+        drawerLayout.closeDrawers();
+
+        int user=DataManager.inst().getUserData().getGrade();
+
+        switch(user) {
+            case Define.GRADE_ADMIN: {
+                NetworkManager.inst().RequestAnnounceData(HomeActivity.this, mCallBack, "announce_data", 0, 20);
             }
-        }else{
-            //로그아웃 유저 처리
-            NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 0);
-            //Intent i=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.youtube.com/channel/UCbDMBZg-GwskhUNX5by5E3w/featured"));
-            //startActivity(i);
+            break;//관리자
+            case Define.GRADE_STUDENT: {
+                NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 0);
+            }
+            break;//일반
+            case Define.GRADE_GRADUATE: {
+                NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 1);
+            }
+            break;//오비
+            case Define.GRADE_TRADER: {
+                NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 0);
+            }
+            break;//업체
+            case Define.GRADE_PRESIDENT: {
+                NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 0);
+            }
+            break;//동아리장
+            case Define.GRADE_COMUNI: {
+                NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 4);
+            }
+            break;//운영위
+            case Define.GRADE_INSPEC: {
+                NetworkManager.inst().RequestAnnounceGradeData(HomeActivity.this, mCallBack, "announce_data", 0, 20, 5);
+            }
+            break;//검차
+
         }
-
-
-
-
-
-
     }
 
     //규정집 팝업 이동

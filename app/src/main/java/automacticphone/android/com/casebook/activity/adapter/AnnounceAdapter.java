@@ -67,6 +67,7 @@ public class AnnounceAdapter extends BaseAdapter {
         TextView textView = (TextView) view.findViewById(R.id.list_announce_data);
         textView.setText( dataList.get(position).getContent() );
 
+
         //date 포맷 변경
         String dateText = "";
         try
@@ -80,9 +81,14 @@ public class AnnounceAdapter extends BaseAdapter {
         textView = (TextView) view.findViewById(R.id.list_announcd_date_data);
         textView.setText( dateText );
 
-        if(DataManager.inst().getUserData().getGrade()==Define.GRADE_ADMIN) {
+        try{
+            if(DataManager.inst().getUserData().getGrade()==Define.GRADE_ADMIN) {
+                textView = (TextView) view.findViewById(R.id.list_announcd_grade_data);
+                textView.setText(dataList.get(position).getGrade());
+        }
+        }catch(NullPointerException e){
             textView = (TextView) view.findViewById(R.id.list_announcd_grade_data);
-            textView.setText(dataList.get(position).getGrade());
+            textView.setText("");
         }
 
         return view;
