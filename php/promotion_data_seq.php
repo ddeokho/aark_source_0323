@@ -24,7 +24,8 @@
         "logo_img" => $row['logo_img'],
         "feq" => $row['feq'],
         "show_state" => $row['show_state'],                
-        "timestamp" => $row['timestamp']        
+        "timestamp" => $row['timestamp'],
+        "url" => $row['url']        
          ) );
     }
     else

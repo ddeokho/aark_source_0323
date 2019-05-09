@@ -40,13 +40,14 @@
         $result = mysql_query("SET AUTOCOMMIT=0", $conn);
         $result = mysql_query("BEGIN", $conn);
 
+        //url추가
         if( $data->seq > -1 )
         {
-            $query = "update promotion set title='$data->title',name='$data->name',email='$data->email',address='$data->address', latitude='$data->latitude', longitude='$data->longitude', phone='$data->phone', logo_img='$data->logo_img' where seq='$data->seq' ";
+            $query = "update promotion set title='$data->title',name='$data->name',email='$data->email',address='$data->address', latitude='$data->latitude', longitude='$data->longitude', phone='$data->phone', logo_img='$data->logo_img', url='$data->url' where seq='$data->seq' ";
         }   
         else
         {
-            $query = "insert into promotion( member_seq, type, title, name, email, address, latitude, longitude, phone, logo_img ) values( '$data->member_seq', '$data->type', '$data->title', '$data->name','$data->email', '$data->address', '$data->latitude', '$data->longitude', '$data->phone', '$data->logo_img' );";    
+            $query = "insert into promotion( member_seq, type, title, name, email, address, latitude, longitude, phone, logo_img, url ) values( '$data->member_seq', '$data->type', '$data->title', '$data->name','$data->email', '$data->address', '$data->latitude', '$data->longitude', '$data->phone', '$data->logo_img', '$data->url' );";    
         }
         
         $result = mysqli_query($conn, $query);

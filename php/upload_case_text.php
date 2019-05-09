@@ -29,6 +29,10 @@
       }
     }
 
+    //view_title , view_title='$view_title'
+    
+
+
     if( $upload_result )
     {
         $conn = connect_db();        
@@ -40,7 +44,7 @@
         }
         else
         {
-            $query = "insert into case_text( member_seq, year, title, content, cate_reg, cate_1, cate_2, cate_3, img_1, img_2, img_3 ) values( '$data->member_seq', '$data->year', '$data->title', '$data->content', '$data->cate_reg', '$data->cate_1', '$data->cate_2', '$data->cate_3', '$data->img_1', '$data->img_2', '$data->img_3' );";
+            $query = "insert into case_text( member_seq, year, title, content, cate_reg, cate_1, cate_2, cate_3, img_1, img_2, img_3, view_title ) values( '$data->member_seq', '$data->year', '$data->title', '$data->content', '$data->cate_reg', '$data->cate_1', '$data->cate_2', '$data->cate_3', '$data->img_1', '$data->img_2', '$data->img_3', 'view_title');";
         }
             
         if( $result = mysqli_query($conn, $query) )

@@ -7,16 +7,8 @@
     
     $start = $data->start;
     $size = $data->size;   
-    
-    if($data->type == 1){
-        $query = "select * from promotion where show_state=0 and type='$data->type' LIMIT $start, $size";//동아리홍보
-    }
-    else{
-        $query = "select * from promotion where show_state=0 and type='$data->type' order by TIMESTAMP desc LIMIT $start, $size";//order by TIMESTAMP desc 추가 업체홍보 변경
-    }
-    
+    $query = "select * from promotion where show_state=0 and type='$data->type' LIMIT $start, $size";
 
-      
     if( $result = mysqli_query($conn, $query) )
     {  
         $count = mysqli_num_rows($result);
@@ -40,7 +32,9 @@
                     "logo_img" => $row['logo_img'],
                     "feq" => $row['feq'],
                     "show_state" => $row['show_state'],
-                    "timestamp" => $row['timestamp']                    
+                    "timestamp" => $row['timestamp'],
+                    //url 추가
+                    "url" => $row['url']                    
                 ));
             }
 

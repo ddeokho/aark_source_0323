@@ -4,8 +4,10 @@
     //$out_put = json_encode( $param, JSON_UNESCAPED_UNICODE );
     $data = json_decode($param);
     $conn = connect_db();
+
+    $date =date('Y-m-d H:i:s');
         
-    $query = "update promotion set timestamp=now() where seq='$data->seq'";
+    $query = "update promotion set TIMESTAMP=NOW() where seq='$data->seq'";
 
     if( $result = mysqli_query($conn, $query) )
     {

@@ -8,32 +8,33 @@
         
     $conn = connect_db(); 
 
-        $query = "update case_text set grade='$data->grade' where seq='$data->seq'";
+        $query = "insert into announce(content, grade) values('[검차+운영위+오비]$data->push_text', '3')";
         $tokens = array();
         if( $result = mysqli_query($conn, $query) )
         {        
-            echo json_encode( array('packet_id' => $data->packet_id, 'result' => 'true', "seq" => $data->seq, "grade" => $data->grade ) );
-            $query = "select * from member where seq = '".$data->member_seq."'";
+            echo json_encode( array('packet_id' => $data->packet_id, 'result' => 'true') );
+            //$result = mysqli_query($conn,$query);
+            $query = "select * from member where grade >= '1'";
             $result = mysqli_query($conn,$query);
-            if( mysqli_num_rows($result) > 0 )
+            if(mysqli_num_rows($result)>0)
             {
                 $row = mysqli_fetch_assoc($result);  
                 $query = "select token from fcm_token where email = '".$row['email']."'";
                 $result = mysqli_query($conn,$query);
                 if(mysqli_num_rows($result) > 0 ){
-
+    
                     while ($row = mysqli_fetch_assoc($result)) 
                     {               
                         $tokens[] = $row["token"];
                     }
-                }    
-            }            
+                }   
+            }              
         }
         else
             echo json_encode( array('packet_id' => $data->packet_id, 'result' => 'false' ) );
             
         $title = "AARK 사례집";
-        $message = "올린 질문이 판별되었어요!";
+        $message = "[검차+운영위+오비]$data->push_text";
         $channel_id = "notice";
         $arr = array( 'title' => $title, 'message' => $message, 'channel_id' => $channel_id );
         //$arr['title'] = $title;
