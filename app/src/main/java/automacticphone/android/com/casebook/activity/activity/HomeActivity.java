@@ -998,7 +998,7 @@ public class HomeActivity extends AppCompatActivity
     {
         selectBarImg.setX( homeMenuBtnList.get(3).getX() );
         DataManager.inst().ClearCaseDataList();
-        NetworkManager.inst().RequestPromotionData( HomeActivity.this, mCallBack, "promotion_data", Define.PROMOTION_STUDENT, 0, Define.MAX_CASE_DATA );
+        NetworkManager.inst().RequestPromotionData( HomeActivity.this, mCallBack, "promotion_data", Define.PROMOTION_STUDENT, 0, Define.MAX_PROM_DATA );
     }
 
     void OnMyPageBtnClick()

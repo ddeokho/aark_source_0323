@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 
@@ -56,7 +57,8 @@ public class PromoteListFragment extends Fragment
 
     private PromoteListAdapter adapter;
     private ArrayList<PromotionData> dataList;
-    private ListView promoteList;
+    //private ListView promoteList;
+    private GridView promoteList;
     private boolean lastItemVisibleFlag = false;    // 리스트 스크롤이 마지막 셀(맨 바닥)로 이동했는지 체크할 변수
     private boolean mLockListView = false;          // 데이터 불러올때 중복안되게 하기위한 변수
     private ProgressBar progressBar;                // 데이터 로딩중을 표시할 프로그레스바
@@ -127,17 +129,17 @@ public class PromoteListFragment extends Fragment
                         case 0:
                         {
                             if( searchText.length() > 0 )
-                                NetworkManager.inst().RequestPromotionSearchList( getContext(), mCallBack, "promotion_data", Define.PROMOTION_STUDENT, searchText, 0, Define.MAX_CASE_DATA );
+                                NetworkManager.inst().RequestPromotionSearchList( getContext(), mCallBack, "promotion_data", Define.PROMOTION_STUDENT, searchText, 0, Define.MAX_PROM_DATA );
                             else
-                                NetworkManager.inst().RequestPromotionData( getContext(), mCallBack, "promotion_data", Define.PROMOTION_STUDENT, 0, Define.MAX_CASE_DATA );
+                                NetworkManager.inst().RequestPromotionData( getContext(), mCallBack, "promotion_data", Define.PROMOTION_STUDENT, 0, Define.MAX_PROM_DATA );
                         }
                         break;
                         case 1:
                         {
                             if( searchText.length() > 0 )
-                                NetworkManager.inst().RequestPromotionSearchList( getContext(), mCallBack, "promotion_data", Define.PROMOTION_TRADER, searchText, 0, Define.MAX_CASE_DATA );
+                                NetworkManager.inst().RequestPromotionSearchList( getContext(), mCallBack, "promotion_data", Define.PROMOTION_TRADER, searchText, 0, Define.MAX_PROM_DATA );
                             else
-                                NetworkManager.inst().RequestPromotionData( getContext(), mCallBack, "promotion_data", Define.PROMOTION_TRADER, 0, Define.MAX_CASE_DATA );
+                                NetworkManager.inst().RequestPromotionData( getContext(), mCallBack, "promotion_data", Define.PROMOTION_TRADER, 0, Define.MAX_PROM_DATA );
                         }
                         break;
                     }
@@ -197,9 +199,9 @@ public class PromoteListFragment extends Fragment
                     int start = dataList.size();
                     // 다음 데이터를 불러온다.
                     if( searchText.length() > 0 )
-                        NetworkManager.inst().RequestPromotionSearchList( getContext(), mCallBack, "promotion_data", type, searchText, start, Define.MAX_CASE_DATA );
+                        NetworkManager.inst().RequestPromotionSearchList( getContext(), mCallBack, "promotion_data", type, searchText, start, Define.MAX_PROM_DATA );
                     else
-                        NetworkManager.inst().RequestPromotionData( getContext(), mCallBack, "promotion_data", type, start, Define.MAX_CASE_DATA );
+                        NetworkManager.inst().RequestPromotionData( getContext(), mCallBack, "promotion_data", type, start, Define.MAX_PROM_DATA );
                 }
             }
 
@@ -344,6 +346,6 @@ public class PromoteListFragment extends Fragment
         }
 
         DataManager.inst().ClearPromotionDataList();
-        NetworkManager.inst().RequestPromotionSearchList( getContext(), mCallBack, "promotion_data", promotionType, searchText, 0, Define.MAX_CASE_DATA );
+        NetworkManager.inst().RequestPromotionSearchList( getContext(), mCallBack, "promotion_data", promotionType, searchText, 0, Define.MAX_PROM_DATA );
     }
 }

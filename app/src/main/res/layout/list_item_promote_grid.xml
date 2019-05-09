@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="horizontal"
+    tools:context=".activity.fragment.TableContentsFragment">
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#ffffffff"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1060"
+        app:scale_base_height="960"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+        <ImageView
+            android:id="@+id/item_promote_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:scale_height="600"
+            app:scale_left="0"
+            app:scale_top="0"
+            app:scale_width="1050" />
+
+
+        <TextView
+            android:id="@+id/item_promote_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="ABS 분말 소화기 1kg"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            app:scale_textsize = "80"
+            app:scale_left="0"
+            app:scale_top="620"
+            app:scale_width="1050"
+            app:scale_height="110"/>
+
+        <!--<TextView
+            android:id="@+id/item_promote_date"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="19.01.21"
+            android:textAlignment="textEnd"
+            app:scale_textsize = "36"
+            app:scale_left="690"
+            app:scale_top="40"
+            app:scale_width="300"
+            app:scale_height="50"/>-->
+
+
+
+        <TextView
+            android:id="@+id/item_promote_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="간단한 설명이 보여지는 공간 입니다. 몇글자까지.."
+            android:gravity="center_horizontal"
+            app:scale_textsize = "55"
+            app:scale_left="0"
+            app:scale_top="750"
+            app:scale_width="1050"
+            app:scale_height="160"/>
+
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_left="70"
+            app:scale_top="760"
+            app:scale_width="940"
+            app:scale_height="1"
+            />-->
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</LinearLayout>

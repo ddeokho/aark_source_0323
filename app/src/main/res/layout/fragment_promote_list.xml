@@ -24,7 +24,7 @@
             app:scale_width="1080"
             app:scale_height="120"/>
 
-        <ListView
+        <!--<ListView
             android:id="@+id/promote_list_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -32,7 +32,19 @@
             app:scale_left="0"
             app:scale_top="120"
             app:scale_width="1080"
-            tools:listitem="@layout/list_item_promote"></ListView>
+            tools:listitem="@layout/list_item_promote"></ListView>-->
+
+        <GridView
+            android:id="@+id/promote_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:numColumns="2"
+            android:layout_margin="8dp"
+            app:scale_height="1410"
+            app:scale_left="0"
+            app:scale_top="120"
+            app:scale_width="1080"
+            tools:listitem="@layout/list_item_promote_grid"></GridView>
 
         <Button
             android:id="@+id/fragment_promote_Add_btn"

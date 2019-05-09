@@ -22,6 +22,7 @@ public class Define
     public static final int BAD_CASE = 2;                  //좋은사례.
     public static final int MAX_COMMENT_COUNT = 5;
     public static final int MAX_CASE_DATA = 10;
+    public static final int MAX_PROM_DATA = 16;
     public static final String ERROR_100 = "-100";                //이미 가입된 이메일
     public static final String ERROR_101 = "-101";                //파일 업로드 실패
     public static final String ERROR_102 = "-102";                //이미 가입된 핸드폰 번호

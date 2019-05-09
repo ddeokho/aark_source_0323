@@ -60,15 +60,15 @@ public class PromoteListAdapter extends BaseAdapter
     public View getView(int position, View view, ViewGroup parent)
     {
         if(view == null) {
-            view = inflater.inflate(R.layout.list_item_promote, parent, false);
+            view = inflater.inflate(R.layout.list_item_promote_grid, parent, false);
         }
 
         //화면에 표시될 View(Layout이 inflate된) 으로 부터 위젝에 대한 참조 획득
         TextView textView = (TextView) view.findViewById(R.id.item_promote_name);
         textView.setText( dataList.get(position).getName() );
 
-        textView = (TextView) view.findViewById(R.id.item_promote_date);
-        textView.setText( dataList.get(position).getTimestamp() );
+        /*textView = (TextView) view.findViewById(R.id.item_promote_date);
+        textView.setText( dataList.get(position).getTimestamp() );*/
 
         textView = (TextView) view.findViewById(R.id.item_promote_title);
         textView.setText( dataList.get(position).getTitle() );
