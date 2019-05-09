@@ -1409,26 +1409,47 @@ public class HomeActivity extends AppCompatActivity
     {
         switch ( prevFragmentTag )
         {
-            case "AdminPageFragment":       { ChangeFragment( new AdminPageFragment(), "AdminPageFragment"); }  break;
-            case "BoardFragment":
-            {
-                BoardFragment boardFragment = new BoardFragment();
-                if( searchText.length() > 0 )
-                    boardFragment.setSearchText( searchText );
-
-                if( param.length() > 0 )
+            case "AdminPageFragment":
                 {
-                    BoardFragment.selectTab = Integer.valueOf( param );
-                }
+                    ChangeFragment( new AdminPageFragment(), "AdminPageFragment");
+                }  break;
+            case "BoardFragment":
+                {
+                    if(currentFragmentTag == "ContentsViewFragment"){
+                        BoardFragment boardFragment = new BoardFragment();
+                        if( searchText.length() > 0 )
+                            boardFragment.setSearchText( searchText );
 
-                ChangeFragment( boardFragment, "BoardFragment");
-            }
-            break;
+                        if( param.length() > 0 )
+                        {
+                            BoardFragment.selectTab = Integer.valueOf( param );
+                        }
+
+                        ChangeFragment( boardFragment, "BoardFragment");
+                    }else{
+                        { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }
+                    }
+                }
+                break;
             case "ContentsViewFragment":    { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }  break; //{ ChangeFragment( new ContentsViewFragment(), "ContentsViewFragment"); }  break;
-            case "JoinMembershipFragment":  { ChangeFragment( new JoinMembershipFragment(), "JoinMembershipFragment"); }  break;
-            case "LoginFragment":           { ChangeFragment( new LoginFragment(), "LoginFragment"); }  break;
-            case "ModifyProfileFragment":   { ChangeFragment( new ModifyProfileFragment(), "ModifyProfileFragment"); }  break;
-            case "MyPageFragment":          { ChangeFragment( new MyPageFragment(), "MyPageFragment"); }  break;
+            case "JoinMembershipFragment":  { ChangeFragment( new TableContentsFragment(), "TableContentsFragment");  }  break; //{ ChangeFragment( new JoinMembershipFragment(), "JoinMembershipFragment"); }  break;
+            case "LoginFragment":           {
+                if(currentFragmentTag == "JoinMembershipFragment"){
+                    ChangeFragment( new LoginFragment(), "LoginFragment");
+                }else{
+                    ChangeFragment( new TableContentsFragment(), "TableContentsFragment");
+                }
+            }  break;
+            case "ModifyProfileFragment":  { ChangeFragment( new TableContentsFragment(), "TableContentsFragment");  }  break;//{ ChangeFragment( new ModifyProfileFragment(), "ModifyProfileFragment"); }  break;
+            case "MyPageFragment":
+                {
+                    if (currentFragmentTag == "ContentsViewFragment") {
+                        ChangeFragment(new MyPageFragment(), "MyPageFragment");
+                    } else {
+                        ChangeFragment(new TableContentsFragment(), "TableContentsFragment");
+                    }
+                    break;
+                }
             case "PromoteAddressFragment":  { ChangeFragment( new PromoteAddressFragment(), "PromoteAddressFragment"); }  break;
             case "PromoteContentsFragment":
             {
@@ -1444,8 +1465,12 @@ public class HomeActivity extends AppCompatActivity
             case "PromoteFragment":         { ChangeFragment( new PromoteFragment(), "PromoteFragment"); }  break;
             case "PromoteListFragment":
             {
-                PromoteListFragment fragment = PromoteListFragment.newInstance( String.valueOf( PromoteListFragment.selectTab ) );
-                ChangeFragment( fragment, "PromoteListFragment");
+                if(currentFragmentTag=="PromoteContentsFragment"){
+                    PromoteListFragment fragment = PromoteListFragment.newInstance( String.valueOf( PromoteListFragment.selectTab ) );
+                    ChangeFragment( fragment, "PromoteListFragment");//리스트 상세로 들어갔을 때 뒤로가기는 리스트로 돌아감
+                }else{
+                    ChangeFragment( new TableContentsFragment(), "TableContentsFragment");//리스트 상세가 아닌 다른 곳으로 빠졌을 땐 1단계 깊이로 들어가기 때문에 메인 테이블로 되돌아옴
+                }
             }
             break;
             case "PromoteRegisterFragment":
@@ -1468,8 +1493,7 @@ public class HomeActivity extends AppCompatActivity
             break;
             case "QuestionsFragment":       { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }  break;//
             case "TableContentsFragment":   { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }  break;
-            case "UploadContentsFragment":   { ChangeFragment( new UploadContentsFragment(), "UploadContentsFragment"); }  break;
-
+            case "UploadContentsFragment" : {ChangeFragment(new TableContentsFragment(),"TableContentsFragment");} break;//ChangeFragment( new UploadContentsFragment(), "UploadContentsFragment");
             case "annonceFragment": {ChangeFragment(new TableContentsFragment(),"TableContentsFragment");} break;//
             case "reguViewFragment": {ChangeFragment(new TableContentsFragment(),"TableContentsFragment");}break;//
         }
