@@ -24,7 +24,7 @@
             app:scale_top="0"
             app:scale_width="1080" />
 
-        <TextView
+       <!-- <TextView
             android:id="@+id/fragment_board_title"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -34,15 +34,15 @@
             app:scale_left="20"
             app:scale_top="140"
             app:scale_width="1040"
-            app:scale_height="50"/>
+            app:scale_height="50"/>-->
 
         <ListView
             android:id="@+id/fragment_board_list_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:scale_height="1360"
+            app:scale_height="1410"
             app:scale_left="0"
-            app:scale_top="220"
+            app:scale_top="120"
             app:scale_width="1080"
             tools:listitem="@layout/list_item_bulletin"></ListView>
 

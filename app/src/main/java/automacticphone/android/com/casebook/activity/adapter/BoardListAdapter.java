@@ -55,7 +55,8 @@ public class BoardListAdapter extends BaseAdapter
 
     @Override
     public long getItemId(int position) {
-        return dataList.get(position).getSeq();
+        //return dataList.get(position).getSeq();
+        return 0;
     }
 
     @Override

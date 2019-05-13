@@ -119,6 +119,7 @@ public class BoardFragment extends Fragment
                         {
                             if( DataManager.inst().ParsingCaseData( jsonObj ) )
                             {
+
                                 // 리스트에 다음 데이터를 입력할 동안에 이 메소드가 또 호출되지 않도록 mLockListView 를 true로 설정한다.
                                 dataList = DataManager.inst().getCaseDataList();
                                 adapter.ChangeData( dataList );
@@ -204,11 +205,11 @@ public class BoardFragment extends Fragment
             SubTreeCaseData subTreeCaseData = HomeActivity.inst().getSelectSubTreeCaseData();
             if( subTreeCaseData != null )
             {
-                TextView textView = view.findViewById(R.id.fragment_board_title );
+                //TextView textView = view.findViewById(R.id.fragment_board_title );
                 RegulationSubData3 subData3 = DataManager.inst().getRegulSubData3( subTreeCaseData.getCate_3() );
                 if( subData3 != null )
                 {
-                    textView.setText( subData3.getRegul() );
+                    //textView.setText( subData3.getRegul() );
                 }
             }
 

@@ -482,12 +482,14 @@ public class HomeActivity extends AppCompatActivity
                     }
                     else if(jsonObj.get("packet_id").equals("promotion_data"))
                     {
-                        ChangeFragment(new PromoteListFragment(), "PromoteListFragment");
+                        // ChangeFragment(new PromoteListFragment(), "PromoteListFragment");
                         if( jsonObj.get("result").equals("true") ) {
                             DataManager.inst().ClearPromotionDataList();
                             if (DataManager.inst().ParsingPromotionData(jsonObj)) {
-                                //ChangeFragment(new PromoteListFragment(), "PromoteListFragment");
+                                ChangeFragment(new PromoteListFragment(), "PromoteListFragment");
                             }
+                        }else{
+                            ChangeFragment(new PromoteListFragment(), "PromoteListFragment");
                         }
                     }
                     else if(jsonObj.get("packet_id").equals("promotion_sub_data"))
