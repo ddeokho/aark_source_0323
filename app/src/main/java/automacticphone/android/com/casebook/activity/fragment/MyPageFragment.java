@@ -178,6 +178,7 @@ public class MyPageFragment extends Fragment {
             }
         };
 
+        HomeActivity.inst().setMenuBarPos( 4 );
         return view;
     }
 

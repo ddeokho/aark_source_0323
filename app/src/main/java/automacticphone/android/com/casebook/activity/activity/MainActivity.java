@@ -31,6 +31,7 @@ import java.util.HashMap;
 
 import automacticphone.android.com.casebook.activity.HomeActivity;
 import automacticphone.android.com.casebook.activity.common.DataManager;
+import automacticphone.android.com.casebook.activity.common.Define;
 import automacticphone.android.com.casebook.activity.common.PermissionDeniedCallback;
 import automacticphone.android.com.casebook.activity.common.PermissionManager;
 import automacticphone.android.com.casebook.activity.common.Util;
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity
 {
     private HttpTaskCallBack mCallBack = null;
     private int requestDataCount = 5;
+    private String pushAction = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -62,6 +64,7 @@ public class MainActivity extends AppCompatActivity
 
         }
 
+        requestDataCount = 5;
         Intent intent = getIntent();
         String data = intent.getDataString();
         if(intent.getAction() == Intent.ACTION_VIEW)
@@ -75,12 +78,16 @@ public class MainActivity extends AppCompatActivity
                 DataManager.inst().setKakaoBoardSeq( boardSeq );
             }
 
-             param = intent.getData().getQueryParameter("promotion_seq" );
+            param = intent.getData().getQueryParameter("promotion_seq" );
             if( param != null )
             {
                 int promotionSeq = Integer.parseInt( param );
                 DataManager.inst().setKakaoPromotionSeq( promotionSeq );
             }
+        }
+        else if( intent.getAction() == Define.ACTION_PUSH_VIEW )
+        {
+            pushAction = intent.getAction();
         }
 
         mCallBack = new HttpTaskCallBack()
@@ -166,8 +173,13 @@ public class MainActivity extends AppCompatActivity
 
     private void NextActivity()
     {
-            Intent intent = new Intent( getApplicationContext(), HomeActivity.class);
-            startActivity(intent);
+        Intent intent = new Intent( getApplicationContext(), HomeActivity.class);
+        if( pushAction.length() > 0 )
+        {
+            intent.setAction( pushAction );
+            pushAction = "";
+        }
+        startActivity(intent);
     }
 
     private void RequestRegulationMainData()
@@ -255,7 +267,7 @@ public class MainActivity extends AppCompatActivity
     }
 
     //다음 API 키해시 등록을 위한 앱 키해시 생성.
-   private void getAppKeyHash() {
+    private void getAppKeyHash() {
         try {
             PackageInfo info = getPackageManager().getPackageInfo(getPackageName(), PackageManager.GET_SIGNATURES);
             for (Signature signature : info.signatures) {

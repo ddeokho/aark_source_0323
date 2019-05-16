@@ -15,6 +15,7 @@ import android.os.PowerManager;
 import android.support.annotation.RequiresApi;
 import android.support.annotation.StringDef;
 import android.support.v4.app.NotificationCompat;
+import android.support.v4.app.TaskStackBuilder;
 import android.util.Log;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
@@ -26,6 +27,7 @@ import java.lang.annotation.RetentionPolicy;
 import automacticphone.android.com.casebook.MainActivity;
 import automacticphone.android.com.casebook.R;
 import automacticphone.android.com.casebook.activity.HomeActivity;
+import automacticphone.android.com.casebook.activity.common.Define;
 import automacticphone.android.com.casebook.activity.network.HttpTaskCallBack;
 import automacticphone.android.com.casebook.activity.network.NetworkManager;
 
@@ -121,24 +123,26 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         }
 
         Intent intent;
-        intent = new Intent(this, MainActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-        /*if(click_action.equals("annonceFragment")){
-            Intent notiIconClickIntent = new Intent(this, HomeActivity.class);
-            notiIconClickIntent.putExtra("annonceFragment", "notiIntent");
-            //intent = new Intent(this, HomeActivity.class);
+        /*if(click_action=="announce"){
+            intent = new Intent(this, HomeActivity.class);
+
+            //해당 플래그먼트로 이동
+            intent.putExtra("annonceFragment", "notiIntent");
             //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
 
-        }else if(click_action.equals("mypage")){
-            intent = new Intent(this, HomeActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        }
-        else{
-            intent = new Intent(this, MainActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        }
-*/
+            intent .setAction(Intent.ACTION_MAIN);
+            intent .addCategory(Intent.CATEGORY_LAUNCHER);
+            TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+            stackBuilder.addParentStack(MainActivity.class);
+
+            stackBuilder.addNextIntent(intent);
+
+        }else{}*/
+
+        intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.setAction(Define.ACTION_PUSH_VIEW);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);

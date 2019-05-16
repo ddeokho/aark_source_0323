@@ -292,7 +292,7 @@ public class HomeActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-       /* String str = getIntent().getStringExtra("annonceFragment");
+       /*String str = getIntent().getStringExtra("annonceFragment");
         if(str !=null)
         {
             if(str.equals("notiIntent"))
@@ -300,7 +300,7 @@ public class HomeActivity extends AppCompatActivity
                 //DataManager.inst().ClearAnnounceDataList();
                 //drawerLayout.closeDrawers();
                 //NetworkManager.inst().RequestAnnounceData(HomeActivity.this, mCallBack, "announce_data",0, 15);
-                OnAnnounceBtnClick();
+                OnAnnounceLoginBtnClick();
             }
         }*/
 
@@ -351,7 +351,11 @@ public class HomeActivity extends AppCompatActivity
                         {
                             if(DataManager.inst().ParsingWriteList( jsonObj ) )
                             {
-
+                                Intent intent = getIntent();
+                                if( intent.getAction() == Define.ACTION_PUSH_VIEW )
+                                {
+                                    OnMyPageBtnClick();
+                                }
                             }
                         }
                     }
@@ -649,7 +653,7 @@ public class HomeActivity extends AppCompatActivity
                     OnYoutubeBtnClick();
                     break;
 
-                    //공지사항 버튼
+                //공지사항 버튼
                 case R.id.announce_btn:
                     //로그인
                     if(DataManager.inst().getUserData()!=null){
@@ -1412,27 +1416,27 @@ public class HomeActivity extends AppCompatActivity
         switch ( prevFragmentTag )
         {
             case "AdminPageFragment":
-                {
-                    ChangeFragment( new AdminPageFragment(), "AdminPageFragment");
-                }  break;
+            {
+                ChangeFragment( new AdminPageFragment(), "AdminPageFragment");
+            }  break;
             case "BoardFragment":
-                {
-                    if(currentFragmentTag == "ContentsViewFragment"){
-                        BoardFragment boardFragment = new BoardFragment();
-                        if( searchText.length() > 0 )
-                            boardFragment.setSearchText( searchText );
+            {
+                if(currentFragmentTag == "ContentsViewFragment"){
+                    BoardFragment boardFragment = new BoardFragment();
+                    if( searchText.length() > 0 )
+                        boardFragment.setSearchText( searchText );
 
-                        if( param.length() > 0 )
-                        {
-                            BoardFragment.selectTab = Integer.valueOf( param );
-                        }
-
-                        ChangeFragment( boardFragment, "BoardFragment");
-                    }else{
-                        { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }
+                    if( param.length() > 0 )
+                    {
+                        BoardFragment.selectTab = Integer.valueOf( param );
                     }
+
+                    ChangeFragment( boardFragment, "BoardFragment");
+                }else{
+                    { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }
                 }
-                break;
+            }
+            break;
             case "ContentsViewFragment":    { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }  break; //{ ChangeFragment( new ContentsViewFragment(), "ContentsViewFragment"); }  break;
             case "JoinMembershipFragment":  { ChangeFragment( new TableContentsFragment(), "TableContentsFragment");  }  break; //{ ChangeFragment( new JoinMembershipFragment(), "JoinMembershipFragment"); }  break;
             case "LoginFragment":           {
@@ -1444,14 +1448,14 @@ public class HomeActivity extends AppCompatActivity
             }  break;
             case "ModifyProfileFragment":  { ChangeFragment( new TableContentsFragment(), "TableContentsFragment");  }  break;//{ ChangeFragment( new ModifyProfileFragment(), "ModifyProfileFragment"); }  break;
             case "MyPageFragment":
-                {
-                    if (currentFragmentTag == "ContentsViewFragment") {
-                        ChangeFragment(new MyPageFragment(), "MyPageFragment");
-                    } else {
-                        ChangeFragment(new TableContentsFragment(), "TableContentsFragment");
-                    }
-                    break;
+            {
+                if (currentFragmentTag == "ContentsViewFragment") {
+                    ChangeFragment(new MyPageFragment(), "MyPageFragment");
+                } else {
+                    ChangeFragment(new TableContentsFragment(), "TableContentsFragment");
                 }
+                break;
+            }
             case "PromoteAddressFragment":  { ChangeFragment( new PromoteAddressFragment(), "PromoteAddressFragment"); }  break;
             case "PromoteContentsFragment":
             {
@@ -1525,4 +1529,8 @@ public class HomeActivity extends AppCompatActivity
         }
     }
 
+    public void setMenuBarPos( int pos )
+    {
+        selectBarImg.setX( homeMenuBtnList.get(pos).getX() );
+    }
 }
