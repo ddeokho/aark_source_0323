@@ -292,17 +292,7 @@ public class HomeActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-       /*String str = getIntent().getStringExtra("annonceFragment");
-        if(str !=null)
-        {
-            if(str.equals("notiIntent"))
-            {
-                //DataManager.inst().ClearAnnounceDataList();
-                //drawerLayout.closeDrawers();
-                //NetworkManager.inst().RequestAnnounceData(HomeActivity.this, mCallBack, "announce_data",0, 15);
-                OnAnnounceLoginBtnClick();
-            }
-        }*/
+        //Log.d("AARKFirebase","공지공지_홈");
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
@@ -347,6 +337,7 @@ public class HomeActivity extends AppCompatActivity
                     }
                     else if(jsonObj.get("packet_id").equals("write_list"))
                     {
+                        //Log.d("AARKFirebase","공지공지_홈2");
                         if( jsonObj.get("result").equals("true") )
                         {
                             if(DataManager.inst().ParsingWriteList( jsonObj ) )
@@ -355,6 +346,8 @@ public class HomeActivity extends AppCompatActivity
                                 if( intent.getAction() == Define.ACTION_PUSH_VIEW )
                                 {
                                     OnMyPageBtnClick();
+                                }else if(intent.getAction() == Define.ACTION_PUSH_VIEW2){
+                                    OnAnnounceLoginBtnClick();
                                 }
                             }
                         }
@@ -802,14 +795,14 @@ public class HomeActivity extends AppCompatActivity
             case "JoinMembershipFragment":
             case "LoginFragment":
             case "ModifyProfileFragment":
-                selectBarImg.setX( homeMenuBtnList.get(0).getX() );
+                selectBarImg.setX( homeMenuBtnList.get(0).getX()-10 );
                 break;
             case "BoardFragment":
             case "ContentsViewFragment":
-                selectBarImg.setX( homeMenuBtnList.get(1).getX() );
+                selectBarImg.setX( homeMenuBtnList.get(1).getX()-10 );
                 break;
             case "UploadContentsFragment":
-                selectBarImg.setX( homeMenuBtnList.get(2).getX() );
+                selectBarImg.setX( homeMenuBtnList.get(2).getX()-10 );
                 break;
             case "PromoteFragment":
             case "PromoteListFragment":
@@ -817,13 +810,13 @@ public class HomeActivity extends AppCompatActivity
             case "PromoteRegisterFragment2":
             case "PromoteAddressFragment":
             case "PromoteContentsFragment":
-                selectBarImg.setX( homeMenuBtnList.get(3).getX() );
+                selectBarImg.setX( homeMenuBtnList.get(3).getX()-10 );
                 break;
             case "MyPageFragment":
             case "annonceFragment":
             case "reguViewFragment":
             case "AdminPageFragment":
-                selectBarImg.setX( homeMenuBtnList.get(4).getX() );
+                selectBarImg.setX( homeMenuBtnList.get(4).getX()-10 );
                 break;
 
         }
@@ -969,13 +962,13 @@ public class HomeActivity extends AppCompatActivity
 
     void OnHomeBtnClick()
     {
-        selectBarImg.setX( homeMenuBtnList.get(0).getX() );
+        selectBarImg.setX( homeMenuBtnList.get(0).getX()-10 );
         ChangeFragment(new TableContentsFragment(), "TableContentsFragment");
     }
 
     void OnSearchBtnClick()
     {
-        selectBarImg.setX( homeMenuBtnList.get(1).getX() );
+        selectBarImg.setX( homeMenuBtnList.get(1).getX()-10 );
         //setSearchMainBtnClicked( true );
         DataManager.inst().ClearCaseDataList();
         NetworkManager.inst().RequestCaseData( HomeActivity.this, mCallBack, "case_data_lastest", 0, 0, 0, 0, 0, Define.GOOD_CASE, 0, Define.MAX_CASE_DATA );
@@ -991,7 +984,7 @@ public class HomeActivity extends AppCompatActivity
                 return;
             }
             DataManager.inst().setSelectCaseData( null );
-            selectBarImg.setX( homeMenuBtnList.get(2).getX() );
+            selectBarImg.setX( homeMenuBtnList.get(2).getX()-10 );
             ChangeFragment(new UploadContentsFragment(), "UploadContentsFragment");
         }
         else
@@ -1002,14 +995,14 @@ public class HomeActivity extends AppCompatActivity
 
     void OnPromoteBtnClick()
     {
-        selectBarImg.setX( homeMenuBtnList.get(3).getX() );
+        selectBarImg.setX( homeMenuBtnList.get(3).getX()-10 );
         DataManager.inst().ClearCaseDataList();
         NetworkManager.inst().RequestPromotionData( HomeActivity.this, mCallBack, "promotion_data", Define.PROMOTION_STUDENT, 0, Define.MAX_PROM_DATA );
     }
 
     void OnMyPageBtnClick()
     {
-        selectBarImg.setX( homeMenuBtnList.get(4).getX() );
+        selectBarImg.setX( homeMenuBtnList.get(4).getX()-10 );
         ChangeFragment(new MyPageFragment(), "MyPageFragment");
     }
 
@@ -1531,6 +1524,6 @@ public class HomeActivity extends AppCompatActivity
 
     public void setMenuBarPos( int pos )
     {
-        selectBarImg.setX( homeMenuBtnList.get(pos).getX() );
+        selectBarImg.setX( homeMenuBtnList.get(pos).getX()-10 );
     }
 }

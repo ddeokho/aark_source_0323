@@ -9,7 +9,7 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:scale_base_height="1520"
+        app:scale_base_height="1540"
         app:scale_base_width="1080">
 
         <TextView
@@ -184,7 +184,7 @@
             android:paddingLeft="10dp"
             app:scale_left="50"
             app:scale_textsize="30"
-            app:scale_top="1420"
+            app:scale_top="1430"
             app:scale_width="860"
             app:scale_height="70"/>
 
@@ -196,7 +196,7 @@
             android:text="보내기"
             app:scale_textsize="20"
             app:scale_left="950"
-            app:scale_top="1420"
+            app:scale_top="1430"
             app:scale_width="70"
             app:scale_height="70"/>
     </com.ssomai.android.scalablelayout.ScalableLayout>

@@ -12,6 +12,7 @@ import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
 import android.net.Uri;
+import android.nfc.Tag;
 import android.os.Environment;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -51,7 +52,7 @@ public class MainActivity extends AppCompatActivity
     private HttpTaskCallBack mCallBack = null;
     private int requestDataCount = 5;
     private String pushAction = "";//grade
-    //private String pushAction2 = "";//all
+    private String pushAction2 = "";//all
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -86,15 +87,15 @@ public class MainActivity extends AppCompatActivity
                 DataManager.inst().setKakaoPromotionSeq( promotionSeq );
             }
         }
-        else if( intent.getAction() == Define.ACTION_PUSH_VIEW )
-        {
+        else if( intent.getAction() == Define.ACTION_PUSH_VIEW ) {
             pushAction = intent.getAction();//마이페이지
         }
-
-        //push
-        /*else if(intent.getAction() == Define.ACTION_PUSH_VIEW2){
+        else if(intent.getAction() == Define.ACTION_PUSH_VIEW2){
             pushAction2 = intent.getAction();//공지
-        }*/
+            Log.d("AARKFirebase","공지공지");
+
+        }//push
+
 
         mCallBack = new HttpTaskCallBack()
         {
@@ -184,11 +185,10 @@ public class MainActivity extends AppCompatActivity
             intent.setAction(pushAction);
             pushAction = "";
         }
-
-        /*else if(pushAction2.length() > 0){
-            intent.setAction(pushAction);
-            pushAction = "";
-        }*/
+        else if(pushAction2.length() > 0){
+            intent.setAction(pushAction2);
+            pushAction2 = "";
+        }
         startActivity(intent);
     }
 

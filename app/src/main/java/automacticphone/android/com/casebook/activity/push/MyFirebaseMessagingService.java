@@ -102,8 +102,15 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         String title = remoteMessage.getData().get("title");
         String body = remoteMessage.getData().get("message");
-        String click_action = remoteMessage.getData().get("click_action");
-        sendNotification( Channel.NOTICE, title, body, click_action );
+        try {
+            String click_action = remoteMessage.getData().get("click_action");
+            Log.d(TAG, click_action);
+            sendNotification( Channel.NOTICE, title, body, click_action );
+        }catch(NullPointerException e){
+            Log.d(TAG,  e+"널에러");
+            sendNotification( Channel.NOTICE, title, body, null );
+        }
+        //sendNotification( Channel.NOTICE, title, body, click_action );
     }
 
     private void scheduleJob() {
@@ -115,38 +122,21 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Log.d(TAG, "10초이내 처리됨");
     }
 
-    private void sendNotification(String channel, String title, String messageBody, String clickAction ) {
+    private void sendNotification(String channel, String title, String messageBody, String click_action ) {
         if (title == null){
             //제목이 없는 payload이면
             title = "푸시알림"; //기본제목을 적어 주자.
         }
 
         Intent intent;
-
-        /*if(click_action=="announce"){
-            intent = new Intent(this, HomeActivity.class);
-
-            //해당 플래그먼트로 이동
-            intent.putExtra("annonceFragment", "notiIntent");
-            //intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-
-            intent .setAction(Intent.ACTION_MAIN);
-            intent .addCategory(Intent.CATEGORY_LAUNCHER);
-            TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-            stackBuilder.addParentStack(MainActivity.class);
-
-            stackBuilder.addNextIntent(intent);
-
-        }else{}*/
-
         intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        if( clickAction == null ) {
+        if( click_action == null ) {
             intent.setAction(Define.ACTION_PUSH_VIEW);//푸시
+        }else if(click_action.equals("announce") ){
+            intent.setAction(Define.ACTION_PUSH_VIEW2);//공지
+            //Log.d(TAG, "공지사항");
         }
-        /*else if(clickAction == "announce"){
-            //intent.setAction(Define.ACTION_PUSH_VIEW2);//공지
-        }*/
 
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);

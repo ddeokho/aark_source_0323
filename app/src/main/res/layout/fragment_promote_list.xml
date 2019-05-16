@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:scale_base_width="1080"
-        app:scale_base_height="1530">
+        app:scale_base_height="1540">
 
         <android.support.design.widget.TabLayout
             android:id="@+id/fragment_promote_list_tabs"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/ic_home_add"
             app:scale_left="920"
-            app:scale_top="1220"
+            app:scale_top="1320"
             app:scale_width="120"
             app:scale_height="120"/>
         <!--ListView 끝에서 다음 데이터 로딩중에 보여줄 프로그레스바-->

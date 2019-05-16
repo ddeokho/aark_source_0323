@@ -21,7 +21,7 @@
                 android:layout_gravity="top"
                 android:background="#ffffff"
                 app:scale_base_width="1080"
-                app:scale_base_height="170">
+                app:scale_base_height="160">
 
                 <Button
                     android:id="@+id/home_menu_btn"
@@ -31,7 +31,7 @@
                     app:scale_left="0"
                     app:scale_top="20"
                     app:scale_width="160"
-                    app:scale_height="140"/>
+                    app:scale_height="130"/>
 
 
                 <EditText
@@ -49,7 +49,7 @@
                     app:scale_textsize="40"
                     app:scale_top="40"
                     app:scale_width="700"
-                    app:scale_height="100"/>
+                    app:scale_height="90"/>
 
                    <Button
                     android:id="@+id/home_search_btn"
@@ -59,7 +59,7 @@
                     app:scale_left="940"
                     app:scale_top="40"
                     app:scale_width="100"
-                    app:scale_height="100"/>
+                    app:scale_height="90"/>
             </com.ssomai.android.scalablelayout.ScalableLayout>
 
         <com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -68,7 +68,7 @@
             android:layout_width="match_parent"
             android:layout_height="608dp"
             android:layout_gravity="center"
-            app:scale_base_height="1530"
+            app:scale_base_height="1540"
             app:scale_base_width="1080"
             ></com.ssomai.android.scalablelayout.ScalableLayout>
 
