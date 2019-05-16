@@ -141,8 +141,12 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
         intent = new Intent(this, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        if( clickAction == null )
-            intent.setAction(Define.ACTION_PUSH_VIEW);
+        if( clickAction == null ) {
+            intent.setAction(Define.ACTION_PUSH_VIEW);//푸시
+        }
+        /*else if(clickAction == "announce"){
+            //intent.setAction(Define.ACTION_PUSH_VIEW2);//공지
+        }*/
 
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 /* Request code */, intent,
                 PendingIntent.FLAG_ONE_SHOT);

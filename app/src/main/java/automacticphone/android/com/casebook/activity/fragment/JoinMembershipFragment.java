@@ -252,11 +252,18 @@ public class JoinMembershipFragment extends Fragment
             return;
         }
 
-        if( passwordEdit1.getText() == passwordEdit2.getText())
+        if(!passwordEdit1.getText().toString().equals(passwordEdit2.getText().toString()) )
         {
             HomeActivity.inst().ShowAlertDialog( "비밀번호가 일치하지 않습니다." );
             return;
         }
+
+/*
+        if( passwordEdit1.getText() != passwordEdit2.getText())
+        {
+            HomeActivity.inst().ShowAlertDialog( "비밀번호가 일치하지 않습니다." );
+            return;
+        }*/
 
         if( maleCheckBox.isChecked() == false && femaleCheckBox.isChecked() == false )
         {

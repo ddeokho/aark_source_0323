@@ -50,7 +50,8 @@ public class MainActivity extends AppCompatActivity
 {
     private HttpTaskCallBack mCallBack = null;
     private int requestDataCount = 5;
-    private String pushAction = "";
+    private String pushAction = "";//grade
+    //private String pushAction2 = "";//all
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -87,8 +88,13 @@ public class MainActivity extends AppCompatActivity
         }
         else if( intent.getAction() == Define.ACTION_PUSH_VIEW )
         {
-            pushAction = intent.getAction();
+            pushAction = intent.getAction();//마이페이지
         }
+
+        //push
+        /*else if(intent.getAction() == Define.ACTION_PUSH_VIEW2){
+            pushAction2 = intent.getAction();//공지
+        }*/
 
         mCallBack = new HttpTaskCallBack()
         {
@@ -174,11 +180,15 @@ public class MainActivity extends AppCompatActivity
     private void NextActivity()
     {
         Intent intent = new Intent( getApplicationContext(), HomeActivity.class);
-        if( pushAction.length() > 0 )
-        {
-            intent.setAction( pushAction );
+        if( pushAction.length() > 0 ) {
+            intent.setAction(pushAction);
             pushAction = "";
         }
+
+        /*else if(pushAction2.length() > 0){
+            intent.setAction(pushAction);
+            pushAction = "";
+        }*/
         startActivity(intent);
     }
 

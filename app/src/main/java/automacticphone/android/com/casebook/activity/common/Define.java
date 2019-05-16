@@ -27,5 +27,6 @@ public class Define
     public static final String ERROR_101 = "-101";                //파일 업로드 실패
     public static final String ERROR_102 = "-102";                //이미 가입된 핸드폰 번호
     public static final String downloadPath = "/uploads/logo/";
-    public static final String ACTION_PUSH_VIEW = "android.intent.action.PUSH_VIEW";
+    public static final String ACTION_PUSH_VIEW = "android.intent.action.PUSH_VIEW";//
+    public static final String ACTION_PUSH_VIEW2 = "android.intent.action.PUSH_VIEW2";//전체
 }
