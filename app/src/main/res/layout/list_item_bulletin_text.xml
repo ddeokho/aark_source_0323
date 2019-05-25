@@ -60,6 +60,18 @@
             app:scale_height="50"/>
 
         <TextView
+            android:id="@+id/list_bulletin_text_comment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="댓글수 : 0"
+            android:textAlignment="textStart"
+            app:scale_textsize = "33"
+            app:scale_left="560"
+            app:scale_top="240"
+            app:scale_width="250"
+            app:scale_height="50"/>
+
+        <TextView
             android:id="@+id/list_bulletin_text_date"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -1,5 +1,6 @@
 package automacticphone.android.com.casebook.activity.data;
 
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -24,6 +25,7 @@ public class CaseData
     private String img_3;
     private String timestamp;
     private Date dateTime;
+    private int comment_count;
 
     public Date getDateTime() {
         return dateTime;
@@ -189,5 +191,10 @@ public class CaseData
 
         return categoryText;
     }
+
+    //댓글
+    public int getComment_count(){return comment_count;}
+    public void setComment_count(int comment_count){this.comment_count=comment_count;}
+
     //
 }

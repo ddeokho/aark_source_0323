@@ -571,6 +571,9 @@ public class ContentsViewFragment extends Fragment
             jsonObj.put("member_seq", DataManager.inst().getUserData().getSeq() );
             jsonObj.put("example_seq", caseData.getSeq() );
             jsonObj.put("content", commentEdit.getText().toString() );
+            jsonObj.put("count", caseData.getComment_count()+1 );
+            //댓글수 추가
+
 
             ContentValues values = new ContentValues();
             values.put("param", jsonObj.toString() );
@@ -605,6 +608,11 @@ public class ContentsViewFragment extends Fragment
             deleteView = (ViewGroup)v.getParent();
             jsonObj.put("packet_id", "delete_comment");
             jsonObj.put("seq", commentSeq );
+
+            //댓글 수 삭제
+            jsonObj.put("example_seq", caseData.getSeq() );
+            jsonObj.put("count",caseData.getComment_count()-1);
+
 
             ContentValues values = new ContentValues();
             values.put("param", jsonObj.toString() );

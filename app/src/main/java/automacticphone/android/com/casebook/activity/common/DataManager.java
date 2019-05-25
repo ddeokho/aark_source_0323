@@ -473,6 +473,8 @@ public class DataManager
                 data.setImg_3( jObject.get("img_3").toString() );
                 data.setTimestamp( jObject.get("timestamp").toString() );
 
+                data.setComment_count(Integer.parseInt(jObject.get("comment_count").toString()));//댓글수
+
                 myWriteList.add( data );
             }
         }
@@ -513,6 +515,8 @@ public class DataManager
                 data.setImg_2( jObject.get("img_2").toString() );
                 data.setImg_3( jObject.get("img_3").toString() );
                 data.setTimestamp( jObject.get("timestamp").toString() );
+
+                data.setComment_count(Integer.parseInt(jObject.get("comment_count").toString()));//댓글
 
                 memberWriteList.add( data );
             }
@@ -745,6 +749,7 @@ public class DataManager
                 data.setImg_2( jObject.get("img_2").toString() );
                 data.setImg_3( jObject.get("img_3").toString() );
                 data.setTimestamp( jObject.get("timestamp").toString() );
+                data.setComment_count(Integer.parseInt(jObject.get("comment_count").toString()));//댓글
 
                 caseDataList.add( data );
             }
@@ -787,6 +792,9 @@ public class DataManager
             data.setImg_2( jsonObject.get("img_2").toString() );
             data.setImg_3( jsonObject.get("img_3").toString() );
             data.setTimestamp( jsonObject.get("timestamp").toString() );
+
+            //댓글수
+            data.setComment_count(Integer.parseInt(jsonObject.get("comment_count").toString()));//댓글
 
             if( caseData == null )
             {
@@ -900,6 +908,8 @@ public class DataManager
                 data.setImg_2( jObject.get("img_2").toString() );
                 data.setImg_3( jObject.get("img_3").toString() );
                 data.setTimestamp( jObject.get("timestamp").toString() );
+
+                data.setComment_count(Integer.parseInt(jObject.get("comment_count").toString()));//댓글
 
                 searchCaseList.add( data );
             }

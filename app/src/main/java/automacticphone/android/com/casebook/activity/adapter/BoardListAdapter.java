@@ -107,6 +107,19 @@ public class BoardListAdapter extends BaseAdapter
                 String hitsText = String.format( "조회수: %d", dataList.get(position).getFeq() );
                 textView.setText( hitsText );
 
+
+                //댓글
+                textView = view.findViewById(R.id.list_bulletin_comment);
+                try{
+                    String hitsComment = String.format("댓글수: %d", dataList.get(position).getComment_count());//댓글
+                    textView.setText(hitsComment);
+
+                }catch(NullPointerException e){
+                    textView.setText("댓글수: 0");
+                }
+
+
+
                 textView = view.findViewById(R.id.list_bulletin_date);
                 String dateText = "";
                 try
@@ -138,6 +151,16 @@ public class BoardListAdapter extends BaseAdapter
                 textView = view.findViewById(R.id.list_bulletin_text_hits);
                 String hitsText = String.format( "조회수: %d", dataList.get(position).getFeq() );
                 textView.setText( hitsText );
+
+                //댓글
+                textView = view.findViewById(R.id.list_bulletin_text_comment);
+                try{
+                    String hitsComment = String.format("댓글수: %d", dataList.get(position).getComment_count());//댓글
+                    textView.setText(hitsComment);
+
+                }catch(NullPointerException e){
+                    textView.setText("댓글수: 0");
+                }
 
                 textView = view.findViewById(R.id.list_bulletin_text_date);
                 String dateText = "";
