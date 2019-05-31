@@ -130,7 +130,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:fontFamily="@font/khnphdbold"
-            android:text="2. 1차 드라이버 안전교육 : 6월말 or 7월초, 미정"
+            android:text="2. 1차 드라이버 안전교육 : 6/29(토), 신청기한 : 6/16(일)"
             android:textAlignment="textStart"
             android:textStyle="bold"
             app:scale_height="80"
