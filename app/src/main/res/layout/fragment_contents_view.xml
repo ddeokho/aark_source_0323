@@ -56,12 +56,12 @@
                 android:id="@+id/contents_view_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text=""
+                android:text="ffffff"
                 android:textAlignment="textStart"
                 android:textStyle="bold"
-                app:scale_height="80"
+                app:scale_height="90"
                 app:scale_left="90"
-                app:scale_textsize="60"
+                app:scale_textsize="40"
                 app:scale_top="680"
                 app:scale_width="780" />
 

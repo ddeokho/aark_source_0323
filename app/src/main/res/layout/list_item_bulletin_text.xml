@@ -23,7 +23,7 @@
             app:scale_left="30"
             app:scale_top="20"
             app:scale_width="900"
-            app:scale_height="60"/>
+            app:scale_height="50"/>
 
         <TextView
             android:id="@+id/list_bulletin_new_text"
