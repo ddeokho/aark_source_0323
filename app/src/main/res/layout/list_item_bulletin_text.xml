@@ -22,8 +22,21 @@
             app:scale_textsize = "40"
             app:scale_left="30"
             app:scale_top="20"
-            app:scale_width="1000"
+            app:scale_width="900"
             app:scale_height="60"/>
+
+        <TextView
+            android:id="@+id/list_bulletin_new_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:gravity="center_horizontal"
+            app:scale_textsize = "30"
+            app:scale_left="950"
+            app:scale_top="20"
+            app:scale_width="100"
+            app:scale_height="50"/>
+
         <TextView
             android:id="@+id/list_bulletin_text_content"
             android:layout_width="match_parent"

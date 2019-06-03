@@ -238,7 +238,8 @@ public class ContentsViewFragment extends Fragment
             commentLayout.addView( v );
             commentItemList.add( v );
         }
-
+        //코멘트 달면 -> 해당 글쓴이 및 댓글을 남긴 사람에게 푸시알림 가도록 -> 판별이 되었을 떄랑 같이
+        //현재시간 업데이트하고 자바에서 현재시간과 하루 이내로 차이가 나면 new 표시 안나면 빈공간으로
         if( IsShowSeeMoreBtn() )
         {
             inflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -573,6 +574,8 @@ public class ContentsViewFragment extends Fragment
             jsonObj.put("content", commentEdit.getText().toString() );
             jsonObj.put("count", caseData.getComment_count()+1 );
             //댓글수 추가
+            jsonObj.put("writer", caseData.getMember_seq() );
+            //글쓴이 추가 - 푸시알림을 위해
 
 
             ContentValues values = new ContentValues();

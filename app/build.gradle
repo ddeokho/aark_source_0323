@@ -7,8 +7,8 @@ android {
         applicationId "automacticphone.android.com.casebook"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 25
-        versionName "1.6.1"
+        versionCode 26
+        versionName "1.6.2"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         //ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'//19/05/09일 구글플레이 이슈 추가

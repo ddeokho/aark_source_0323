@@ -23,16 +23,30 @@
             />
 
         <TextView
-            android:id="@+id/list_bulletin_title"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="ABS 분말 소화기 1kg"
+        android:id="@+id/list_bulletin_title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="ABS 분말 소화기 1kg"
+        android:textStyle="bold"
+        app:scale_textsize = "40"
+        app:scale_left="300"
+        app:scale_top="20"
+        app:scale_width="600"
+        app:scale_height="60"/>
+
+        <TextView
+            android:id="@+id/list_bulletin_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
             android:textStyle="bold"
-            app:scale_textsize = "40"
-            app:scale_left="300"
+            android:gravity="center_horizontal"
+            app:scale_textsize = "30"
+            app:scale_left="950"
             app:scale_top="20"
-            app:scale_width="750"
-            app:scale_height="60"/>
+            app:scale_width="100"
+            app:scale_height="50"/>
+
         <TextView
             android:id="@+id/list_bulletin_content"
             android:layout_width="match_parent"

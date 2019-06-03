@@ -474,6 +474,7 @@ public class DataManager
                 data.setTimestamp( jObject.get("timestamp").toString() );
 
                 data.setComment_count(Integer.parseInt(jObject.get("comment_count").toString()));//댓글수
+                data.setComment_timestamp(jObject.get("comment_timestamp").toString());//코멘트 업로드 시간
 
                 myWriteList.add( data );
             }
@@ -517,6 +518,7 @@ public class DataManager
                 data.setTimestamp( jObject.get("timestamp").toString() );
 
                 data.setComment_count(Integer.parseInt(jObject.get("comment_count").toString()));//댓글
+                data.setComment_timestamp(jObject.get("comment_timestamp").toString());//코멘트 업로드 시간
 
                 memberWriteList.add( data );
             }
@@ -750,6 +752,7 @@ public class DataManager
                 data.setImg_3( jObject.get("img_3").toString() );
                 data.setTimestamp( jObject.get("timestamp").toString() );
                 data.setComment_count(Integer.parseInt(jObject.get("comment_count").toString()));//댓글
+                data.setComment_timestamp(jObject.get("comment_timestamp").toString());//코멘트 업로드 시간
 
                 caseDataList.add( data );
             }
@@ -795,6 +798,7 @@ public class DataManager
 
             //댓글수
             data.setComment_count(Integer.parseInt(jsonObject.get("comment_count").toString()));//댓글
+            data.setComment_timestamp(jsonObject.get("comment_timestamp").toString());//코멘트 업로드 시간
 
             if( caseData == null )
             {
@@ -910,6 +914,7 @@ public class DataManager
                 data.setTimestamp( jObject.get("timestamp").toString() );
 
                 data.setComment_count(Integer.parseInt(jObject.get("comment_count").toString()));//댓글
+                data.setComment_timestamp(jObject.get("comment_timestamp").toString());//코멘트 업로드 시간
 
                 searchCaseList.add( data );
             }

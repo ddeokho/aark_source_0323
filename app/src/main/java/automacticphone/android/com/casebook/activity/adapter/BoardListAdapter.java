@@ -3,6 +3,8 @@ package automacticphone.android.com.casebook.activity.adapter;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Color;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -119,7 +121,6 @@ public class BoardListAdapter extends BaseAdapter
                 }
 
 
-
                 textView = view.findViewById(R.id.list_bulletin_date);
                 String dateText = "";
                 try
@@ -130,6 +131,57 @@ public class BoardListAdapter extends BaseAdapter
                     e.printStackTrace();
                 }
                 textView.setText( dateText );
+
+
+                //현재 시간과 코멘트 또는 저장된 시간과 비교했을 때 new 판단
+                textView = view.findViewById(R.id.list_bulletin_new);
+                try
+                {
+                    //업로드 시간
+                    Date up_date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(dataList.get(position).getTimestamp());
+                    //String up_dateText = new SimpleDateFormat("yyyyMMdd").format(up_date);//최종
+
+                    //코멘트 등록 시간
+                    Date com_date =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(dataList.get(position).getComment_timestamp());
+                    //String com_dateText = new SimpleDateFormat("yyyyMMdd").format(com_date);//최종
+
+                    //현재 시간
+                    long cur_ms_time= System.currentTimeMillis();
+                    SimpleDateFormat day_time=new SimpleDateFormat("yyyy-MM-dd HH:mm:dd");
+                    String cur_date_time= day_time.format(new Date(cur_ms_time));
+                    Date cur_time=day_time.parse(cur_date_time);
+                    //String cur_time_cal = new SimpleDateFormat("yyyyMMdd").format(cur_time);//최종
+
+                    //System.out.print(Integer.parseInt(cur_time_cal)-
+                    //android:background="@drawable/round_button_red"
+                    //            android:textColor="#FFFFFF"
+                    //            android:textStyle="bold"
+
+                    //업로드와 현재 비교
+                    long aa=60*1000*60*24*4;
+                    long diff1=cur_time.getTime()-up_date.getTime();
+                    long diff2=cur_time.getTime()-com_date.getTime();
+
+                    if(diff1<aa){
+
+                        textView.setText("new");
+                        textView.setTextColor(Color.RED);
+
+                    }else if(diff2<aa){
+                        textView.setText("new");
+                        textView.setTextColor(Color.BLUE);
+
+                    }else{
+
+                        textView.setText("");
+
+                    }
+
+                }catch(ParseException e){
+                    e.printStackTrace();
+                }
+
+
             }
             else
             {
@@ -172,6 +224,58 @@ public class BoardListAdapter extends BaseAdapter
                     e.printStackTrace();
                 }
                 textView.setText( dateText );
+
+
+
+
+                //현재 시간과 코멘트 또는 저장된 시간과 비교했을 때 new 판단
+                textView = view.findViewById(R.id.list_bulletin_new_text);
+                try
+                {
+                    //업로드 시간
+                    Date up_date = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(dataList.get(position).getTimestamp());
+                    //String up_dateText = new SimpleDateFormat("yyyyMMdd").format(up_date);//최종
+
+                    //코멘트 등록 시간
+                    Date com_date =new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").parse(dataList.get(position).getComment_timestamp());
+                    //String com_dateText = new SimpleDateFormat("yyyyMMdd").format(com_date);//최종
+
+                    //현재 시간
+                    long cur_ms_time= System.currentTimeMillis();
+                    SimpleDateFormat day_time=new SimpleDateFormat("yyyy-MM-dd HH:mm:dd");
+                    String cur_date_time= day_time.format(new Date(cur_ms_time));
+                    Date cur_time=day_time.parse(cur_date_time);
+                    //String cur_time_cal = new SimpleDateFormat("yyyyMMdd").format(cur_time);//최종
+
+                    //System.out.print(Integer.parseInt(cur_time_cal)-
+                    //android:background="@drawable/round_button_red"
+                    //            android:textColor="#FFFFFF"
+                    //            android:textStyle="bold"
+
+                    //업로드와 현재 비교
+                    long aa=60*1000*60*24*3;
+                    long diff1=cur_time.getTime()-up_date.getTime();
+                    long diff2=cur_time.getTime()-com_date.getTime();
+
+                    if(diff1<aa){
+
+                        textView.setText("new");
+                        textView.setTextColor(Color.RED);
+
+                    }else if(diff2<aa){
+                        textView.setText("new");
+                        textView.setTextColor(Color.BLUE);
+                    }
+                    else{
+
+                        textView.setText("");
+
+                    }
+
+                }catch(ParseException e){
+                    e.printStackTrace();
+                }
+
             }
 
         }

@@ -26,8 +26,16 @@ public class CaseData
     private String timestamp;
     private Date dateTime;
     private int comment_count;
+    private String comment_timestamp;
 
-    public Date getDateTime() {
+
+    //코멘트 데이트 타임임
+    public String getComment_timestamp(){return comment_timestamp;}
+    public void setComment_timestamp(String comment_dataTime){this.comment_timestamp = comment_dataTime;}
+    //
+
+
+   public Date getDateTime() {
         return dateTime;
     }
 
