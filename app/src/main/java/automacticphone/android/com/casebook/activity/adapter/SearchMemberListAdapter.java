@@ -68,10 +68,10 @@ public class SearchMemberListAdapter extends BaseAdapter
                     UpdateMemberGrade(Define.GRADE_STUDENT);
                     break;
                 case R.id.grade_popup_ob_member_btn:
-                    UpdateMemberGrade(Define.GRADE_GRADUATE);
+                    UpdateMemberGrade(Define.GRADE_COMUNI);//운영위
                     break;
                 case R.id.grade_popup_trader_member_btn:
-                    UpdateMemberGrade(Define.GRADE_TRADER);
+                    UpdateMemberGrade(Define.GRADE_INSPEC);//검차
                     break;
                 case R.id.grade_popup_president_member_btn:
                     UpdateMemberGrade(Define.GRADE_PRESIDENT);
