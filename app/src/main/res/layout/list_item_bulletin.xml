@@ -59,6 +59,19 @@
             app:scale_height="88"/>
 
         <TextView
+            android:id="@+id/list_bulletin_year"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="2019년 사례"
+            android:textAlignment="textStart"
+            android:textStyle="bold"
+            app:scale_height="45"
+            app:scale_left="300"
+            app:scale_textsize="28"
+            app:scale_top="190"
+            app:scale_width="200" />
+
+        <TextView
             android:id="@+id/list_bulletin_category"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -66,9 +79,9 @@
             android:textAlignment="textEnd"
             android:textStyle="bold"
             app:scale_textsize = "28"
-            app:scale_left="300"
+            app:scale_left="500"
             app:scale_top="190"
-            app:scale_width="750"
+            app:scale_width="550"
             app:scale_height="45"/>
 
         <TextView

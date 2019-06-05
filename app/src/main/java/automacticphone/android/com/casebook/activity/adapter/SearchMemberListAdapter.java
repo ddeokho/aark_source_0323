@@ -161,10 +161,10 @@ public class SearchMemberListAdapter extends BaseAdapter
     {
         if( grade == Define.GRADE_STUDENT )
             return "일반학생";
-        else if( grade == Define.GRADE_GRADUATE )
-            return "OB";
-        else if( grade == Define.GRADE_TRADER )
-            return "업체";
+        else if( grade == Define.GRADE_COMUNI )
+            return "운영위";
+        else if( grade == Define.GRADE_INSPEC )
+            return "검차위원";
         else if( grade == Define.GRADE_PRESIDENT )
             return "동아리장";
         else

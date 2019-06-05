@@ -183,6 +183,12 @@ public class ContentsViewFragment extends Fragment
         textView = view.findViewById( R.id.contents_view_date);
         textView.setText( dateText );
 
+        //사례 년도 추가
+        textView = view.findViewById(R.id.contents_view_category_year);
+        String data_year = String.format( "%d년 사례", caseData.getYear());
+        textView.setText(data_year);
+
+
         //새로추가
         textView = view.findViewById( R.id.contents_view_category_text);
         textView.setText( caseData.getCategoryText() );

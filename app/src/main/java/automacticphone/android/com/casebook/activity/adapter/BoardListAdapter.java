@@ -105,6 +105,13 @@ public class BoardListAdapter extends BaseAdapter
                 textView = view.findViewById(R.id.list_bulletin_content);
                 textView.setText( dataList.get(position).getContent() );
 
+
+                //사례 년도
+                textView = view.findViewById(R.id.list_bulletin_year);
+                String data_year = String.format( "%d년 사례", dataList.get(position).getYear());
+                textView.setText(data_year);
+                //
+
                 textView = view.findViewById(R.id.list_bulletin_hits);
                 String hitsText = String.format( "조회수: %d", dataList.get(position).getFeq() );
                 textView.setText( hitsText );
@@ -199,6 +206,14 @@ public class BoardListAdapter extends BaseAdapter
 
                 textView = view.findViewById(R.id.list_bulletin_text_content);
                 textView.setText( dataList.get(position).getContent() );
+
+
+                //사례 년도
+                textView = view.findViewById(R.id.list_bulletin_text_year);
+                String data_year = String.format( "%d년 사례", dataList.get(position).getYear());
+                textView.setText(data_year);
+                //
+
 
                 textView = view.findViewById(R.id.list_bulletin_text_hits);
                 String hitsText = String.format( "조회수: %d", dataList.get(position).getFeq() );

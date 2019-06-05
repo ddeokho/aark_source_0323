@@ -56,27 +56,40 @@
                 android:id="@+id/contents_view_title"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="ffffff"
+                android:text="제목"
                 android:textAlignment="textStart"
                 android:textStyle="bold"
                 app:scale_height="90"
                 app:scale_left="90"
-                app:scale_textsize="40"
+                app:scale_textsize="45"
                 app:scale_top="680"
                 app:scale_width="780" />
 
             <TextView
-            android:id="@+id/contents_view_category_text"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text=""
-            android:textAlignment="textStart"
-            android:textStyle="bold"
-            app:scale_height="50"
-            app:scale_left="90"
-            app:scale_textsize="30"
-            app:scale_top="780"
-            app:scale_width="780" />
+                android:id="@+id/contents_view_category_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text=""
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                app:scale_height="50"
+                app:scale_left="90"
+                app:scale_textsize="30"
+                app:scale_top="780"
+                app:scale_width="700" />
+
+            <TextView
+                android:id="@+id/contents_view_category_year"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="2019년 사례"
+                android:textAlignment="textStart"
+                android:textStyle="bold"
+                app:scale_height="50"
+                app:scale_left="800"
+                app:scale_textsize="30"
+                app:scale_top="780"
+                app:scale_width="190" />
 
             <TextView
                 android:id="@+id/contents_view_name"
