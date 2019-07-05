@@ -82,7 +82,7 @@
                 android:id="@+id/contents_view_category_year"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="2019년 사례"
+                android:text=""
                 android:textAlignment="textStart"
                 android:textStyle="bold"
                 app:scale_height="50"

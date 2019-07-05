@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <com.ssomai.android.scalablelayout.ScalableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:scale_base_width="1080"
+        app:scale_base_height="1700"
+        android:layout_gravity="center"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:background="@drawable/background_outline2"
+        >
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#505050"
+            app:scale_left="40"
+            app:scale_top="1240"
+            app:scale_width="1000"
+            app:scale_height="1"
+            />
+
+        <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="1. 로그인 한 회원만 이용 가능 합니다."
+        app:scale_textsize = "40"
+        app:scale_left="50"
+        app:scale_top="1250"
+        app:scale_width="1080"
+        app:scale_height="60"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="2. 중복 참여 불가합니다."
+            app:scale_textsize = "40"
+            app:scale_left="50"
+            app:scale_top="1310"
+            app:scale_width="1080"
+            app:scale_height="60"/>
+
+        <Button
+            android:id="@+id/event_go_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FF0000"
+            android:text="이벤트 참여하기"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "60"
+            app:scale_left="200"
+            app:scale_top="1400"
+            app:scale_width="700"
+            app:scale_height="130"/>
+
+        <Button
+            android:id="@+id/close_never_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#BDBDBD"
+            android:fontFamily="@font/khnphdbold"
+            android:text="다시보지 않기"
+            android:textAlignment="center"
+            android:textColor="#FFF"
+            android:textStyle="bold"
+            app:scale_height="100"
+            app:scale_left="3"
+            app:scale_textsize="40"
+            app:scale_top="1595"
+            app:scale_width="537" />
+
+        <Button
+            android:id="@+id/ok_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#64b6ee"
+            android:text="확인"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textAlignment="center"
+            android:fontFamily="@font/khnphdbold"
+            app:scale_textsize = "40"
+            app:scale_left="540"
+            app:scale_top="1595"
+            app:scale_width="537"
+            app:scale_height="100"/>
+    </com.ssomai.android.scalablelayout.ScalableLayout>
+
+</FrameLayout>

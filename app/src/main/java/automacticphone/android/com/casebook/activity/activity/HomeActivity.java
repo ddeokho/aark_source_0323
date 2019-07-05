@@ -35,6 +35,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.PopupWindow;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -287,6 +288,7 @@ public class HomeActivity extends AppCompatActivity
         {
             PermissionCheck();
         }
+        //여기에 팝업 창 넣음
     }
 
     @Override
@@ -312,6 +314,7 @@ public class HomeActivity extends AppCompatActivity
         selectBarImg = (ImageView)findViewById(R.id.home_menu_bar_img);
         emailText = (TextView)findViewById(R.id.home_login_email_text);
         searchEdit = (EditText) findViewById(R.id.home_search_edit);
+
 
         SetBtnsListener();
         SetDrawerMenuList();
@@ -656,6 +659,10 @@ public class HomeActivity extends AppCompatActivity
                     }
                     break;
 
+                case R.id.event_btn:
+                    OnEventBtnClick();
+                    break;
+
                 case R.id.Inquiry_btn:
                     OnInquiryBtnClick();
                     break;
@@ -735,6 +742,11 @@ public class HomeActivity extends AppCompatActivity
 
         //공지사항버튼
         btn = (Button)findViewById(R.id.announce_btn) ;
+        btn.setOnClickListener(onClickListener);
+
+
+        //이벤트 버튼
+        btn = (Button)findViewById(R.id.event_btn);
         btn.setOnClickListener(onClickListener);
 
         btn = (Button)findViewById(R.id.Inquiry_btn);
@@ -1151,6 +1163,45 @@ public class HomeActivity extends AppCompatActivity
                 mPopupWindow.dismiss();
             }
         });*/
+    }
+
+    //이벤트 팝업 띄우는 버튼
+    void OnEventBtnClick()
+    {
+        drawerLayout.closeDrawers();
+        View popupView = getLayoutInflater().inflate(R.layout.event_popup, null);
+        mPopupWindow = new PopupWindow(popupView, LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        //popupView 에서 (LinearLayout 을 사용) 레이아웃이 둘러싸고 있는
+        //        mPopupWindow.setFocusable(true); 컨텐츠의 크기 만큼 팝업 크기를 지정
+
+        // 외부 영역 선택히 PopUp 종료
+
+        mPopupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
+
+        Button eventGoBtn = (Button) popupView.findViewById(R.id.event_go_btn);
+        eventGoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPopupWindow.dismiss();
+            }
+        });
+
+        Button eventOkBtn = (Button) popupView.findViewById(R.id.ok_btn);
+        eventOkBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mPopupWindow.dismiss();
+            }
+        });
+
+        Button eventNeverBtn = (Button) popupView.findViewById(R.id.close_never_btn);
+        eventNeverBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                mPopupWindow.dismiss();
+            }
+        });
+
     }
 
 

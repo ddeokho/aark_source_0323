@@ -72,76 +72,74 @@
             app:scale_base_width="1080"
             ></com.ssomai.android.scalablelayout.ScalableLayout>
 
-        <com.ssomai.android.scalablelayout.ScalableLayout
-            xmlns:android="http://schemas.android.com/apk/res/android"
+        <com.ssomai.android.scalablelayout.ScalableLayout xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#ffffff"
             android:layout_gravity="bottom"
-            app:scale_base_width="1080"
-            app:scale_base_height="140">
+            android:background="#ffffff"
+            app:scale_base_height="140"
+            app:scale_base_width="1080">
 
             <Button
                 android:id="@+id/home_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_home_menu_1"
+                app:scale_height="80"
                 app:scale_left="90"
                 app:scale_top="30"
-                app:scale_width="80"
-                app:scale_height="80"/>
+                app:scale_width="80" />
 
             <Button
                 android:id="@+id/search_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_home_menu_2"
+                app:scale_height="80"
                 app:scale_left="290"
                 app:scale_top="30"
-                app:scale_width="80"
-                app:scale_height="80"/>
+                app:scale_width="80" />
 
             <Button
                 android:id="@+id/upload_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_home_menu_3"
+                app:scale_height="80"
                 app:scale_left="490"
                 app:scale_top="30"
-                app:scale_width="80"
-                app:scale_height="80"/>
+                app:scale_width="80" />
 
             <Button
                 android:id="@+id/promote_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_home_menu_4"
+                app:scale_height="80"
                 app:scale_left="690"
                 app:scale_top="30"
-                app:scale_width="80"
-                app:scale_height="80"/>
+                app:scale_width="80" />
 
             <Button
                 android:id="@+id/my_page_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/ic_home_menu_5"
+                app:scale_height="80"
                 app:scale_left="890"
                 app:scale_top="30"
-                app:scale_width="80"
-                app:scale_height="80"/>
+                app:scale_width="80" />
 
             <ImageView
                 android:id="@+id/home_menu_bar_img"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#505050"
+                app:scale_height="10"
                 app:scale_left="70"
                 app:scale_top="130"
-                app:scale_width="100"
-                app:scale_height="10"
-                />
+                app:scale_width="100" />
         </com.ssomai.android.scalablelayout.ScalableLayout>
     </FrameLayout>>
 
@@ -154,12 +152,18 @@
         android:clickable="true"
         >
 
+        <ScrollView
+            android:id="@+id/horScrollVIew2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            //추가
+
         <com.ssomai.android.scalablelayout.ScalableLayout
             xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:scale_base_height="2100"
+            app:scale_base_height="2240"
             app:scale_base_width="1000"
             android:background="#f8f8f9">
 
@@ -416,11 +420,28 @@
             app:scale_height="120"/>
 
             <Button
-                android:id="@+id/youtube_btn"
+            android:id="@+id/youtube_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#8C8C8C"
+            android:text="@string/youtube_text"
+            android:textStyle="bold"
+            android:textColor="#FFF"
+            android:textAlignment="textStart"
+            android:fontFamily="@font/khnphdbold"
+            android:paddingLeft="10dp"
+            app:scale_textsize = "50"
+            app:scale_left="50"
+            app:scale_top="1350"
+            app:scale_width="900"
+            app:scale_height="120"/>
+
+            <Button
+                android:id="@+id/event_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="#8C8C8C"
-                android:text="@string/youtube_text"
+                android:text="@string/event_text"
                 android:textStyle="bold"
                 android:textColor="#FFF"
                 android:textAlignment="textStart"
@@ -428,7 +449,7 @@
                 android:paddingLeft="10dp"
                 app:scale_textsize = "50"
                 app:scale_left="50"
-                app:scale_top="1350"
+                app:scale_top="1490"
                 app:scale_width="900"
                 app:scale_height="120"/>
 
@@ -437,7 +458,7 @@
                 android:layout_height="wrap_content"
                 android:background="#505050"
                 app:scale_left="50"
-                app:scale_top="1500"
+                app:scale_top="1640"
                 app:scale_width="900"
                 app:scale_height="2"
                 />
@@ -455,7 +476,7 @@
                 android:fontFamily="@font/khnphdbold"
                 app:scale_textsize = "50"
                 app:scale_left="50"
-                app:scale_top="1530"
+                app:scale_top="1670"
                 app:scale_width="900"
                 app:scale_height="120"/>
 
@@ -472,7 +493,7 @@
                 android:fontFamily="@font/khnphdbold"
                 app:scale_textsize = "50"
                 app:scale_left="50"
-                app:scale_top="1670"
+                app:scale_top="1810"
                 app:scale_width="900"
                 app:scale_height="120"/>
 
@@ -489,7 +510,7 @@
                 android:fontFamily="@font/khnphdbold"
                 app:scale_textsize = "50"
                 app:scale_left="50"
-                app:scale_top="1810"
+                app:scale_top="1950"
                 app:scale_width="900"
                 app:scale_height="120"/>
 
@@ -506,11 +527,14 @@
                 android:fontFamily="@font/khnphdbold"
                 app:scale_textsize = "50"
                 app:scale_left="50"
-                app:scale_top="1950"
+                app:scale_top="2090"
                 app:scale_width="900"
                 app:scale_height="120"/>
 
         </com.ssomai.android.scalablelayout.ScalableLayout>
+
+        </ScrollView>
+
     </LinearLayout>
 
 </android.support.v4.widget.DrawerLayout>
