@@ -12,6 +12,7 @@ import automacticphone.android.com.casebook.R;
 
 public class eventViewFragment extends Fragment {
 
+    //질문 이벤트 때 생성 완료하는 것으로 - popup화면을 여기에 연동해야 함
     public eventViewFragment(){
 
     }

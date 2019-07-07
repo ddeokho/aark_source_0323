@@ -169,17 +169,18 @@ public class BoardListAdapter extends BaseAdapter
                     long diff1=cur_time.getTime()-up_date.getTime();
                     long diff2=cur_time.getTime()-com_date.getTime();
 
-                    if(diff1<aa){
-
+                    if(diff1<aa && diff2<aa){
+                        //초기 업로드 상황
                         textView.setText("new");
                         textView.setTextColor(Color.RED);
 
-                    }else if(diff2<aa){
+                    }else if(diff1<aa && diff2>=aa){
+                        //코멘추 추가 상황 - timestamp만 최신화
                         textView.setText("new");
                         textView.setTextColor(Color.BLUE);
 
                     }else{
-
+                        //둘 다 4일을 넘겼을 떄
                         textView.setText("");
 
                     }
@@ -270,14 +271,15 @@ public class BoardListAdapter extends BaseAdapter
                     //업로드와 현재 비교
                     long aa=60*1000*60*24*3;
                     long diff1=cur_time.getTime()-up_date.getTime();
-                    long diff2=cur_time.getTime()-com_date.getTime();
+                    long diff2=cur_time.getTime()-com_date.getTime();//코멘트 업로드 시간 -> 업로드 저장 상태로 변경
 
-                    if(diff1<aa){
-
+                    if(diff1<aa && diff2<aa){
+                        //초기 업로드 상황
                         textView.setText("new");
                         textView.setTextColor(Color.RED);
 
-                    }else if(diff2<aa){
+                    }else if(diff1<aa && diff2>=aa){
+                        //코멘추 추가 상황 - timestamp만 최신화
                         textView.setText("new");
                         textView.setTextColor(Color.BLUE);
                     }
