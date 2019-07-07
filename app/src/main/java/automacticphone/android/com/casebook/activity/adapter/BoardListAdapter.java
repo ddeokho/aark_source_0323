@@ -120,8 +120,14 @@ public class BoardListAdapter extends BaseAdapter
                 //댓글
                 textView = view.findViewById(R.id.list_bulletin_comment);
                 try{
-                    String hitsComment = String.format("댓글수: %d", dataList.get(position).getComment_count());//댓글
-                    textView.setText(hitsComment);
+
+
+                    if(dataList.get(position).getComment_count()<=0){
+                        textView.setText("댓글수: 0");
+                    }else{
+                        String hitsComment = String.format("댓글수: %d", dataList.get(position).getComment_count());//댓글
+                        textView.setText(hitsComment);
+                    }
 
                 }catch(NullPointerException e){
                     textView.setText("댓글수: 0");
@@ -223,8 +229,13 @@ public class BoardListAdapter extends BaseAdapter
                 //댓글
                 textView = view.findViewById(R.id.list_bulletin_text_comment);
                 try{
-                    String hitsComment = String.format("댓글수: %d", dataList.get(position).getComment_count());//댓글
-                    textView.setText(hitsComment);
+
+                    if(dataList.get(position).getComment_count()<=0){
+                        textView.setText("댓글수: 0");
+                    }else {
+                        String hitsComment = String.format("댓글수: %d", dataList.get(position).getComment_count());//댓글
+                        textView.setText(hitsComment);
+                    }
 
                 }catch(NullPointerException e){
                     textView.setText("댓글수: 0");

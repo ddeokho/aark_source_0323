@@ -48,7 +48,7 @@
             app:scale_width="1080"
             app:scale_height="60"/>
 
-        <Button
+       <!-- <Button
             android:id="@+id/event_go_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -62,7 +62,7 @@
             app:scale_left="200"
             app:scale_top="1400"
             app:scale_width="700"
-            app:scale_height="130"/>
+            app:scale_height="130"/>-->
 
         <Button
             android:id="@+id/close_never_btn"

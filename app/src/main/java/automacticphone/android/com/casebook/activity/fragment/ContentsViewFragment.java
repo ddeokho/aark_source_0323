@@ -621,6 +621,8 @@ public class ContentsViewFragment extends Fragment
             //댓글 수 삭제
             jsonObj.put("example_seq", caseData.getSeq() );
             jsonObj.put("count",caseData.getComment_count()-1);
+            //업로드가 저장된 날짜 보내기
+            jsonObj.put("comment_timestamp", caseData.getComment_timestamp());
 
 
             ContentValues values = new ContentValues();
