@@ -121,7 +121,7 @@ public class HomeActivity extends AppCompatActivity
     }
 
     private String userEmail = "";
-    public SharedPreferences settings;
+    public SharedPreferences settings;//권한 허용
     public String getToken() {
         return token;
     }
@@ -288,7 +288,12 @@ public class HomeActivity extends AppCompatActivity
         {
             PermissionCheck();
         }
-        //여기에 팝업 창 넣음
+
+        //이벤트창 완료
+        if( CheckEventPopup() == false )
+        {
+            ShowEventPopup();
+        }
     }
 
     @Override
@@ -314,6 +319,11 @@ public class HomeActivity extends AppCompatActivity
         selectBarImg = (ImageView)findViewById(R.id.home_menu_bar_img);
         emailText = (TextView)findViewById(R.id.home_login_email_text);
         searchEdit = (EditText) findViewById(R.id.home_search_edit);
+
+
+        //이벤트 화면
+
+        //
 
 
         SetBtnsListener();
@@ -1178,13 +1188,13 @@ public class HomeActivity extends AppCompatActivity
 
         mPopupWindow.showAtLocation(popupView, Gravity.CENTER, 0, 0);
 
-        Button eventGoBtn = (Button) popupView.findViewById(R.id.event_go_btn);
+        /*Button eventGoBtn = (Button) popupView.findViewById(R.id.event_go_btn);
         eventGoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mPopupWindow.dismiss();
             }
-        });
+        });*/
 
         Button eventOkBtn = (Button) popupView.findViewById(R.id.ok_btn);
         eventOkBtn.setOnClickListener(new View.OnClickListener() {
@@ -1333,6 +1343,59 @@ public class HomeActivity extends AppCompatActivity
         });
 
     }
+
+
+
+    //이벤트 창 연결
+    public void ShowEventPopup(){
+
+        View popupView = getLayoutInflater().inflate(R.layout.event_popup, null);
+        mPopupWindow = new PopupWindow(popupView, FrameLayout.LayoutParams.MATCH_PARENT, FrameLayout.LayoutParams.MATCH_PARENT);
+        mPopupWindow.showAtLocation(popupView, Gravity.CENTER, 0,0);
+
+        Button Btn = (Button)popupView.findViewById(R.id.close_never_btn);//다시보지 않기 버튼
+        Btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                //다시보지 않기로 종료
+                mPopupWindow.dismiss();
+                SetEventPopup();
+                //CheckEventPopup();
+
+            }
+        });
+
+        Button okBtn = (Button)popupView.findViewById(R.id.ok_btn);//확인 버튼
+        okBtn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                mPopupWindow.dismiss();//단순 종료
+            }
+        });
+
+
+    }
+
+
+    //이벤트 화면에서 다시보지 않음을 클릭했을 때
+    private void SetEventPopup(){
+        SharedPreferences eventPopup = getSharedPreferences("eventPopup", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = eventPopup.edit();
+        editor.putBoolean("showEventPopup", true);//저장할 값
+
+        editor.commit();
+    }
+    //
+
+    //다시보지 않기를 눌렀는지 저장된 값 가져와 체크하기
+    public boolean CheckEventPopup(){
+        SharedPreferences pref = getSharedPreferences("eventPopup" , Activity.MODE_PRIVATE);
+        boolean showPopup = pref.getBoolean("showEventPopup", false);
+        return showPopup;
+    }
+    //
+
+
 
     private void SetPermissionPopup()
     {

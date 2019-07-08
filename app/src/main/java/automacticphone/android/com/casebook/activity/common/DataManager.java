@@ -753,6 +753,7 @@ public class DataManager
                 data.setTimestamp( jObject.get("timestamp").toString() );
                 data.setComment_count(Integer.parseInt(jObject.get("comment_count").toString()));//댓글
                 data.setComment_timestamp(jObject.get("comment_timestamp").toString());//코멘트 업로드 시간
+               //data.setChk_comment_time(jObject.get("chk_comment_time").toString());//댓글 작성 시간 체크
 
                 caseDataList.add( data );
             }

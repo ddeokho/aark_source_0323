@@ -27,6 +27,7 @@ public class CaseData
     private Date dateTime;
     private int comment_count;
     private String comment_timestamp;
+    //private String chk_comment_time;
 
 
     //코멘트 데이트 타임임
@@ -34,6 +35,9 @@ public class CaseData
     public void setComment_timestamp(String comment_dataTime){this.comment_timestamp = comment_dataTime;}
     //
 
+    //이전 코멘트가 작성된 시간 저장
+    // public String getChk_comment_time(){return chk_comment_time;}
+    //public void setChk_comment_time(String chk_comment_time){this.chk_comment_time = chk_comment_time;}
 
    public Date getDateTime() {
         return dateTime;
