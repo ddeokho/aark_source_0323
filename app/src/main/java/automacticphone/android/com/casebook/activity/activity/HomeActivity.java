@@ -280,20 +280,22 @@ public class HomeActivity extends AppCompatActivity
     @Override
     public void onAttachedToWindow() {
         super.onAttachedToWindow();
+
+        if( CheckAppFirstExecute() == true && CheckEventPopup() == false )
+        {
+            //이벤트창 완료
+            ShowEventPopup();
+        }
+
         if( CheckAppFirstExecute() == false )
         {
             ShowPermissionPopup();
-        }
-        else
+        }else
         {
             PermissionCheck();
         }
 
-        //이벤트창 완료
-        if( CheckEventPopup() == false )
-        {
-            ShowEventPopup();
-        }
+
     }
 
     @Override
