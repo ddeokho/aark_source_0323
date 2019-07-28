@@ -41,7 +41,7 @@
         <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="1. 각 인원을 세는 기준은 아이디 입니다."
+        android:text="1. 동아리별 인원을 세는 기준은 아이디 입니다."
         app:scale_textsize = "40"
         app:scale_left="50"
         app:scale_top="1550"
@@ -65,6 +65,16 @@
             app:scale_textsize = "40"
             app:scale_left="50"
             app:scale_top="1670"
+            app:scale_width="1080"
+            app:scale_height="60"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="4. "
+            app:scale_textsize = "40"
+            app:scale_left="50"
+            app:scale_top="1730"
             app:scale_width="1080"
             app:scale_height="60"/>
 

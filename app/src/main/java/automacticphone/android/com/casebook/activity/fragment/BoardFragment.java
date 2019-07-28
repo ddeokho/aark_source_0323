@@ -12,6 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.util.Log;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -45,6 +46,8 @@ public class BoardFragment extends Fragment
     private ListView boardListView;
     public static int selectTab = 0;
 
+    private static int pos = 0;//현재위치 파악
+
     private String searchText ="";
     public void setSearchText(String searchText) {
         this.searchText = searchText;
@@ -60,6 +63,8 @@ public class BoardFragment extends Fragment
         View view = inflater.inflate(R.layout.fragment_board, container, false);
         mTabLayout = (TabLayout) view.findViewById( R.id.fragment_board_tabs );
         requestCount = 2;
+
+        //pos = 10;//현재 위치 기억
 
         mCallBack = new HttpTaskCallBack()
         {
@@ -162,40 +167,54 @@ public class BoardFragment extends Fragment
         }
 
         boardListView = view.findViewById( R.id.fragment_board_list_view );
+
+
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab)
             {
-                boardListView.setSelection( 0 );
+
+                boardListView.setSelection( 0 );//해당 위치 보여주기 0 -> pos//원래 있던 곳*/
                 DataManager.inst().ClearCaseDataList();
                 selectTab = tab.getPosition();
                 switch(tab.getPosition())
                 {
                     case 0:
                     {
-                       RequestCaseDataList( Define.GOOD_CASE );
+                        Log.d("pos_good=",Integer.toString(pos));
+                        RequestCaseDataList( Define.GOOD_CASE );
+
                     }
                     break;
                     case 1:
                     {
+                        Log.d("pos_bad=",Integer.toString(pos));
                         RequestCaseDataList( Define.BAD_CASE );
+
                     }
                     break;
                     case 2:
                     {
+                        Log.d("pos_que=",Integer.toString(BoardFragment.pos));
                         RequestCaseDataList( Define.QUESTION_CASE );
+
                     }
                     break;
                 }
+
+                Log.d("pos_onsel=",Integer.toString(pos));
+
 
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
+                Log.d("pos_unsel=",Integer.toString(pos));
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
+                Log.d("pos_resel=",Integer.toString(pos));
             }
         } );
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
@@ -217,57 +236,72 @@ public class BoardFragment extends Fragment
 
             adapter = new BoardListAdapter( getContext(), dataList );
             boardListView.setAdapter( adapter );
-            boardListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+
+        //해당 탭별 다르게 보여주기
+            Log.d("pos_view=",Integer.toString(pos));
+            Log.d("tab_view",Integer.toString(selectTab));
+            boardListView.setSelection( pos );//해당 위치 보여주기 0 -> pos
+
+
+        boardListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                @Override
-                public void onItemClick(AdapterView<?> parent, View view, int position, long id)
-                {
-                    selectCaseData = dataList.get(position);
-                    NetworkManager.inst().RequestContentOwnerData( getContext(), mCallBack, selectCaseData.getMember_seq() );
-                    NetworkManager.inst().RequestCommentData( getContext(), mCallBack, selectCaseData.getSeq(), 0, 5 );
-                    NetworkManager.inst().RequestCommentCount( getContext(), mCallBack, selectCaseData.getSeq() );
+                //test
+                pos=position;
+                Log.d("pos_chk=",Integer.toString(pos));
+
+                selectCaseData = dataList.get(position);
+                NetworkManager.inst().RequestContentOwnerData( getContext(), mCallBack, selectCaseData.getMember_seq() );
+                NetworkManager.inst().RequestCommentData( getContext(), mCallBack, selectCaseData.getSeq(), 0, 5 );
+                NetworkManager.inst().RequestCommentCount( getContext(), mCallBack, selectCaseData.getSeq() );
+            }
+        });
+
+
+        progressBar = view.findViewById( R.id.fragment_board_progressbar );
+        progressBar.setVisibility(View.GONE);
+
+        boardListView.setOnScrollListener(new AbsListView.OnScrollListener()
+        {
+            @Override
+            public void onScrollStateChanged(AbsListView view, int scrollState)
+            { // TODO Auto-generated method stub
+                // 1. OnScrollListener.SCROLL_STATE_IDLE : 스크롤이 이동하지 않을때의 이벤트(즉 스크롤이 멈추었을때).
+                // 2. lastItemVisibleFlag : 리스트뷰의 마지막 셀의 끝에 스크롤이 이동했을때.
+                // 3. mLockListView == false : 데이터 리스트에 다음 데이터를 불러오는 작업이 끝났을때.
+                // 1, 2, 3 모두가 true일때 다음 데이터를 불러온다.
+                if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE && lastItemVisibleFlag && mLockListView == false) {
+                    // 화면이 바닦에 닿을때 처리
+                    // 로딩중을 알리는 프로그레스바를 보인다.
+                    progressBar.setVisibility(View.VISIBLE);
+
+                    int grade = mTabLayout.getSelectedTabPosition() + 1;
+                    // 다음 데이터를 불러온다.
+                    RequestCaseDataList( grade );
                 }
-            });
+            }
 
-            progressBar = view.findViewById( R.id.fragment_board_progressbar );
-            progressBar.setVisibility(View.GONE);
-
-            boardListView.setOnScrollListener(new AbsListView.OnScrollListener()
+            @Override
+            public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount)
             {
-                @Override
-                public void onScrollStateChanged(AbsListView view, int scrollState)
-                { // TODO Auto-generated method stub
-                    // 1. OnScrollListener.SCROLL_STATE_IDLE : 스크롤이 이동하지 않을때의 이벤트(즉 스크롤이 멈추었을때).
-                    // 2. lastItemVisibleFlag : 리스트뷰의 마지막 셀의 끝에 스크롤이 이동했을때.
-                    // 3. mLockListView == false : 데이터 리스트에 다음 데이터를 불러오는 작업이 끝났을때.
-                    // 1, 2, 3 모두가 true일때 다음 데이터를 불러온다.
-                    if (scrollState == AbsListView.OnScrollListener.SCROLL_STATE_IDLE && lastItemVisibleFlag && mLockListView == false) {
-                        // 화면이 바닦에 닿을때 처리
-                        // 로딩중을 알리는 프로그레스바를 보인다.
-                        progressBar.setVisibility(View.VISIBLE);
+                // firstVisibleItem : 화면에 보이는 첫번째 리스트의 아이템 번호.
+                // visibleItemCount : 화면에 보이는 리스트 아이템의 갯수
+                // totalItemCount : 리스트 전체의 총 갯수
+                // 리스트의 갯수가 0개 이상이고, 화면에 보이는 맨 하단까지의 아이템 갯수가 총 갯수보다 크거나 같을때.. 즉 리스트의 끝일때. true
+                lastItemVisibleFlag = (totalItemCount > 0) && (firstVisibleItem + visibleItemCount >= totalItemCount);
+            }
+        });
 
-                        int grade = mTabLayout.getSelectedTabPosition() + 1;
-                        // 다음 데이터를 불러온다.
-                        RequestCaseDataList( grade );
-                    }
-                }
 
-                @Override
-                public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount)
-                {
-                    // firstVisibleItem : 화면에 보이는 첫번째 리스트의 아이템 번호.
-                    // visibleItemCount : 화면에 보이는 리스트 아이템의 갯수
-                    // totalItemCount : 리스트 전체의 총 갯수
-                    // 리스트의 갯수가 0개 이상이고, 화면에 보이는 맨 하단까지의 아이템 갯수가 총 갯수보다 크거나 같을때.. 즉 리스트의 끝일때. true
-                    lastItemVisibleFlag = (totalItemCount > 0) && (firstVisibleItem + visibleItemCount >= totalItemCount);
-                }
-            });
 
         return view;
     }
 
     private void SelectTab( int idx )
     {
+        //pos=0;
         if( mTabLayout == null )
         return;
 
