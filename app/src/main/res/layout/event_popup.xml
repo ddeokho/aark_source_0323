@@ -20,10 +20,10 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#fff"
-            app:scale_left="10"
+            android:background="@drawable/otos_event1"
+            app:scale_left="35"
             app:scale_top="10"
-            app:scale_width="1050"
+            app:scale_width="1000"
             app:scale_height="1500"
             />
 
@@ -61,7 +61,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="3. 상품 배송은 결과 발표 후 추후 공지해 드립니다."
+            android:text="3. 상품 배송일은 결과 발표 후 추후 공지해 드립니다."
             app:scale_textsize = "40"
             app:scale_left="50"
             app:scale_top="1670"
@@ -71,7 +71,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="4. "
+            android:text="4. 문의는 aarkpush@gmail.com 및 문의사항을 이용해주세요."
             app:scale_textsize = "40"
             app:scale_left="50"
             app:scale_top="1730"

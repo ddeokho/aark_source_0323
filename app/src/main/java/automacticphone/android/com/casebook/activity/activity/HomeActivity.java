@@ -284,7 +284,7 @@ public class HomeActivity extends AppCompatActivity
         if( CheckAppFirstExecute() == true && CheckEventPopup() == false )
         {
             //이벤트창 완료
-            //ShowEventPopup();
+            ShowEventPopup();
         }
 
         if( CheckAppFirstExecute() == false )

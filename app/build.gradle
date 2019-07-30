@@ -7,8 +7,8 @@ android {
         applicationId "automacticphone.android.com.casebook"
         minSdkVersion 21
         targetSdkVersion 28
-        versionCode 31
-        versionName "1.6.7"
+        versionCode 38
+        versionName "1.7.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         //ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'//19/05/09일 구글플레이 이슈 추가
@@ -19,6 +19,7 @@ android {
     buildTypes {
         release {
             minifyEnabled false
+            //shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
@@ -34,7 +35,7 @@ android {
         abi {
             enable true
             reset()
-            include 'x86', 'x86_64', 'armeabi-v7a', 'armeabi'
+            include 'x86', 'x86_64', 'armeabi-v7a', 'arm64-v8a' //armeabi, 64비트 지도 라이브러리 추가
             universalApk false
         }
     }
@@ -89,10 +90,12 @@ dependencies {
     implementation 'com.github.bumptech.glide:glide:4.9.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
     implementation files('libs/YouTubeAndroidPlayerApi.jar')
+    implementation files('libs/libDaumMapAndroid.jar')
 }
 
 apply plugin: 'com.google.gms.google-services'
 apply plugin: 'io.fabric'
+
 
 
 //번들 테스트
