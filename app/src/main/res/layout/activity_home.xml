@@ -403,11 +403,11 @@
                 app:scale_height="120"/>
 
             <Button
-                android:id="@+id/plan_case_btn"
+                android:id="@+id/ksae_qna_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#8C8C8C"
-            android:text="@string/plan_text"
+            android:text="@string/ksae_qna"
             android:textStyle="bold"
             android:textColor="#FFF"
             android:textAlignment="textStart"

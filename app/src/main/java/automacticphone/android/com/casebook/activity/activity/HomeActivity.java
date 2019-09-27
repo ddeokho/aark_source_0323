@@ -650,7 +650,8 @@ public class HomeActivity extends AppCompatActivity
                 case R.id.join_membership_btn:
                     OnJoinMemberShipBtnClick();
                     break;
-                case R.id.plan_case_btn:
+                case R.id.ksae_qna_btn:
+                    OnKsaeQnA();
                     break;
 
                 case R.id.regu_btn:
@@ -743,7 +744,7 @@ public class HomeActivity extends AppCompatActivity
         btn = (Button)findViewById(R.id.join_membership_btn);
         btn.setOnClickListener( onClickListener );
 
-        btn = (Button)findViewById(R.id.plan_case_btn);
+        btn = (Button)findViewById(R.id.ksae_qna_btn);
         btn.setOnClickListener( onClickListener );
 
         btn = (Button)findViewById(R.id.regu_btn);
@@ -1046,6 +1047,15 @@ public class HomeActivity extends AppCompatActivity
         drawerLayout.closeDrawers();
         ChangeFragment(new JoinMembershipFragment(), "JoinMembershipFragment");
     }
+
+    //KSAE 질문창
+    void OnKsaeQnA()
+    {
+        drawerLayout.closeDrawers();
+        Intent i = new Intent(Intent.ACTION_VIEW, Uri.parse("http://jajak.ksae.org/bbs/?code=J_qna"));
+        startActivity(i);
+    }
+
 
     //유투브
     void OnYoutubeBtnClick()

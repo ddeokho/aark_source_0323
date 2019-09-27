@@ -145,6 +145,7 @@ public class BoardFragment extends Fragment
             }
         };
 
+        //모든 사용자에게 질문 탭 보여주기
         if( DataManager.inst().getUserData() != null )
         {
             if( DataManager.inst().getUserData().getGrade() == Define.GRADE_ADMIN || DataManager.inst().getUserData().getGrade() == Define.GRADE_GRADUATE
@@ -158,12 +159,14 @@ public class BoardFragment extends Fragment
             {
                 mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text1));
                 mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text2));
+                mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text3));//질문 탭전체 사용자 볼 수 있게 추가
             }
         }
         else
         {
             mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text1));
             mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text2));
+            mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text3));//질문 탭전체 사용자 볼 수 있게 추가
         }
 
         boardListView = view.findViewById( R.id.fragment_board_list_view );
