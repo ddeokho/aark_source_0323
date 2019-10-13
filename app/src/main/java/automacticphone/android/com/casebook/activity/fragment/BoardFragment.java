@@ -46,7 +46,9 @@ public class BoardFragment extends Fragment
     private ListView boardListView;
     public static int selectTab = 0;
 
-    private static int pos = 0;//현재위치 파악
+    public static boolean bRequestData = true;     //true: 게시판 들어올때 최신데이터 요청, false: 게시판 들어올때 최신데이터 요청안함.
+    public static int scrollIdx = 0;
+    public static int scrollTop = 0;
 
     private String searchText ="";
     public void setSearchText(String searchText) {
@@ -63,8 +65,6 @@ public class BoardFragment extends Fragment
         View view = inflater.inflate(R.layout.fragment_board, container, false);
         mTabLayout = (TabLayout) view.findViewById( R.id.fragment_board_tabs );
         requestCount = 2;
-
-        //pos = 10;//현재 위치 기억
 
         mCallBack = new HttpTaskCallBack()
         {
@@ -145,11 +145,10 @@ public class BoardFragment extends Fragment
             }
         };
 
-        //모든 사용자에게 질문 탭 보여주기
         if( DataManager.inst().getUserData() != null )
         {
             if( DataManager.inst().getUserData().getGrade() == Define.GRADE_ADMIN || DataManager.inst().getUserData().getGrade() == Define.GRADE_GRADUATE
-                || DataManager.inst().getUserData().getGrade()==Define.GRADE_INSPEC || DataManager.inst().getUserData().getGrade()==Define.GRADE_COMUNI)//검차, 운영위 추가
+                    || DataManager.inst().getUserData().getGrade()==Define.GRADE_INSPEC || DataManager.inst().getUserData().getGrade()==Define.GRADE_COMUNI)//검차, 운영위 추가
             {
                 mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text1));
                 mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text2));
@@ -159,101 +158,92 @@ public class BoardFragment extends Fragment
             {
                 mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text1));
                 mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text2));
-                mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text3));//질문 탭전체 사용자 볼 수 있게 추가
+                mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text3));
             }
         }
         else
         {
             mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text1));
             mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text2));
-            mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text3));//질문 탭전체 사용자 볼 수 있게 추가
+            mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text3));
         }
 
         boardListView = view.findViewById( R.id.fragment_board_list_view );
-
-
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab)
             {
-
-                boardListView.setSelection( 0 );//해당 위치 보여주기 0 -> pos//원래 있던 곳*/
-                DataManager.inst().ClearCaseDataList();
+                boardListView.setSelection( 0 );
                 selectTab = tab.getPosition();
-                switch(tab.getPosition())
+                if(bRequestData == false )
                 {
-                    case 0:
-                    {
-                        Log.d("pos_good=",Integer.toString(pos));
-                        RequestCaseDataList( Define.GOOD_CASE );
-
-                    }
-                    break;
-                    case 1:
-                    {
-                        Log.d("pos_bad=",Integer.toString(pos));
-                        RequestCaseDataList( Define.BAD_CASE );
-
-                    }
-                    break;
-                    case 2:
-                    {
-                        Log.d("pos_que=",Integer.toString(BoardFragment.pos));
-                        RequestCaseDataList( Define.QUESTION_CASE );
-
-                    }
-                    break;
+                    boardListView.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            bRequestData = true;
+                            boardListView.setSelectionFromTop(scrollIdx, scrollTop);
+                        }
+                    });
                 }
-
-                Log.d("pos_onsel=",Integer.toString(pos));
-
+                else
+                {
+                    DataManager.inst().ClearCaseDataList();
+                    switch(tab.getPosition())
+                    {
+                        case 0:
+                        {
+                            RequestCaseDataList( Define.GOOD_CASE );
+                        }
+                        break;
+                        case 1:
+                        {
+                            RequestCaseDataList( Define.BAD_CASE );
+                        }
+                        break;
+                        case 2:
+                        {
+                            RequestCaseDataList( Define.QUESTION_CASE );
+                        }
+                        break;
+                    }
+                }
 
             }
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
-                Log.d("pos_unsel=",Integer.toString(pos));
             }
 
             @Override
             public void onTabReselected(TabLayout.Tab tab) {
-                Log.d("pos_resel=",Integer.toString(pos));
             }
         } );
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
         dataList = DataManager.inst().getCaseDataList();
 
-            SubTreeCaseData subTreeCaseData = HomeActivity.inst().getSelectSubTreeCaseData();
-            if( subTreeCaseData != null )
+        SubTreeCaseData subTreeCaseData = HomeActivity.inst().getSelectSubTreeCaseData();
+        if( subTreeCaseData != null )
+        {
+            //TextView textView = view.findViewById(R.id.fragment_board_title );
+            RegulationSubData3 subData3 = DataManager.inst().getRegulSubData3( subTreeCaseData.getCate_3() );
+            if( subData3 != null )
             {
-                //TextView textView = view.findViewById(R.id.fragment_board_title );
-                RegulationSubData3 subData3 = DataManager.inst().getRegulSubData3( subTreeCaseData.getCate_3() );
-                if( subData3 != null )
-                {
-                    //textView.setText( subData3.getRegul() );
-                }
+                //textView.setText( subData3.getRegul() );
             }
+        }
 
-            SelectTab( selectTab );
+        SelectTab( selectTab );
 
-            adapter = new BoardListAdapter( getContext(), dataList );
-            boardListView.setAdapter( adapter );
-
-        //해당 탭별 다르게 보여주기
-            Log.d("pos_view=",Integer.toString(pos));
-            Log.d("tab_view",Integer.toString(selectTab));
-            boardListView.setSelection( pos );//해당 위치 보여주기 0 -> pos
-
-
+        adapter = new BoardListAdapter( getContext(), dataList );
+        boardListView.setAdapter( adapter );
         boardListView.setOnItemClickListener(new AdapterView.OnItemClickListener()
         {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
-                //test
-                pos=position;
-                Log.d("pos_chk=",Integer.toString(pos));
+                //상세글 페이지로 넘어갈때 스크롤 데이터 저장.
+                saveScrollPos();
 
                 selectCaseData = dataList.get(position);
                 NetworkManager.inst().RequestContentOwnerData( getContext(), mCallBack, selectCaseData.getMember_seq() );
@@ -261,7 +251,6 @@ public class BoardFragment extends Fragment
                 NetworkManager.inst().RequestCommentCount( getContext(), mCallBack, selectCaseData.getSeq() );
             }
         });
-
 
         progressBar = view.findViewById( R.id.fragment_board_progressbar );
         progressBar.setVisibility(View.GONE);
@@ -297,16 +286,24 @@ public class BoardFragment extends Fragment
             }
         });
 
-
+        boardListView.post(new Runnable() {
+            @Override
+            public void run() {
+                if(bRequestData == false )
+                {
+                    bRequestData = true;
+                    boardListView.setSelectionFromTop(scrollIdx, scrollTop);
+                }
+            }
+        });
 
         return view;
     }
 
     private void SelectTab( int idx )
     {
-        //pos=0;
         if( mTabLayout == null )
-        return;
+            return;
 
         TabLayout.Tab tab = mTabLayout.getTabAt(idx );
         if( tab != null )
@@ -335,5 +332,13 @@ public class BoardFragment extends Fragment
     public void onDestroy()
     {
         super.onDestroy();
+        bRequestData = true;
+    }
+    private void saveScrollPos()
+    {
+        // save index and top position
+        scrollIdx = boardListView.getFirstVisiblePosition();
+        View v = boardListView.getChildAt(0);
+        scrollTop= (v == null) ? 0 : (v.getTop() - boardListView.getPaddingTop());
     }
 }

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="automacticphone.android.com.casebook"
-    android:versionCode="38"
-    android:versionName="1.7.5"
+    android:versionCode="42"
+    android:versionName="1.8.3"
     >
 
     <!-- 네트워크 사용에 대한 퍼미션 -->
@@ -12,6 +12,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <!--uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /-->
+
     <uses-feature android:name="android.hardware.camera2" android:required="false"/> <!--  -->
 
     <application
@@ -32,6 +33,8 @@
             android:name="com.kakao.sdk.AppKey"
             android:value="d7db2a84ef68aa7830a11a9809c6f00b" /
         -->
+        <!--카카오 지도 테스으-->
+
 
         <provider
             android:name="android.support.v4.content.FileProvider"

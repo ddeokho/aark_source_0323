@@ -69,6 +69,9 @@ public class PromoteListFragment extends Fragment
     }
 
     private String searchText = "";
+    public static boolean bRequestData = true;     //true: 게시판 들어올때 최신데이터 요청, false: 게시판 들어올때 최신데이터 요청안함.
+    public static int scrollIdx = 0;
+    public static int scrollTop = 0;
     public PromoteListFragment() {
         // Required empty public constructor
     }
@@ -122,9 +125,21 @@ public class PromoteListFragment extends Fragment
             public void onTabSelected(TabLayout.Tab tab)
             {
                 promoteList.setSelection(0);
-                DataManager.inst().ClearPromotionDataList();
                 selectTab = tab.getPosition();
-                switch(selectTab)
+                if(bRequestData == false )
+                {
+                    promoteList.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            bRequestData = true;
+                            promoteList.setSelectionFromTop(scrollIdx, scrollTop);
+                        }
+                    });
+                }
+                else
+                {
+                    DataManager.inst().ClearPromotionDataList();
+                    switch(selectTab)
                     {
                         case 0:
                         {
@@ -145,6 +160,8 @@ public class PromoteListFragment extends Fragment
                     }
 
                 }
+            }
+
 
             @Override
             public void onTabUnselected(TabLayout.Tab tab) {
@@ -171,6 +188,7 @@ public class PromoteListFragment extends Fragment
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id)
             {
+                saveScrollPos();
                 selectPromotionData = adapter.getDataList().get( position );
                 DataManager.inst().setSelectPromotionData( selectPromotionData );
                 RequestPromoteSubData( selectPromotionData );
@@ -269,6 +287,17 @@ public class PromoteListFragment extends Fragment
         };
 
         SelectTab( selectTab );
+
+        promoteList.post(new Runnable() {
+            @Override
+            public void run() {
+                if(bRequestData == false )
+                {
+                    bRequestData = true;
+                    promoteList.setSelectionFromTop(scrollIdx, scrollTop);
+                }
+            }
+        });
         return view;
     }
 
@@ -347,5 +376,20 @@ public class PromoteListFragment extends Fragment
 
         DataManager.inst().ClearPromotionDataList();
         NetworkManager.inst().RequestPromotionSearchList( getContext(), mCallBack, "promotion_data", promotionType, searchText, 0, Define.MAX_PROM_DATA );
+    }
+
+    private void saveScrollPos()
+    {
+        // save index and top position
+        scrollIdx = promoteList.getFirstVisiblePosition();
+        View v = promoteList.getChildAt(0);
+        scrollTop= (v == null) ? 0 : (v.getTop() - promoteList.getPaddingTop());
+    }
+
+    @Override
+    public void onDestroy()
+    {
+        super.onDestroy();
+        bRequestData = true;
     }
 }

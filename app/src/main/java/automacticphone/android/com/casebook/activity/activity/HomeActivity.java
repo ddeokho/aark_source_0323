@@ -1549,11 +1549,15 @@ public class HomeActivity extends AppCompatActivity
                     {
                         BoardFragment.selectTab = Integer.valueOf( param );
                     }
+                    //스크롤 상태 유지를 위해 서버 요청 막음
+                    BoardFragment.bRequestData = false;
 
                     ChangeFragment( boardFragment, "BoardFragment");
                 }else{
                     { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }
                 }
+
+
             }
             break;
             case "ContentsViewFragment":    { ChangeFragment( new TableContentsFragment(), "TableContentsFragment"); }  break; //{ ChangeFragment( new ContentsViewFragment(), "ContentsViewFragment"); }  break;
@@ -1591,6 +1595,7 @@ public class HomeActivity extends AppCompatActivity
             case "PromoteListFragment":
             {
                 if(currentFragmentTag=="PromoteContentsFragment"){
+                    PromoteListFragment.bRequestData=false;
                     PromoteListFragment fragment = PromoteListFragment.newInstance( String.valueOf( PromoteListFragment.selectTab ) );
                     ChangeFragment( fragment, "PromoteListFragment");//리스트 상세로 들어갔을 때 뒤로가기는 리스트로 돌아감
                 }else{
