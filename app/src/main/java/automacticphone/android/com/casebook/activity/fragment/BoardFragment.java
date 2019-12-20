@@ -46,6 +46,7 @@ public class BoardFragment extends Fragment
     private ListView boardListView;
     public static int selectTab = 0;
 
+    //뒤로 갔을 때 상태 유지 하도록 추가
     public static boolean bRequestData = true;     //true: 게시판 들어올때 최신데이터 요청, false: 게시판 들어올때 최신데이터 요청안함.
     public static int scrollIdx = 0;
     public static int scrollTop = 0;
@@ -175,6 +176,8 @@ public class BoardFragment extends Fragment
             {
                 boardListView.setSelection( 0 );
                 selectTab = tab.getPosition();
+
+                //뒤로 갔을 때 상태 유지 하도록 추가
                 if(bRequestData == false )
                 {
                     boardListView.post(new Runnable() {
@@ -286,6 +289,7 @@ public class BoardFragment extends Fragment
             }
         });
 
+        //뒤로 갔을 때 상태 유지 하도록 추가
         boardListView.post(new Runnable() {
             @Override
             public void run() {
@@ -332,8 +336,10 @@ public class BoardFragment extends Fragment
     public void onDestroy()
     {
         super.onDestroy();
+        //뒤로 갔을 때 상태 유지 하도록 추가
         bRequestData = true;
     }
+    //뒤로 갔을 때 상태 유지 하도록 추가
     private void saveScrollPos()
     {
         // save index and top position

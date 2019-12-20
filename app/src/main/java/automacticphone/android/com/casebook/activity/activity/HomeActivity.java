@@ -1550,6 +1550,7 @@ public class HomeActivity extends AppCompatActivity
                         BoardFragment.selectTab = Integer.valueOf( param );
                     }
                     //스크롤 상태 유지를 위해 서버 요청 막음
+                    //뒤로 갔을 때 상태 유지 하도록 추가
                     BoardFragment.bRequestData = false;
 
                     ChangeFragment( boardFragment, "BoardFragment");
@@ -1595,6 +1596,7 @@ public class HomeActivity extends AppCompatActivity
             case "PromoteListFragment":
             {
                 if(currentFragmentTag=="PromoteContentsFragment"){
+                    //뒤로 갔을 때 상태 유지 하도록 추가
                     PromoteListFragment.bRequestData=false;
                     PromoteListFragment fragment = PromoteListFragment.newInstance( String.valueOf( PromoteListFragment.selectTab ) );
                     ChangeFragment( fragment, "PromoteListFragment");//리스트 상세로 들어갔을 때 뒤로가기는 리스트로 돌아감
