@@ -285,7 +285,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:fontFamily="@font/khnphdbold"ㅇ
+            android:fontFamily="@font/khnphdbold"
             android:text="3. 팀장/팀원 변경마감 : 8/23(금)"
             android:textAlignment="textStart"
             android:textStyle="bold"
