@@ -166,7 +166,7 @@ public class BoardFragment extends Fragment
         {
             mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text1));
             mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text2));
-            mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text3));
+            //mTabLayout.addTab( mTabLayout.newTab().setText(R.string.board_tab_text3));
         }
 
         boardListView = view.findViewById( R.id.fragment_board_list_view );
