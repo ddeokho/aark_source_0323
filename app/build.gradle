@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.google.gms.google-services'
 
 android {
-    compileSdkVersion 28
+    compileSdkVersion 29
     defaultConfig {
         applicationId "automacticphone.android.com.casebook"
         minSdkVersion 21
-        targetSdkVersion 28
-        versionCode 42
-        versionName "1.8.3"
+        targetSdkVersion 29
+        versionCode 44
+        versionName "1.8.5"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary = true
         //ndk.abiFilters 'armeabi-v7a','arm64-v8a','x86','x86_64'//19/05/09일 구글플레이 이슈 추가
